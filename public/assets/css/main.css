@@ -1,0 +1,30 @@
+/* font  */
+
+/* root */
+:root {
+    --title-color: #000000;
+    --text-color: #31373D;
+    --sub-text-color: #5F6975;
+    --placeholder-color: #BEC1CC;
+    --background-color: #F6F7FA;
+    --standard-color: #FFFFFF;
+    --shadow-color: #EAECF3;
+    --page-shadow: linear-gradient(to right, #DADDE6, rgba(218, 221, 230, 0));
+    --autofill-color: #31373d;
+    --yellow-color: #FFAD00;
+    --primary-color: #3BC117;
+    --border-radius: .25rem
+}
+
+.darken {
+    --title-color: #ffffff;
+    --text-color: #98A7B5;
+    --sub-text-color: #656E78;
+    --placeholder-color: #4D565E;
+    --background-color: #24262B;
+    --standard-color: #1C1E22;
+    --shadow-color: #111415;
+    --page-shadow: linear-gradient(to right, #111415, rgba(17, 20, 21, 0));
+    --autofill-color: #f5f6f7;
+    --yellow-color: #FFBF39
+}
