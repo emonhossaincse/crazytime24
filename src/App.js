@@ -3,11 +3,16 @@ import './App.css';
 import './assets/css/main.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Aside from './component/nav/Aside';
 import TopNavMenu from './component/nav/TopNavMenu';
 import Chat from './component/sidebar/Chat';
+import HomeBigBanner from './component/banner/HomeBigBanner';
+import HomeSlider from './component/slider/HomeSlider';
+import RecentWins from './component/slider/RecentWins';
+import TopRatedGames from './component/slider/TopRatedGames';
+import PaymentBanner from './component/banner/PaymentBanner';
+
 
 
 function App() {
@@ -16,6 +21,11 @@ function App() {
       <Aside/>
       <Chat/>
       <TopNavMenu/>
+      <HomeBigBanner/>
+      <HomeSlider/>
+      <RecentWins/>
+      <TopRatedGames/>
+      <PaymentBanner/>
       
     </div>
   );
