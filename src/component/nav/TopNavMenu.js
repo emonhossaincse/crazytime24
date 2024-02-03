@@ -1,16 +1,18 @@
 import React from "react";
-
-
-
+import SignUp from "../modal/SignUp";
 function TopNavMenu (){
     const handleChatOpen = () =>{
-        const bodyElement = document.querySelector('.chat');
-    bodyElement.classList.add('open');
+        const bodyElements = document.querySelector('.chat');
+    bodyElements.classList.add('open');
     };
     const closeChat = () => {
         const chatElement = document.querySelector('.chat');
         chatElement.classList.remove('open');
     };
+
+    const handleOpenSignUp = () => {
+    
+    }
 
     return(
             <div className="top-nav">
@@ -61,7 +63,7 @@ function TopNavMenu (){
             </div>
             <div className="top-action">
                    <span className="nav-action">Sign In</span> 
-                   <button className="nav-action">Sign Up</button>
+                   <SignUp/>
                    <span className="nav-action">
                     <span onClick={handleChatOpen}  className="seen">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
