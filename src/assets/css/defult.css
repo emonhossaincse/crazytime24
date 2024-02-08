@@ -1224,9 +1224,9 @@
   .nfnfs0b .notify-cd svg {
     width: 1rem;
     height: 1rem;
-    -webkit-transform: rotate(90deg) scaleX(-1);
-    -ms-transform: rotate(90deg) scaleX(-1);
-    transform: rotate(90deg) scaleX(-1)
+    transform: rotate(90deg);
+    
+    
   }
   
   .nfnfs0b .notify-cd circle {

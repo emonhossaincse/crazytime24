@@ -1,5 +1,6 @@
 import React from "react";
 import SignUp from "../modal/SignUp";
+import SignIn from "../modal/SignIn";
 function TopNavMenu (){
     const handleChatOpen = () =>{
         const bodyElements = document.querySelector('.chat');
@@ -62,7 +63,7 @@ function TopNavMenu (){
                     
             </div>
             <div className="top-action">
-                   <span className="nav-action">Sign In</span> 
+                <SignIn/>
                    <SignUp/>
                    <span className="nav-action">
                     <span onClick={handleChatOpen}  className="seen">

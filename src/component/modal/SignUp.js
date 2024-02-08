@@ -1,10 +1,88 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Modal, Button, Tabs, Tab, Nav } from 'react-bootstrap';
 
 
 const MyModal = ({ showModal, handleClose }) => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    const [responseData, setResponseData] = useState(null); // Add state for responseData
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+//   errors
+  const [error, setError] = useState('');
+  const [validationError, setValidationError] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
+  const [customErrorMessage, setCustomErrorMessage] = useState('');
+
+  useEffect(() => {
+    // Set up a timer to clear errors after 5 seconds
+    const errorTimer = setTimeout(() => {
+      setError('');
+      setValidationError('');
+      setSuccessMessage('');
+      setCustomErrorMessage('');
+    }, 5000);
+
+    // Clear the timer when the component is unmounted or when showModal changes
+    return () => clearTimeout(errorTimer);
+  }, );
+
+
+
+
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleCreatePlayer = async () => {
+    try {
+
+        if (!username.trim() || !password.trim()) {
+            setValidationError('Username and password are required.');
+           
+            return;  // Exit the function if validation fails
+          }
+      const response = await fetch('http://127.0.0.1:8000/api/v1/create-player', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username: username,
+          password: password,
+        }),
+      });
+  
+      const responseData = await response.json();
+  
+      console.log('Response Data:', responseData);
+  
+      if (response.ok) {
+
+        // If error is 1, display a custom message
+        if (responseData.error === 1) {
+            setCustomErrorMessage('Player already exists!');
+          } else {
+            setSuccessMessage('Player created successfully');
+        setError('');
+          }
+      } else {
+        setError(responseData.message || 'Failed to create player');
+        setSuccessMessage('');
+  
+        
+      }
+  
+      setResponseData(responseData);
+    } catch (error) {
+      setError('Someting Went Worng please try again later!');
+      setSuccessMessage('');
+      setCustomErrorMessage('');
+    }
+  };
   
     return (
       <Modal show={showModal} onHide={handleClose}>
@@ -23,37 +101,18 @@ const MyModal = ({ showModal, handleClose }) => {
                           <div class="login-right">
                           <div id="regist" className="simple-page s15zywit" style={{ opacity: 1, transform: 'none' }}>
                                   <p class="sign-title">Sign up</p>
-                                 
                                   <form autocomplete="off">
-                                  <Tabs defaultActiveKey="home" id="myTabs">
-                                    <Tab eventKey="home" title="Email">
-                                    <div class="ui-input first-input">
+                                  <div class="ui-input first-input">
                                           <div class="input-control">
                                           <input
                                             type="text"
-                                            placeholder="Email"
+                                            placeholder="Username"
                                             value={username}
                                             onChange={(e) => setUsername(e.target.value)}
                                         />
                                               
                                           </div>
                                       </div>
-                                    </Tab>
-                                    <Tab eventKey="profile" title="Phone Number">
-                                    <div class="ui-input first-input">
-                                          <div class="input-control">
-                                          <input
-                                            type="text"
-                                            placeholder="Phone Number"
-                                            value={username}
-                                            onChange={(e) => setUsername(e.target.value)}
-                                        />
-                                              
-                                          </div>
-                                      </div>
-                                    </Tab>
-                                   
-                                    </Tabs>
                                 
                                     
                                       <div class="ui-input pjkqlcx">
@@ -82,8 +141,8 @@ const MyModal = ({ showModal, handleClose }) => {
                                           </div>
                                       </div>
                                       <div class="acb9vpv">
-                                          <div class="ui-checkbox">
-                                              
+                                      <div>
+                                              <input required class="ui-checkbox" type='checkbox'/>
                                           </div>
                                           <div class="label">
                                               <span>I agree to the </span>
@@ -92,22 +151,23 @@ const MyModal = ({ showModal, handleClose }) => {
                                           </div>
                                       </div>
                                       <div class="acb9vpv">
-                                          <div class="ui-checkbox">
-                                              <svg class="s1ff97qc icon dot">
-                                              
-                                                      
-                                                  
-                                              </svg>
+                                          <div>
+                                              <input required class="ui-checkbox" type='checkbox'/>
                                           </div>
                                           <div class="label">
                                               <span>I agree to receive marketing promotions from bc.game.</span>
                                           </div>
                                       </div>
-                                      <div class="buttons">
-                                          <button class="ui-button button-big s-conic">
-                                              <div class="button-inner">Sign up</div>
-                                          </button>
-                                      </div>
+
+                                     <div class="buttons">
+                                        <button  type="button"    onClick={(e) => {
+                                                        e.preventDefault(); 
+                                                        handleCreatePlayer();
+                                                    }} class="ui-button button-big s-conic">
+                                            <div class="button-inner">Sign up</div>
+                                            </button>
+                                            </div>
+
                                   </form>
                                   <div class="have-account">
                                       <p>Already have an account?</p>
@@ -188,6 +248,95 @@ const MyModal = ({ showModal, handleClose }) => {
                           </div>
                       </div>
                   </div>
+
+                  { validationError &&   
+    <div className="nfnfs0b">
+        <div className="notify-item" style={{height: 'auto'}}>
+            <div className="notify-ins">
+                <div className="notify-wrap">
+                    <div className="notify-cd">
+                        <svg viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="8" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="0.1px 1px">
+                        </circle>
+                        </svg>
+                    </div>
+                    <div className="notify-content">
+                
+                    
+                    <div className="notify-message">{validationError}</div>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+{ customErrorMessage &&   
+    <div className="nfnfs0b">
+        <div className="notify-item" style={{height: 'auto'}}>
+            <div className="notify-ins">
+                <div className="notify-wrap">
+                    <div className="notify-cd">
+                        <svg viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="8" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="0.1px 1px">
+                        </circle>
+                        </svg>
+                    </div>
+                    <div className="notify-content">
+                
+                    
+                    <div className="notify-message">{customErrorMessage}</div>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+{ error &&   
+    <div className="nfnfs0b">
+        <div className="notify-item" style={{height: 'auto'}}>
+            <div className="notify-ins">
+                <div className="notify-wrap">
+                    <div className="notify-cd">
+                        <svg viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="8" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="0.1px 1px">
+                        </circle>
+                        </svg>
+                    </div>
+                    <div className="notify-content">
+                
+                    
+                    <div className="notify-message">{error}</div>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+{ successMessage &&   
+    <div className="nfnfs0b">
+        <div className="notify-item" style={{height: 'auto'}}>
+            <div className="notify-ins">
+                <div className="notify-wrap">
+                    <div className="notify-cd">
+                        <svg viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="8" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="0.1px 1px">
+                        </circle>
+                        </svg>
+                    </div>
+                    <div className="notify-content">
+                
+                    
+                    <div className="notify-message">{successMessage}</div>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
               
           </div>
       </Modal>
