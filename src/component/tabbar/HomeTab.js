@@ -10,13 +10,15 @@ const HomeTab = () => {
       <Tabs defaultActiveKey="home" id="myTabs">
         <Tab eventKey="home" title="Latest bets">
           <table>
-            <tr>
+           <thead>
+           <tr>
                 <th className='text-start'>Game</th>
                 <th>Player</th>
                 <th>Bet Amount</th>
                 <th>Multiplier</th>
                 <th className='text-end'>Profit Amount</th>
             </tr>
+           </thead>
             <tbody>
                 <tr>
                     <td className='text-start fw-bold'> <img src='assets/media/icon/blackjack.webp'/> Jack Black</td>
@@ -79,13 +81,15 @@ const HomeTab = () => {
         </Tab>
         <Tab eventKey="profile" title="High rollers">
         <table>
-            <tr>
+           <thead>
+           <tr>
                 <th className='text-start'>Game</th>
                 <th>Player</th>
                 <th>Bet Amount</th>
                 <th>Multiplier</th>
                 <th className='text-end'>Profit Amount</th>
             </tr>
+           </thead>
             <tbody>
                 <tr>
                     <td className='text-start fw-bold'> <img src='assets/media/icon/blackjack.webp'/> Jack Black</td>

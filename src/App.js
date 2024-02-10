@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -22,12 +22,23 @@ import Footer from './layout/Footer';
 import Category from './layout/Category';
 import YourComponent from './component/modal/modal';
 import Login from './layout/Test';
+import AuthService from './Auth/AuthService';
 
 
 
 
 function App() {
-  
+
+  const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('token'));
+
+  useEffect(() => {
+    // Check if a token exists in localStorage when the component mounts
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+ 
   return (
     <div className="App">
       <Aside/>
@@ -35,14 +46,14 @@ function App() {
       <TopNavMenu/>
       <HomeBigBanner/>
       <HomeSlider/>
-      <Category/>
+      {isLoggedIn &&  <Category/> }
       <RecentWins/>
       <TopRatedGames/>
       <PaymentBanner/>
       <HomeTab/>
       <ExclusiveBanner/>
       <Footer/>
-           
+      
          
     </div>
   );

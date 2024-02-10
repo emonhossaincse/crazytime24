@@ -1,18 +1,11 @@
 import React, { useState } from 'react';
 
-const Login = () => {
+
+const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const [success, setSuccess] = useState('');
-
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
+  
 
   const handleLogin = async () => {
     try {
@@ -21,41 +14,40 @@ const Login = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          username: username,
-          password: password,
-        }),
+        body: JSON.stringify({ username, password }),
       });
 
       const data = await response.json();
 
       if (response.ok) {
-        // Login successful
-        setSuccess(data.success);
-        // Additional actions for successful login
+        console.log(data.token);
+       
+       
       } else {
-        // Login failed
-        setError(data.error || 'Failed to log in');
+        setError(data.error || 'An unexpected error occurred');
       }
     } catch (error) {
-      setError('Error during login');
+      console.log('Error during login:', error);
+      setError('An unexpected error occurred');
     }
   };
 
   return (
     <div>
-      <h2>Login</h2>
-      {success && <p style={{ color: 'green' }}>{success}</p>}
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      <div>
-        <label>Username:</label>
-        <input type="text" value={username} onChange={handleUsernameChange} />
-      </div>
-      <div>
-        <label>Password:</label>
-        <input type="password" value={password} onChange={handlePasswordChange} />
-      </div>
-      <button onClick={handleLogin}>Login</button>
+      <p>Please login to continue.</p>
+      <form>
+        <label>
+          Username:
+          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+        </label>
+        <br />
+        <label>
+          Password:
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        </label>
+        <br />
+        <button type="button" onClick={handleLogin}>Login</button>
+      </form>
     </div>
   );
 };
