@@ -45,7 +45,7 @@ const MyModal = ({ showModal, handleClose }) => {
            
             return;  // Exit the function if validation fails
           }
-      const response = await fetch('http://127.0.0.1:8000/api/v1/create-player', {
+      const response = await fetch('https://six6.site/api/v1/create-player', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
