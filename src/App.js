@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import './assets/css/responsive.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './assets/css/main.css';
@@ -20,15 +21,10 @@ import HomeTab from './component/tabbar/HomeTab';
 import ExclusiveBanner from './component/banner/ExclusiveBanner';
 import Footer from './layout/Footer';
 import Category from './layout/Category';
-import YourComponent from './component/modal/modal';
-import Login from './layout/Test';
-import AuthService from './Auth/AuthService';
-
-
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import GameLunch from './pages/GameLunch';
 
 function App() {
-
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('token'));
 
   useEffect(() => {
@@ -38,23 +34,30 @@ function App() {
       setIsLoggedIn(true);
     }
   }, []);
- 
+
   return (
     <div className="App">
-      <Aside/>
-      <Chat/>
-      <TopNavMenu/>
-      <HomeBigBanner/>
-      <HomeSlider/>
-      {isLoggedIn &&  <Category/> }
-      <RecentWins/>
-      <TopRatedGames/>
-      <PaymentBanner/>
-      <HomeTab/>
-      <ExclusiveBanner/>
-      <Footer/>
-      
-         
+      <Router>
+        {/* Place Router at the top level of your app */}
+        <Aside/>
+        <Chat/>
+        <TopNavMenu/>
+        <Routes>
+          {/* Update Route definitions to use `element` prop in v6 */}
+          <Route path="/" element={<>
+            <HomeBigBanner/>
+            <HomeSlider/>
+            {isLoggedIn && <Category/>}
+            <RecentWins/>
+            <TopRatedGames/>
+            <PaymentBanner/>
+            <HomeTab/>
+            <ExclusiveBanner/>
+            <Footer/>
+          </>} />
+          <Route path="/game" element={<GameLunch />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

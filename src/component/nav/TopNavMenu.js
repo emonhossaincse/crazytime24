@@ -16,7 +16,7 @@ function TopNavMenu (){
     }
 
     return(
-            <div className="top-nav">
+            <div className="top-nav max-width">
             <div className="container">
             <div className="top-menu">
                     

@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Modal } from 'react-bootstrap';
-
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -14,6 +14,7 @@ const TopRatedGames = () => {
   const [error, setError] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [iframeUrl, setIframeUrl] = useState(null);
+  const navigate = useNavigate();
   
   
   
@@ -82,8 +83,7 @@ const TopRatedGames = () => {
       const data = await response.json();
 
       if (response.ok) {
-        setIframeUrl(data.response.response.url); // Set iframeUrl state
-        setShowModal(true);
+        navigate('/game', { state: { iframeUrl: data.response.response.url } });
 
 
       } else {
@@ -103,18 +103,7 @@ const TopRatedGames = () => {
             <p>Top Rated Games</p>
          
         </div>
-        <Modal show={showModal} onHide={handleModalClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Your Modal Title</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            {/* Iframe to display the URL */}
-            {iframeUrl && <iframe title="My IFrame" width="100%" height="400px" src={iframeUrl} frameBorder="0"></iframe>}
-          </Modal.Body>
-          <Modal.Footer>
-            <button onClick={handleModalClose}>Close</button>
-          </Modal.Footer>
-        </Modal>
+       
       {/* begin::rated_games_area */}
       <div className="rated-games">
         {/* Use the Slider component from react-slick */}

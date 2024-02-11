@@ -50,7 +50,7 @@ const MyModal = ({ showModal, handleClose }) => {
       const data = await response.json();
   
       if (response.ok) {
-        console.log('Login successful');
+        console.log(data);
         localStorage.setItem('token', data.token);
         localStorage.setItem('sessionid', data.response.response.sessionid);
         localStorage.setItem('remote_id', data.response.response.id);
