@@ -92,18 +92,153 @@
     z-index: 100;
     box-shadow: 0 .125rem .5rem #0002;
 }
-@media (max-width: 768px) {
-    .aside {
-      display: none;
-    }
-  }
+img.common-left-img.mobile {
+    display: none;
+}
+ 
   @media (max-width: 768px) {
     .aside.close ~ .max-width{
         width: calc(100%) !important;
         left: 0 !important;
     }
+    .max-width {
+        width: calc(100%) !important;
+        left: 0 !important;
+    }
+    .top-menu {
+        display: none;
+     }
+     .aside {
+        display: none;
+      }
+      .home-big-banner{
+        display: none;
+      }
+      .home-slider {
+        margin-top: 0 !important;
+        top: 64px;
+        margin-bottom: 60px;
+    }
+    .top-action .nav-action .seen {
+        display: none;
+    }
+    .seen{
+        display: block;
+    }
+      .payment_bg{
+        display: none !important;
+      }
+      .ithbrou .login-left{
+        height: 30vh !important;
+      }
+      .ithbrou .login-right{
+        height: 80vh !important;
+        align-items: center !important;
+      }
+      .common-left-img.dark-mode , .common-left-img.light-mode{
+        visibility: hidden;
+      }
+      .ithbrou .login-right{
+        display: block !important;
+      }
+      img.common-left-img.mobile{
+        display: block;
+      }
+      .h1ux4v4o{
+        width: 100%  !important;
+        text-align: center;
+        
+        
+      }
+      .s1ggjuy9 .footer-container{
+        flex-direction: column;
+        
+      }
+      .sckkbci{
+        width: 100% !important;
+        background-color: var(--3zk71c);
+        padding: 20px;
+      }
+      .sckkbci .helpus-inner .help-us-infos textarea{
+        background-color: var(--14p3i5b) !important;
+      }
+      .sckkbci .helpus-inner .help-us-infos .send-wrap{
+        flex-direction: column-reverse;
+      }
+      .sckkbci .helpus-inner .contact {
+       
+        text-align: center;
+    }
+    .f1mx1119{
+        flex-direction: column;
+    }
+    .f1mx1119 .footer-link-wrap .links{
+        display: block !important;
+        margin: 0 10px;
+        text-align: center;
+    }
+    .f1mx1119 .footer-link-wrap .links .footer-link-item{
+        display: inline-block !important;
+        margin: 0 10px;
+    }
+    .f1mx1119 .footer-link-wrap .f-t{
+        text-align: center;
+    }
+    .f1mx1119 .social-links {
+        width: 100% !important;
+        flex-wrap: inherit;
+        justify-content: center;
+    }
+    .fdn9ps2.footer-coins-wrap {
+        padding: 10px;
+    }
+    .f19tyczm .tit {
+       
+        text-align: center;
+        padding: 0 20px;
+    }
+    .top-action button{
+        margin-right: 0 !important;
+    }
+    .chat.open{
+        width: calc(100%) !important;
+        left: 0 !important;
+    }
+    .nav-action{
+        padding: 0 10px !important;
+    }
+    button.slick-prev, button.slick-next{
+        display: none !important;
+    }
+    .slick-dots{
+        bottom: 20px !important;
+    }
+    .f19tyczm.footer-gaming-wrap{
+        display: none ;
+    }
+    .fzoz0z4 .right-text{
+        display: none;
+    }
+    .fzoz0z4 .left-text{
+        width: 100% !important;
+    }
+    .fzoz0z4{
+        flex-direction: column;
+        text-align: center;
+    }
+    .bottom-nav {
+    position: fixed !important;
+    display: flex !important;
+    bottom: 0;
+    visibility: visible !important;
+    background: var(--background-color);
+    z-index: 100;
+        }
   }
-  
+.bottom-action{
+    display: flex;
+    
+}
 
 .aside.close{
     width: 64px;
@@ -251,7 +386,6 @@
 .top-nav{
     position: fixed;
     display: flex;
-    left: 260px;
     background: var(--standard-color);
     transition: var(--transt-05);
     box-shadow: 0 .125rem .5rem #0002;
@@ -259,6 +393,10 @@
 }
 .top-menu .nav-link:hover {
     background: var(--1ru4f9r);
+}
+
+.bottom-nav {
+   display: none;
 }
 
 .top-menu .nav-item {
@@ -429,6 +567,7 @@
     margin-bottom: 17px;
     position: relative;
     overflow: hidden;
+    top: 64px;
 }
 .thumbnail img{
     width: 100%;
@@ -657,7 +796,7 @@ line-height: 12px !important;
     display: block;
 }
 .top-nav{
-    position: fixed;
+    position: fixed !important;
 }
 .blue-btn{
     width: auto;

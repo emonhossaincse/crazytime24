@@ -7,7 +7,7 @@ const GameLunch = () => {
 
   return (
 
-    <div className='max-width'>
+    <div className='max-width game-lunch'>
     <div className="container">
     {iframeUrl ? (
         // Apply 100vh height directly to the iframe
