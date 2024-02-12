@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import AuthService from '../../Auth/AuthService';
 import { Modal } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWallet, faRightFromBracket, faUser} from '@fortawesome/free-solid-svg-icons';
+import { set } from 'mongoose';
+
 
 const MyModal = ({ showModal, handleClose }) => {
   const [username, setUsername] = useState('');
@@ -11,6 +15,8 @@ const MyModal = ({ showModal, handleClose }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('token'));
   const [isSessionId, setisSessionId] = useState(!!localStorage.getItem('sessionid'));
   const [isRemoteId, setIsRemoteId] = useState(!!localStorage.getItem('sessionid'));
+
+ 
 
 
   useEffect(() => {
@@ -280,6 +286,8 @@ const MyModal = ({ showModal, handleClose }) => {
 function SignIn() {
   const [showModal, setShowModal] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('token'));
+  const [isSessionId, setisSessionId] = useState(!!localStorage.getItem('sessionid'));
+  const [isRemoteId, setIsRemoteId] = useState(!!localStorage.getItem('sessionid'));
 
   const handleShow = () => {
     setShowModal(true);
@@ -290,10 +298,18 @@ function SignIn() {
     setShowModal(false);
     
   };
+  
   const handleLogOut = () =>{
+    localStorage.removeItem('token');
+    
     setIsLoggedIn(false);
+    
+    
   }
-
+  const handleWalletOpen = () =>{
+    const bodyElements = document.querySelector('.wallet');
+bodyElements.classList.add('open');
+};
   useEffect(() => {
     // Check if a token exists in localStorage when the component mounts
     const token = localStorage.getItem('token');
@@ -303,18 +319,44 @@ function SignIn() {
   }, []);
 
   return (
-    <div>
+    <div style={{ lineHeight: '64px' }}>
       {!isLoggedIn && (
-        <span onClick={handleShow} className="nav-action">
+       
+         <span onClick={handleShow} className="nav-action">
           Sign In
+        </span>
+       
+       
+      )}
+       {isLoggedIn &&(
+        <span className='nav-action balance-bg'>
+           <img style={{ width: '20px', margin: '5px' }} src='/assets/BDT.black.png'/>1000.00
         </span>
       )}
 
       {isLoggedIn &&(
-        <span onClick={handleLogOut} className="nav-action">
-        Log Out
+       
+      
+     
+       <span onClick={handleWalletOpen} className='nav-action'>
+        <FontAwesomeIcon icon={faWallet} />
+      </span>
+
+      
+      )}
+
+
+      {isLoggedIn && (
+         <span  onClick={handleLogOut} className='nav-action'>
+         <FontAwesomeIcon icon={faRightFromBracket} />
+       </span>
+      )}
+      {isLoggedIn &&(
+        <span  onClick={handleLogOut} className='nav-action'>
+        <FontAwesomeIcon icon={faUser} />
       </span>
       )}
+     
       <MyModal showModal={showModal} handleClose={handleClose} />
     </div>
   );

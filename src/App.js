@@ -23,6 +23,7 @@ import Footer from './layout/Footer';
 import Category from './layout/Category';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import GameLunch from './pages/GameLunch';
+import Wallet from './component/sidebar/Wallet';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('token'));
@@ -38,12 +39,13 @@ function App() {
   return (
     <div className="App">
       <Router>
-        {/* Place Router at the top level of your app */}
+     
         <Aside/>
         <Chat/>
         <TopNavMenu/>
+        <Wallet/>
         <Routes>
-          {/* Update Route definitions to use `element` prop in v6 */}
+        
           <Route path="/" element={<>
             <HomeBigBanner/>
             <HomeSlider/>
