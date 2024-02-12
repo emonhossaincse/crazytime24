@@ -225,7 +225,7 @@ img.common-left-img.mobile {
         left: 0 !important;
     }
     .nav-action{
-        padding: 0 10px !important;
+        padding: 0 0px !important;
     }
     button.slick-prev, button.slick-next{
         display: none !important;
@@ -242,10 +242,26 @@ img.common-left-img.mobile {
     .fzoz0z4 .left-text{
         width: 100% !important;
     }
+    .top-action button{
+        width: 100%;
+    }
+    .payment_bg img{
+        width: 50px;
+    }
+    .wallet-body{
+        padding: 20px 0;
+    }
+    .wallet-nav{
+        position: fixed;
+        width: 100%;
+        
+    }
+
     .fzoz0z4{
         flex-direction: column;
         text-align: center;
     }
+   
     .bottom-nav {
     position: fixed !important;
     display: flex !important;
@@ -538,6 +554,7 @@ img.common-left-img.mobile {
     transition: var(--transt-05);
     box-shadow: 0 .125rem .5rem #0002;
     z-index: 100;
+    height: 64px;
 }
 .top-menu .nav-link:hover {
     background: var(--1ru4f9r);

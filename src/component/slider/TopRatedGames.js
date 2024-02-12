@@ -168,12 +168,12 @@ const TopRatedGames = () => {
           {/* end::item */}
            {/* begin:item */}
            <div className="col-lg-12">
-            <div className="rated-game">
+            <div onClick={() => handleGameClick(109799)} className="rated-game">
               <div className="rated-game-thumbnail">
                 <img src="assets/media/thumbnail/game-05.png" alt="" />
               </div>
               <div className="rated-content">
-               <a href="#">BC Originals</a>
+               <a href="#">Hot Hot Halloween</a>
                 
                  <button className='btn blue-btn'>Play Now</button>
                 
