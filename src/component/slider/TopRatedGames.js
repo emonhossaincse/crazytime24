@@ -115,7 +115,7 @@ const TopRatedGames = () => {
                 <img src="https://stage.game-program.com/media/images/slots/square/es/jpg/es-crazy-time-mobile.jpg" alt="" />
               </div>
               <div className="rated-content">
-               <a href="#">Crazy Time</a>
+               <a href="#">Crazy Time Cheking</a>
                 
                  <button onClick={handleModalOpen} className='btn blue-btn'>Play Now</button>
                 

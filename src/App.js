@@ -26,15 +26,7 @@ import GameLunch from './pages/GameLunch';
 import Wallet from './component/sidebar/Wallet';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('token'));
-
-  useEffect(() => {
-    // Check if a token exists in localStorage when the component mounts
-    const token = localStorage.getItem('token');
-    if (token) {
-      setIsLoggedIn(true);
-    }
-  }, []);
+  
 
   return (
     <div className="App">
@@ -45,11 +37,10 @@ function App() {
         <TopNavMenu/>
         <Wallet/>
         <Routes>
-        
           <Route path="/" element={<>
             <HomeBigBanner/>
             <HomeSlider/>
-            {isLoggedIn && <Category/>}
+             <Category/>
             <RecentWins/>
             <TopRatedGames/>
             <PaymentBanner/>

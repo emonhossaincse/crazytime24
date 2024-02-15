@@ -107,9 +107,9 @@ const Wallet = () => {
               
                </InputGroup>
 
-               <div class="buttons">
-                <button  type="button"  class="ui-button button-big s-conic">
-                    <div class="button-inner">Submit</div>
+               <div className="buttons">
+                <button  type="button"  className="ui-button button-big s-conic">
+                    <div className="button-inner">Submit</div>
                     </button>
                     </div>
                
@@ -165,9 +165,9 @@ const Wallet = () => {
                </InputGroup>
 
                
-               <div class="buttons">
-                <button  type="button"  class="ui-button button-big s-conic">
-                    <div class="button-inner">Submit</div>
+               <div className="buttons">
+                <button  type="button"  className="ui-button button-big s-conic">
+                    <div className="button-inner">Submit</div>
                     </button>
                     </div>
                

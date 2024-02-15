@@ -139,9 +139,7 @@ img.common-left-img.mobile {
         top: 64px;
         margin-bottom: 60px;
     }
-    .top-action .nav-action .seen {
-        display: none;
-    }
+   
     .seen{
         display: block;
     }
@@ -236,6 +234,38 @@ img.common-left-img.mobile {
     .f19tyczm.footer-gaming-wrap{
         display: none ;
     }
+    .wallet-nav {
+        width: 100% !important;
+        position: fixed !important;
+        bottom: 0;
+        overflow-x: scroll;
+        height: 64px !important;
+        padding: 0 !important;
+    }
+    .wallet-nav .nav {
+        display: flex !important;
+        flex-direction: row;
+        overflow-x: scroll;
+        width: 100% !important;
+        flex-wrap: nowrap;
+        text-align: center !important;
+        font-size: 11px;
+    }
+    .wallet-nav .nav .nav-link {
+        padding-left: 0 !important;
+    }
+    .wallet-content{
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin: 10px !important;
+    }
+    .payment-method img {
+        width: 45px !important;
+       
+    }
+    .wallet-body{
+        padding: 0 !important;
+    }
     .fzoz0z4 .right-text{
         display: none;
     }
@@ -274,6 +304,10 @@ img.common-left-img.mobile {
 .bottom-action{
     display: flex;
     
+}
+.close-icon{
+    float: inline-end;
+    margin-top: -10%;
 }
 .wallte-title{
     color: var(--title-color);

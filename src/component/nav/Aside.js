@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faHouse, faUser, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 function Aside() {
   // Load the aside state and dark mode from local storage on component mount
   const initialAsideState = localStorage.getItem('asideState') === 'open';
   const initialDarkMode = localStorage.getItem('darkMode') === 'true';
+  
 
   const [isAsideOpen, setAsideOpen] = useState(initialAsideState);
   const [isDarkMode, setDarkMode] = useState(initialDarkMode);
