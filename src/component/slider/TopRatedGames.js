@@ -155,7 +155,7 @@ const TopRatedGames = () => {
            <div className="col-lg-12">
             <div onClick={() => handleGameClick(157966)} className="rated-game">
               <div className="rated-game-thumbnail">
-                <img src="assets/media/thumbnail/game-04.png" alt="" />
+                <img src="https://stage.game-program.com/media/images/slots/square/gs/jpg/gs-yellow-diver.jpg" alt="" />
               </div>
               <div className="rated-content">
                <a href="#">Yellow Diver</a>
@@ -170,7 +170,7 @@ const TopRatedGames = () => {
            <div className="col-lg-12">
             <div onClick={() => handleGameClick(109799)} className="rated-game">
               <div className="rated-game-thumbnail">
-                <img src="assets/media/thumbnail/game-05.png" alt="" />
+                <img src="https://stage.game-program.com/media/images/slots/square/ha/jpg/ha-hot-hot-halloween.jpg" alt="" />
               </div>
               <div className="rated-content">
                <a href="#">Hot Hot Halloween</a>
@@ -183,12 +183,12 @@ const TopRatedGames = () => {
           {/* end::item */}
            {/* begin:item */}
            <div className="col-lg-12">
-            <div className="rated-game">
+            <div onClick={() => handleGameClick(112229)} className="rated-game">
               <div className="rated-game-thumbnail">
-                <img src="assets/media/thumbnail/game-06.png" alt="" />
+                <img src="https://stage.game-program.com/media/images/slots/square/p0/jpg/p0-sweet-bonanza.jpg" alt="" />
               </div>
               <div className="rated-content">
-               <a href="#">BC Originals</a>
+               <a href="#">Sweet Bonanza</a>
                 
                  <button className='btn blue-btn'>Play Now</button>
                 
@@ -198,12 +198,12 @@ const TopRatedGames = () => {
           {/* end::item */}
            {/* begin:item */}
            <div className="col-lg-12">
-            <div className="rated-game">
+            <div onClick={() => handleGameClick(130043)} className="rated-game">
               <div className="rated-game-thumbnail">
                 <img src="assets/media/thumbnail/game-07.png" alt="" />
               </div>
               <div className="rated-content">
-               <a href="#">BC Originals</a>
+               <a href="#">Mega Wheel</a>
                 
                  <button className='btn blue-btn'>Play Now</button>
                 
