@@ -281,7 +281,7 @@ const TopRatedGames = () => {
       {/* end::rated_games_area */}
 
       <div>
-        {embed_code}
+        {embedCode}
       </div>
     </div>
     </div>
