@@ -246,12 +246,12 @@ const TopRatedGames = () => {
           {/* end::item */}
            {/* begin:item */}
            <div className="col-lg-12">
-            <div className="rated-game">
+            <div onClick={() => handleGameClick(150627)}  className="rated-game">
               <div className="rated-game-thumbnail">
-                <img src="assets/media/thumbnail/game-10.png" alt="" />
+                <img src="https://stage.game-program.com/media/images/slots/square/es/jpg/es-roleta-ao-vivo.jpg" alt="" />
               </div>
               <div className="rated-content">
-               <a href="#">BC Originals</a>
+               <a href="#">Roleta Ao Vivo</a>
                 
                  <button className='btn blue-btn'>Play Now</button>
                 
