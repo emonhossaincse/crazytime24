@@ -128,6 +128,21 @@ const TopRatedGames = () => {
           {/* end::item */}
            {/* begin:item */}
            <div className="col-lg-12">
+            <div onClick={() => handleGameClick(150627)}  className="rated-game">
+              <div className="rated-game-thumbnail">
+                <img src="https://stage.game-program.com/media/images/slots/square/es/jpg/es-roleta-ao-vivo.jpg" alt="" />
+              </div>
+              <div className="rated-content">
+               <a href="#">Roleta Ao Vivo</a>
+                
+                 <button className='btn blue-btn'>Play Now</button>
+                
+              </div>
+            </div>
+          </div>
+          {/* end::item */}
+           {/* begin:item */}
+           <div className="col-lg-12">
             <div onClick={() => handleGameClick(115287)} className="rated-game">
               <div className="rated-game-thumbnail">
                 <img src="https://stage.game-program.com/media/images/slots/square/es/jpg/es-crazy-time.jpg" alt="" />
@@ -244,21 +259,7 @@ const TopRatedGames = () => {
             </div>
           </div>
           {/* end::item */}
-           {/* begin:item */}
-           <div className="col-lg-12">
-            <div onClick={() => handleGameClick(150627)}  className="rated-game">
-              <div className="rated-game-thumbnail">
-                <img src="https://stage.game-program.com/media/images/slots/square/es/jpg/es-roleta-ao-vivo.jpg" alt="" />
-              </div>
-              <div className="rated-content">
-               <a href="#">Roleta Ao Vivo</a>
-                
-                 <button className='btn blue-btn'>Play Now</button>
-                
-              </div>
-            </div>
-          </div>
-          {/* end::item */}
+          
            {/* begin:item */}
            <div className="col-lg-12">
             <div className="rated-game">
