@@ -15,6 +15,7 @@ const TopRatedGames = () => {
   const [showModal, setShowModal] = useState(false);
   const [iframeUrl, setIframeUrl] = useState(null);
   const navigate = useNavigate();
+  const [embedCode, setEmbedCode] = useState(null);
   
   
   
@@ -76,15 +77,17 @@ const TopRatedGames = () => {
           game_id: gameId,
           lang: 'en', // Replace with the desired language
           play_for_fun: false, // Replace with the desired play_for_fun value
-          home_url: 'https://six6.site/', // Replace with your actual home URL
+          home_url: 'https://six6.online/', // Replace with your actual home URL
         }),
       });
 
       const data = await response.json();
 
       if (response.ok) {
-        navigate('/game', { state: { iframeUrl: data.response.response.url } });
+        // navigate('/game', { state: { iframeUrl: data.response.response.url } });
+        setEmbedCode(data.response.response.embed_code);
 
+        
 
       } else {
         setError(data.message || 'An unexpected error occurred');
@@ -213,12 +216,12 @@ const TopRatedGames = () => {
           {/* end::item */}
            {/* begin:item */}
            <div className="col-lg-12">
-            <div className="rated-game">
+            <div onClick={() => handleGameClick(123895)} className="rated-game">
               <div className="rated-game-thumbnail">
-                <img src="assets/media/thumbnail/game-08.png" alt="" />
+                <img src="https://stage.game-program.com/media/images/slots/square/di/jpg/di-live-betting-mobile.jpg" alt="" />
               </div>
               <div className="rated-content">
-               <a href="#">BC Originals</a>
+               <a href="#">LiveBetting</a>
                 
                  <button className='btn blue-btn'>Play Now</button>
                 
@@ -228,12 +231,12 @@ const TopRatedGames = () => {
           {/* end::item */}
            {/* begin:item */}
            <div className="col-lg-12">
-            <div className="rated-game">
+            <div onClick={() => handleGameClick(914)}  className="rated-game">
               <div className="rated-game-thumbnail">
                 <img src="assets/media/thumbnail/game-09.png" alt="" />
               </div>
               <div className="rated-content">
-               <a href="#">BC Originals</a>
+               <a href="#">Youtube</a>
                 
                  <button className='btn blue-btn'>Play Now</button>
                 
@@ -276,6 +279,10 @@ const TopRatedGames = () => {
         </Slider>
       </div>
       {/* end::rated_games_area */}
+
+      <div>
+        {embed_code}
+      </div>
     </div>
     </div>
   );
