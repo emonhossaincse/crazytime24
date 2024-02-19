@@ -31,7 +31,7 @@ function TopNavMenu (){
               game_id: gameId,
               lang: 'en', // Replace with the desired language
               play_for_fun: false, // Replace with the desired play_for_fun value
-              home_url: 'https://six6.online', // Replace with your actual home URL
+              home_url: 'https://six6.site', // Replace with your actual home URL
             }),
           });
     
