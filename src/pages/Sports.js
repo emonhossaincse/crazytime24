@@ -11,7 +11,8 @@ const Sports = () => {
   return (
     <div className='max-width game-lunch'>
       <div className="container">
-            {soprtsLink}
+            
+            <div dangerouslySetInnerHTML={{__html: soprtsLink}}/>
       </div>
     </div>
   );
