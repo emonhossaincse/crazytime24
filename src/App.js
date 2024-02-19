@@ -25,6 +25,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import GameLunch from './pages/GameLunch';
 import Wallet from './component/sidebar/Wallet';
 import BottomNavMenu from './component/nav/BottomNavMenu';
+import Sports from './pages/Sports';
 
 function App() {
   
@@ -51,6 +52,7 @@ function App() {
             <Footer/>
           </>} />
           <Route path="/game" element={<GameLunch />} />
+          <Route path="/sports" element={<Sports />} />
         </Routes>
       </Router>
     </div>

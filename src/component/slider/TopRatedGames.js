@@ -15,7 +15,7 @@ const TopRatedGames = () => {
   const [showModal, setShowModal] = useState(false);
   const [iframeUrl, setIframeUrl] = useState(null);
   const navigate = useNavigate();
-  const [embedCode, setEmbedCode] = useState(null);
+  
   
   
   
@@ -84,9 +84,8 @@ const TopRatedGames = () => {
       const data = await response.json();
 
       if (response.ok) {
-        // navigate('/game', { state: { iframeUrl: data.response.response.url } });
-        setEmbedCode(data.response.response.embed_code);
-        console.log(data.response.response.embed_code);
+        navigate('/game', { state: { iframeUrl: data.response.response.url } });
+      
 
         
 
@@ -232,7 +231,7 @@ const TopRatedGames = () => {
           {/* end::item */}
            {/* begin:item */}
            <div className="col-lg-12">
-            <div onClick={() => handleGameClick(123895)} className="rated-game">
+            <div onClick={() => handleGameClick(123897)} className="rated-game">
               <div className="rated-game-thumbnail">
                 <img src="https://stage.game-program.com/media/images/slots/square/di/jpg/di-live-betting-mobile.jpg" alt="" />
               </div>
@@ -283,7 +282,7 @@ const TopRatedGames = () => {
       {/* end::rated_games_area */}
 
       
-      {embedCode && <div className='max-width' dangerouslySetInnerHTML={{ __html: embedCode }} />}
+     
       
     </div>
     </div>
