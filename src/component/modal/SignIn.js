@@ -376,7 +376,7 @@ useEffect(() => {
        
       )}
           {isLoggedIn && (
-      <span className='nav-action balance-bg'>
+      <span className='balance-bg'>
         <img style={{ width: '20px', margin: '5px' }} src='/assets/BDT.black.png'/>
         {balance} 
       </span>

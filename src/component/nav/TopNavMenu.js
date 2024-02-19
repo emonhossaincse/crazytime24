@@ -12,9 +12,7 @@ function TopNavMenu (){
         chatElement.classList.remove('open');
     };
 
-    const handleOpenSignUp = () => {
     
-    }
 
     return(
           

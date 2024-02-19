@@ -24,6 +24,7 @@ import Category from './layout/Category';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import GameLunch from './pages/GameLunch';
 import Wallet from './component/sidebar/Wallet';
+import BottomNavMenu from './component/nav/BottomNavMenu';
 
 function App() {
   
@@ -35,6 +36,7 @@ function App() {
         <Aside/>
         <Chat/>
         <TopNavMenu/>
+        <BottomNavMenu/>
         <Wallet/>
         <Routes>
           <Route path="/" element={<>

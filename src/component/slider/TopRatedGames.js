@@ -15,7 +15,7 @@ const TopRatedGames = () => {
   const [showModal, setShowModal] = useState(false);
   const [iframeUrl, setIframeUrl] = useState(null);
   const navigate = useNavigate();
-  // const [embedCode, setEmbedCode] = useState(null);
+  const [embedCode, setEmbedCode] = useState(null);
   
   
   
@@ -77,15 +77,16 @@ const TopRatedGames = () => {
           game_id: gameId,
           lang: 'en', // Replace with the desired language
           play_for_fun: false, // Replace with the desired play_for_fun value
-          home_url: 'https://six6.six/', // Replace with your actual home URL
+          home_url: 'https://six6.site', // Replace with your actual home URL
         }),
       });
 
       const data = await response.json();
 
       if (response.ok) {
-        navigate('/game', { state: { iframeUrl: data.response.response.url } });
-        // setEmbedCode(data.response.response.embed_code);
+        // navigate('/game', { state: { iframeUrl: data.response.response.url } });
+        setEmbedCode(data.response.response.embed_code);
+        console.log(data.response.response.embed_code);
 
         
 
@@ -103,7 +104,7 @@ const TopRatedGames = () => {
       <div className="container">
         
           <div className="title">
-            <p>Top Rated Games</p>
+            <p>Casino</p>
          
         </div>
        
@@ -281,9 +282,9 @@ const TopRatedGames = () => {
       </div>
       {/* end::rated_games_area */}
 
-      <div>
-        {/* {embedCode} */}
-      </div>
+      
+      {embedCode && <div className='max-width' dangerouslySetInnerHTML={{ __html: embedCode }} />}
+      
     </div>
     </div>
   );
