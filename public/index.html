@@ -30,106 +30,16 @@
   <body class="darken">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <script type="text/javascript" src="https://sport.seriea.fun/js/Partner/IntegrationLoader.js"></script>
-    <script src="https://sport.seriea.fun/js/partner/bootstrapper.min.js?gl=0.5&v=0.00"></script>
-    <div id="sport_div_iframe"></div>
-    <script type="text/javascript">
-    
-        function receiveMessage(event) {
-            if (event.data.command == 'login') {
-                login();
-            } else if (event.data.command == 'registration') {
-                                register();
-                        }
-        }
-    
-        function setLaunchConfig(check) {
-            return {
-                desktop: {
-                    sp: [
-                        ['server', 'https://sport.seriea.fun/'],
-                        ['token', '1228172-123897-65296ad449e1ae4542a91e12fb654cb9'],
-                        ['currentPage', 'Overview'],
-                        ['device', 'd'],
-                        ['language', 'en'],
-                        ['login', 'SportLogin'],
-                        ['registration', 'SportRegistration'],
-                        ["fixedHeight", true],
-                                                                                    ["parent", ["seriea.fun","stage.game-program.com","six6.online"]],
-                                        ],
-                    initializeApplication: function(params) {
-                        SportFrame.frame(params);
-                    }
-                },
-                mobile: {
-                    params: {
-                        server: 'https://sport.seriea.fun/',
-                        containerId: "sport_div_iframe",
-                        token: '1228172-123897-65296ad449e1ae4542a91e12fb654cb9',
-                        defaultLanguage: 'en',
-                        hashRouterDisabled: false,
-                        loginTrigger: function() {
-                            login();
-                        }
-                    },
-                    initializeApplication: function(params) {
-                        if(check) {
-                            var height = returnMobileAppHeight();
-                            Bootstrapper.bootIframe( params, { name: "Mobile" }, { height: height } );
-                        } else {
-                            Bootstrapper.boot( params, { name: "Mobile" } );
-                        }
-                    }
-                }
-            };
-        }
-    
-        function returnMobileAppHeight() {
-            var desktopElement = document.getElementById('navContainer');
-            var mobileElement = document.getElementById('top-bar');
-            var topHeight = 0;
-            if (typeof (desktopElement) != 'undefined' && desktopElement != null) {
-                topHeight = document.getElementById('navContainer').clientHeight;
-            } else if (typeof (mobileElement) != 'undefined' && mobileElement != null) {
-                topHeight = document.getElementById('top-bar').clientHeight;
-            }
-    
-            var height = document.documentElement.clientHeight - topHeight;
-            if (!height) //default height
-                height = 500;
-    
-            return height + 'px';
-        }
-    
-        //window.addEventListener('load', function () {
-            var sIframe = document.getElementById('sport_div_iframe');
-            var gh = document.getElementById('gameholder');
-            var checkGh = gh !== null;
-    
-            var config = setLaunchConfig(checkGh);
-    
-                        config.desktop.initializeApplication(config.desktop.sp);
-    
-                var iframe = document.getElementById('iframe');
-                if(iframe !== null) {
-                    iframe.appendChild(sIframe);
-                }
-            
-            if(checkGh) {
-                                gh.setAttribute('style','overflow-y: scroll;');
-                            gh.appendChild(sIframe);
-            }
-    
-        //});
-    
-        window.addEventListener("message", receiveMessage, false);
-    
-        window.loginTrigger = function() {
-            login();
-        }
-    
-    </script>
-    
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
   </body>
 
   

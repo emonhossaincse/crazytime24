@@ -64,14 +64,22 @@ const TopRatedGames = () => {
 
   const handleGameClick = async (gameId) => {
     try {
+      // Fetch the user's authentication token from localStorage
+      const token = localStorage.getItem('token');
+      
+      // Ensure that the user is logged in before making the request
+      if (!token) {
+        setError('User not logged in');
+        return;
+      }
+  
       // Fetch the game details from the Laravel backend
       const response = await fetch('https://six6.site/api/get-game-direct', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
-          // Include your authentication token if required
-          'Authorization': `Bearer ${localStorage.getItem('token')}`,
+          'Authorization': `Bearer ${token}`, // Include the authentication token
         },
         body: JSON.stringify({
           game_id: gameId,
@@ -80,15 +88,12 @@ const TopRatedGames = () => {
           home_url: 'https://six6.site', // Replace with your actual home URL
         }),
       });
-
+  
       const data = await response.json();
-
+  
       if (response.ok) {
         navigate('/game', { state: { iframeUrl: data.response.response.url } });
-      
-
-        
-
+        console.log(data.response.response.e);
       } else {
         setError(data.message || 'An unexpected error occurred');
       }
@@ -97,6 +102,7 @@ const TopRatedGames = () => {
       setError('An unexpected error occurred');
     }
   };
+  
 
   return (
     <div className='max-width'>
@@ -113,7 +119,7 @@ const TopRatedGames = () => {
         <Slider {...sliderSettings}>
           {/* begin:item */}
           <div className="col-lg-12">
-            <div  onClick={() => handleGameClick(120179)} className="rated-game">
+            <div  onClick={() => handleGameClick(115287)} className="rated-game">
               <div  className="rated-game-thumbnail">
                 <img src="https://stage.game-program.com/media/images/slots/square/es/jpg/es-crazy-time-mobile.jpg" alt="" />
               </div>
@@ -231,7 +237,7 @@ const TopRatedGames = () => {
           {/* end::item */}
            {/* begin:item */}
            <div className="col-lg-12">
-            <div onClick={() => handleGameClick(123897)} className="rated-game">
+            <div onClick={() => handleGameClick(120179)} className="rated-game">
               <div className="rated-game-thumbnail">
                 <img src="https://stage.game-program.com/media/images/slots/square/di/jpg/di-live-betting-mobile.jpg" alt="" />
               </div>
