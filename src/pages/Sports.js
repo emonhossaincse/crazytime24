@@ -12,7 +12,7 @@ const Sports = () => {
     <div className='max-width game-lunch'>
       <div className="container">
             
-            <div dangerouslySetInnerHTML={{__html: soprtsLink}}/>
+      <iframe src='https://six6.site/game' />
       </div>
     </div>
   );
