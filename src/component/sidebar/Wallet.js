@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Tab from 'react-bootstrap/Tab';
 import Nav from 'react-bootstrap/Nav';
 import Table from 'react-bootstrap/Table';
@@ -9,13 +9,70 @@ import { faWallet, faPiggyBank, faMoneyBillTransfer, faCreditCard, faXmark, faMo
 
 
 const Wallet = () => {
-  const [key, setKey] = useState('balance');
+  const [activeKey, setActive] = useState('balance');
   const closeWallet = () => {
-    const chatElement = document.querySelector('.wallet');
+  const chatElement = document.querySelector('.wallet');
     chatElement.classList.remove('open');
+    
+
+
+
+};
+const [transactionType, setTransactionType] = useState('deposit'); // Default to 'deposit'
+const [remoteId, setRemoteId] = useState(localStorage.getItem('remote_id'));
+const [amount, setAmount] = useState('');
+const [transactionId, setTransactionId] = useState('');
+const [provider, setProvider] = useState('');
+const [key, setKey] = useState('0');
+const [errors, setErrors] = useState('');
+const [responseData, setResponseData] = useState(null);
+
+const handleCreateTransaction = async () => {
+  const action = transactionType; // Use the transactionType directly
+  try {
+    const response = await fetch(`http://127.0.0.1:8000/api/transaction`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        action: transactionType, // Corrected from 'action' to 'transactionType'
+        remote_id: remoteId,
+        amount: amount,
+        transaction_id: transactionId,
+        provider: provider,
+        key: key,
+      }),
+    });
+
+    const responseData = await response.json();
+
+    if (response.ok) {
+      console.log(`${action} Success:`, responseData);
+      setResponseData(responseData);
+    } else {
+      setErrors(responseData.error);
+    }
+  } catch (error) {
+    console.error(`${action} Fetch Error:`, error);
+  }
 };
 
+const setTransactionTypeAndExecute = (type) => {
+  setTransactionType(type); // Dynamically set the transaction type
+  handleCreateTransaction(); // Then execute the transaction
+};
 
+useEffect(() => {
+  const errorTimer = setTimeout(() => {
+    setErrors('');
+  }, 5000);
+  
+
+  return () => clearTimeout(errorTimer);
+
+  
+}, []);
   return (
     
     <>
@@ -25,7 +82,7 @@ const Wallet = () => {
    
      <div className='max-width wallet'>
   
-  <Tab.Container id="left-tabs-example" defaultActiveKey="home" activeKey={key} onSelect={(k) => setKey(k)}>
+  <Tab.Container id="left-tabs-example" defaultActiveKey="home" Key={activeKey} onSelect={(k) => setActive(k)}>
       <div className='wallet-header'>
         <div className='wallte-title'>
           Wallet
@@ -79,12 +136,34 @@ const Wallet = () => {
           </div>
           <div className='transation-from'>
               <form>
+                <InputGroup className='mb-3'>
+                <FormControl
+                
+                  type='hidden'
+               
+                  value={key}
+                  
+                  aria-describedby="basic-addon1"
+              />
+              
+               <FormControl
+                  placeholder="Amount"
+                  type='hidden'
+                  aria-label="amount"
+                  value={remoteId}
+                
+                  aria-describedby="basic-addon1"
+              />
+             
+                </InputGroup>
               <InputGroup className="mb-3">
               <InputGroup.Text id="basic-addon1"><FontAwesomeIcon icon={faMoneyBill} /></InputGroup.Text>
               <FormControl
                   placeholder="Amount"
                   aria-label="amount"
                   aria-describedby="basic-addon1"
+                  value={amount}
+                  onChange={(e) => setAmount(e.target.value)}
               />
               
                </InputGroup>
@@ -94,6 +173,8 @@ const Wallet = () => {
                   placeholder="Transaction id"
                   aria-label="transaction_id"
                   aria-describedby="basic-addon1"
+                  value={transactionId}
+                  onChange={(e) => setTransactionId(e.target.value)}
               />
               
                </InputGroup>
@@ -103,12 +184,14 @@ const Wallet = () => {
                   placeholder="Sender Wallet Number"
                   aria-label="from"
                   aria-describedby="basic-addon1"
+                  value={provider}
+                  onChange={(e) => setProvider(e.target.value)}
               />
               
                </InputGroup>
 
                <div className="buttons">
-                <button  type="button"  className="ui-button button-big s-conic">
+                <button  type="button" onClick={() => setTransactionTypeAndExecute('deposit')} className="ui-button button-big s-conic">
                     <div className="button-inner">Submit</div>
                     </button>
                     </div>
@@ -135,13 +218,35 @@ const Wallet = () => {
               </div>
           </div>
           <div className='transation-from'>
-              <form>
+          <form>
+                <InputGroup className='mb-3'>
+                <FormControl
+                
+                  type='hidden'
+               
+                  value={key}
+                  
+                  aria-describedby="basic-addon1"
+              />
+             
+               <FormControl
+                  placeholder="Amount"
+                  type='hidden'
+                  aria-label="amount"
+                  value={remoteId}
+                
+                  aria-describedby="basic-addon1"
+              />
+             
+                </InputGroup>
               <InputGroup className="mb-3">
               <InputGroup.Text id="basic-addon1"><FontAwesomeIcon icon={faMoneyBill} /></InputGroup.Text>
               <FormControl
                   placeholder="Amount"
                   aria-label="amount"
                   aria-describedby="basic-addon1"
+                  value={amount}
+                  onChange={(e) => setAmount(e.target.value)}
               />
               
                </InputGroup>
@@ -151,22 +256,31 @@ const Wallet = () => {
                   placeholder="Transaction id"
                   aria-label="transaction_id"
                   aria-describedby="basic-addon1"
+                  value={transactionId}
+                  onChange={(e) => setTransactionId(e.target.value)}
               />
               
                </InputGroup>
                <InputGroup className="mb-3">
               <InputGroup.Text id="basic-addon1"><FontAwesomeIcon icon={faPhone} /></InputGroup.Text>
               <FormControl
-                  placeholder="Receiver Wallet Number"
+                  placeholder="Sender Wallet Number"
                   aria-label="from"
                   aria-describedby="basic-addon1"
+                  value={provider}
+                  onChange={(e) => setProvider(e.target.value)}
               />
               
                </InputGroup>
 
+               { errors &&   
+                      <div> {errors}</div>
+            
                
+                  }
+
                <div className="buttons">
-                <button  type="button"  className="ui-button button-big s-conic">
+                <button  type="button" onClick={() => setTransactionTypeAndExecute('withdraw')} className="ui-button button-big s-conic">
                     <div className="button-inner">Submit</div>
                     </button>
                     </div>
@@ -211,6 +325,8 @@ const Wallet = () => {
           </div>
       </div>
   </Tab.Container>
+
+ 
 
   
 

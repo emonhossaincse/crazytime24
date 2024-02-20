@@ -294,7 +294,7 @@ function SignIn() {
   const [showModal, setShowModal] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('token'));
   const [isSessionId, setisSessionId] = useState(!!localStorage.getItem('sessionid'));
-  const [isRemoteId, setIsRemoteId] = useState(!!localStorage.getItem('sessionid'));
+  const [isRemoteId, setIsRemoteId] = useState(!!localStorage.getItem('remote_id'));
   const [balance, setBalance] = useState('');
 
 
