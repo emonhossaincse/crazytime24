@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 const Sports = () => {
   const location = useLocation();
   const { soprtsLink } = location.state || {}; 
-
+  console.log(soprtsLink);
 
 
   return (
