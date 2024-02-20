@@ -352,16 +352,12 @@ useEffect(() => {
   const token = localStorage.getItem('token');
   if (token) {
     setIsLoggedIn(true);
-    // Initialize balance from local storage
-    const storedBalance = localStorage.getItem('balance');
-    if (storedBalance) {
-      setBalance(storedBalance);
-    }
+   
   }
-  fetchBalance();
+ 
   // Optional: Refresh balance every X milliseconds
-  const interval = setInterval(fetchBalance, 30000); // Adjust interval as needed
-  return () => clearInterval(interval);
+ 
+ 
 }, []);
 
 
