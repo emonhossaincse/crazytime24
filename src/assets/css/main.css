@@ -345,6 +345,9 @@ img.common-left-img.mobile {
     .nav-action{
         /* display: none; */
     }
+    .display-none{
+        display: none !important;
+    }
   }
 .fa-wallet{
     color: var(--text-color) !important;

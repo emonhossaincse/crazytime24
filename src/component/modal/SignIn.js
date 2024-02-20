@@ -387,7 +387,7 @@ useEffect(() => {
        
       
      
-       <span onClick={handleWalletOpen} className='nav-action'>
+       <span onClick={handleWalletOpen} className='nav-action display-none'>
         <FontAwesomeIcon icon={faWallet} />
       </span>
 
@@ -401,7 +401,7 @@ useEffect(() => {
        </span>
       )}
       {isLoggedIn &&(
-        <span  onClick={handleLogOut} className='nav-action'>
+        <span  onClick={handleLogOut} className='nav-action display-none'>
         <FontAwesomeIcon icon={faUser} />
       </span>
       )}
