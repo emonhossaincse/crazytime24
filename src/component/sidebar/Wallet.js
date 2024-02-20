@@ -30,7 +30,7 @@ const [responseData, setResponseData] = useState(null);
 const handleCreateTransaction = async () => {
   const action = transactionType; // Use the transactionType directly
   try {
-    const response = await fetch(`http://127.0.0.1:8000/api/transaction`, {
+    const response = await fetch(`'https://six6.site/api/transaction`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
