@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useLocation } from 'react-router-dom';
 
 const Sports = () => {
@@ -11,7 +11,7 @@ const Sports = () => {
     <div className='max-width game-lunch'>
       <div className="container">
             
-        {/* <iframe src='https://six6.site/game'/> */}
+        <iframe src='https://six6.site/game'/>
         <div dangerouslySetInnerHTML={{ __html: soprtsLink}} />
       </div>
     </div>
