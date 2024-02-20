@@ -343,7 +343,7 @@ img.common-left-img.mobile {
         
     }
     .nav-action{
-        display: none;
+        /* display: none; */
     }
   }
 .fa-wallet{
