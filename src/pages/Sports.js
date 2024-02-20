@@ -13,7 +13,7 @@ const Sports = () => {
       <div className="container">
             
      
-        <div dangerouslySetInnerHTML={{ __html: soprtsLink || '' }} />
+        <div dangerouslySetInnerHTML={{ __html: soprtsLink}} />
       </div>
     </div>
   );
