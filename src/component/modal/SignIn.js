@@ -295,34 +295,34 @@ function SignIn() {
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('token'));
   const [isSessionId, setisSessionId] = useState(!!localStorage.getItem('sessionid'));
   const [isRemoteId, setIsRemoteId] = useState(!!localStorage.getItem('remote_id'));
-  // const [balance, setBalance] = useState('');
+  const [balance, setBalance] = useState('');
 
 
-//   const fetchBalance = async () => {
-//     const token = localStorage.getItem('token');
-//     if (token) {
-//         try {
-//             const response = await fetch('https://six6.site/api/balance', {
-//                 method: 'POST',
-//                 headers: {
-//                     'Authorization': `Bearer ${token}`,
-//                 },
-//             });
+  const fetchBalance = async () => {
+    const token = localStorage.getItem('token');
+    if (token) {
+        try {
+            const response = await fetch('https://six6.site/api/balance', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                },
+            });
 
-//             if (response.ok) {
-//                 const data = await response.json();
-//                 setBalance(data.balance);
-//             } else {
-//                 console.error('Failed to fetch balance with status:', response.status);
-//                 // Optionally, read and log the response text to see the error page content
-//                 const text = await response.text();
-//                 console.error('Error page content:', text);
-//             }
-//         } catch (error) {
-//             console.error('Error fetching balance:', error);
-//         }
-//     }
-// };
+            if (response.ok) {
+                const data = await response.json();
+                setBalance(data.balance);
+            } else {
+                console.error('Failed to fetch balance with status:', response.status);
+                // Optionally, read and log the response text to see the error page content
+                const text = await response.text();
+                console.error('Error page content:', text);
+            }
+        } catch (error) {
+            console.error('Error fetching balance:', error);
+        }
+    }
+};
 
 
   const handleShow = () => {
@@ -352,12 +352,16 @@ useEffect(() => {
   const token = localStorage.getItem('token');
   if (token) {
     setIsLoggedIn(true);
-   
+    // Initialize balance from local storage
+    const storedBalance = localStorage.getItem('balance');
+    if (storedBalance) {
+      setBalance(storedBalance);
+    }
   }
- 
+  fetchBalance();
   // Optional: Refresh balance every X milliseconds
- 
- 
+  const interval = setInterval(fetchBalance, 30000); // Adjust interval as needed
+  return () => clearInterval(interval);
 }, []);
 
 
@@ -374,7 +378,7 @@ useEffect(() => {
           {isLoggedIn && (
       <span className='balance-bg'>
         <img style={{ width: '20px', margin: '5px' }} src='/assets/BDT.black.png'/>
-        1000.00
+        {balance} 
       </span>
     )}
 
