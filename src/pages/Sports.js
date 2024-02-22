@@ -17,7 +17,7 @@ const loadScript = (src) => {
   });
 };
 
-const DynamicScriptComponent = () => {
+const Sports = () => {
   const containerRef = useRef(null);
 
   const location = useLocation();
@@ -65,4 +65,4 @@ const DynamicScriptComponent = () => {
   return <div ref={containerRef}>Loading content...</div>;
 };
 
-export default DynamicScriptComponent;
+export default Sports;
