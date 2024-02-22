@@ -63,7 +63,7 @@ const Sports = () => {
   }, []);
 
   return (
-    <div className='max-width'>
+    <div className='max-width game-lunch'>
 <div ref={containerRef}>Loading content...</div>
 
     </div>

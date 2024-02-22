@@ -360,6 +360,9 @@ img.common-left-img.mobile {
     float: inline-end;
     margin-top: -10%;
 }
+.game-lunch{
+    top: 64px;
+}
 .wallte-title{
     color: var(--title-color);
     width: 50%;
