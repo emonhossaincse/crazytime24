@@ -1,43 +1,137 @@
 import React, { useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
 
-const Sports = () => {
-  const location = useLocation();
-  const { sportsLink } = location.state || {}; // Assuming sportsLink is a function
-  const containerRef = useRef(null);
-  console.log(sportsLink);
-
-  useEffect(() => {
-    if (sportsLink) {
-      sportsLink().then((htmlContent) => {
-        if (containerRef.current) {
-          containerRef.current.innerHTML = htmlContent;
-
-          const scripts = [...containerRef.current.querySelectorAll('script')];
-          scripts.forEach((originalScript) => {
-            const script = document.createElement('script');
-            if (originalScript.src) {
-              script.src = originalScript.src;
-            } else {
-              script.textContent = originalScript.textContent;
-            }
-            originalScript.parentNode.replaceChild(script, originalScript);
-          });
-        }
-      }).catch(error => {
-        console.error('Failed to load sports content:', error);
-        // Handle the error appropriately
-      });
-    }
-  }, [sportsLink]);
-
-  return (
-    <div className='max-width game-launch'>
-      <div className="container" ref={containerRef}>
-        {/* Content will be injected and scripts executed here */}
-      </div>
-    </div>
-  );
+// Mock function to simulate fetching data from an API
+const fetchContentFromAPI = () => {
+  return Promise.resolve(`
+  <script type="text/javascript" src="https://sport.seriea.fun/js/Partner/IntegrationLoader.js"></script>
+  <script src="https://sport.seriea.fun/js/partner/bootstrapper.min.js?gl=0.5&amp;v=0.00"></script>
+  <div id="sport_div_iframe"></div>
+  <script type="text/javascript">
+  
+      function receiveMessage(event) {
+          if (event.data.command == 'login') {
+              login();
+          } else if (event.data.command == 'registration') {
+                              register();
+                      }
+      }
+  
+      function setLaunchConfig(check) {
+          return {
+              desktop: {
+                  sp: [
+                      ['server', 'https://sport.seriea.fun/'],
+                      ['token', '1243995-123897-eca9dcfff9e297bb5ec05a8bbb8dbc10'],
+                      ['currentPage', 'Overview'],
+                      ['device', 'd'],
+                      ['language', 'en'],
+                      ['login', 'SportLogin'],
+                      ['registration', 'SportRegistration'],
+                      ["fixedHeight", true],
+                                                                                  ["parent", ["seriea.fun","stage.game-program.com","www.six6.online"]],
+                                      ],
+                  initializeApplication: function(params) {
+                      SportFrame.frame(params);
+                  }
+              },
+              mobile: {
+                  params: {
+                      server: 'https://sport.seriea.fun/',
+                      containerId: "sport_div_iframe",
+                      token: '1243995-123897-eca9dcfff9e297bb5ec05a8bbb8dbc10',
+                      defaultLanguage: 'en',
+                      hashRouterDisabled: false,
+                      loginTrigger: function() {
+                          login();
+                      }
+                  },
+                  initializeApplication: function(params) {
+                      if(check) {
+                          var height = returnMobileAppHeight();
+                          Bootstrapper.bootIframe( params, { name: "Mobile" }, { height: height } );
+                      } else {
+                          Bootstrapper.boot( params, { name: "Mobile" } );
+                      }
+                  }
+              }
+          };
+      }
+  
+      function returnMobileAppHeight() {
+          var desktopElement = document.getElementById('navContainer');
+          var mobileElement = document.getElementById('top-bar');
+          var topHeight = 0;
+          if (typeof (desktopElement) != 'undefined' && desktopElement != null) {
+              topHeight = document.getElementById('navContainer').clientHeight;
+          } else if (typeof (mobileElement) != 'undefined' && mobileElement != null) {
+              topHeight = document.getElementById('top-bar').clientHeight;
+          }
+  
+          var height = document.documentElement.clientHeight - topHeight;
+          if (!height) //default height
+              height = 500;
+  
+          return height + 'px';
+      }
+  
+      //window.addEventListener('load', function () {
+          var sIframe = document.getElementById('sport_div_iframe');
+          var gh = document.getElementById('gameholder');
+          var checkGh = gh !== null;
+  
+          var config = setLaunchConfig(checkGh);
+  
+                      config.desktop.initializeApplication(config.desktop.sp);
+  
+              var iframe = document.getElementById('iframe');
+              if(iframe !== null) {
+                  iframe.appendChild(sIframe);
+              }
+          
+          if(checkGh) {
+                              gh.setAttribute('style','overflow-y: scroll;');
+                          gh.appendChild(sIframe);
+          }
+  
+      //});
+  
+      window.addEventListener("message", receiveMessage, false);
+  
+      window.loginTrigger = function() {
+          login();
+      }
+  
+  </script>
+  `);
 };
 
-export default Sports;
+const DynamicScriptComponent = () => {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    fetchContentFromAPI().then(htmlContent => {
+      if (containerRef.current) {
+        containerRef.current.innerHTML = htmlContent;
+
+        // Execute scripts
+        const scripts = containerRef.current.querySelectorAll('script');
+        scripts.forEach((originalScript) => {
+          const script = document.createElement('script');
+          if (originalScript.src) {
+            script.src = originalScript.src;
+          } else {
+            script.textContent = originalScript.textContent;
+          }
+          document.body.appendChild(script);
+          originalScript.parentNode.removeChild(originalScript);
+          // Optionally, remove the script element after execution
+          // script.parentNode.removeChild(script);
+        });
+      }
+    });
+  }, []);
+
+  return <div ref={containerRef}>Loading...</div>;
+};
+
+export default DynamicScriptComponent;
