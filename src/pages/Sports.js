@@ -64,10 +64,10 @@ const Sports = () => {
 
   return (
     <div className='max-width'>
-<div ref={containerRef}>Loading content...</div>;
+<div ref={containerRef}>Loading content...</div>
 
     </div>
-  )
-};
+  );
+}
 
 export default Sports;
