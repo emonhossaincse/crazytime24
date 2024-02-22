@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 
-// Mock function to simulate fetching data from an API
 const fetchContentFromAPI = () => {
   return Promise.resolve(`
   <script type="text/javascript" src="https://sport.seriea.fun/js/Partner/IntegrationLoader.js"></script>
@@ -109,26 +108,34 @@ const DynamicScriptComponent = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
+    let addedScripts = []; // Track scripts for cleanup
+
     fetchContentFromAPI().then(htmlContent => {
       if (containerRef.current) {
         containerRef.current.innerHTML = htmlContent;
 
-        // Execute scripts
         const scripts = containerRef.current.querySelectorAll('script');
         scripts.forEach((originalScript) => {
           const script = document.createElement('script');
           if (originalScript.src) {
             script.src = originalScript.src;
+            // Optionally: Handle load/error events for external scripts
           } else {
             script.textContent = originalScript.textContent;
           }
           document.body.appendChild(script);
+          addedScripts.push(script); // Track added script for cleanup
           originalScript.parentNode.removeChild(originalScript);
-          // Optionally, remove the script element after execution
-          // script.parentNode.removeChild(script);
         });
       }
     });
+
+    return () => {
+      // Cleanup: Remove added scripts
+      addedScripts.forEach(script => {
+        document.body.removeChild(script);
+      });
+    };
   }, []);
 
   return <div ref={containerRef}>Loading...</div>;
