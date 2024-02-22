@@ -2,9 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 
 // Mock function to simulate fetching data from an API
-const fetchContentFromAPI = () => {
-    return Promise.resolve(soprtsLink);
-  };
+
   
 
 // Function to load an external script and return a Promise that resolves when the script is loaded
@@ -25,6 +23,10 @@ const DynamicScriptComponent = () => {
   const location = useLocation();
  
   const { soprtsLink } = location.state || {};
+
+  const fetchContentFromAPI = () => {
+    return Promise.resolve(soprtsLink);
+  };
 
   useEffect(() => {
     fetchContentFromAPI().then(htmlContent => {
