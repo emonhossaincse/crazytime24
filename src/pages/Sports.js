@@ -17,12 +17,12 @@ const Sports = () => {
   const containerRef = useRef(null);
   const location = useLocation();
   // Correctly accessing sportsLink from location.state
-  const { sportsLink } = location.state || {};
-  console.log(sportsLink);
+  const { soprtsLink } = location.state || {};
+  console.log(soprtsLink);
   useEffect(() => {
     // Check if sportsLink is provided and is a string
-    if (typeof sportsLink === 'string' && sportsLink.trim() !== '') {
-      fetch(sportsLink) // Use the sportsLink URL to fetch content
+    if (typeof soprtsLink === 'string' && soprtsLink.trim() !== '') {
+      fetch(soprtsLink) // Use the sportsLink URL to fetch content
         .then(response => response.text())
         .then(htmlContent => {
           if (containerRef.current) {
@@ -52,7 +52,7 @@ const Sports = () => {
         })
         .catch(error => console.error('Failed to fetch content from sportsLink:', error));
     }
-  }, [sportsLink]); // Depend on sportsLink to refetch if it changes
+  }, [soprtsLink]); // Depend on sportsLink to refetch if it changes
 
   return <div ref={containerRef}>Loading content...</div>;
 };
