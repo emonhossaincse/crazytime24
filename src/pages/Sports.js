@@ -62,7 +62,12 @@ const Sports = () => {
     });
   }, []);
 
-  return <div ref={containerRef}>Loading content...</div>;
+  return (
+    <div className='max-width'>
+<div ref={containerRef}>Loading content...</div>;
+
+    </div>
+  )
 };
 
 export default Sports;

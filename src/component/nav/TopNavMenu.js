@@ -46,7 +46,7 @@ function TopNavMenu (){
     
         if (response.ok) {
           navigate('/sports', { state: { soprtsLink: data.response.response.embed_code } });
-          console.log(data.response.response.e);
+       
         } else {
           setError(data.message || 'An unexpected error occurred');
         }
