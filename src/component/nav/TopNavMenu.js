@@ -15,42 +15,48 @@ function TopNavMenu (){
         const chatElement = document.querySelector('.chat');
         chatElement.classList.remove('open');
     };
-
     const handleGameClick = async (gameId) => {
-        try {
-          // Fetch the game details from the Laravel backend
-          const response = await fetch('https://six6.site/api/get-game-direct', {
-            method: 'POST',
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${token}`, // Include the authentication token
-            },
-            body: JSON.stringify({
-              game_id: gameId,
-              lang: 'en', // Replace with the desired language
-              play_for_fun: false, // Replace with the desired play_for_fun value
-              home_url: 'https://www.six6.online', // Replace with your actual home URL
-            }),
-          });
-    
-          const data = await response.json();
-    
-          if (response.ok) {
-            navigate('/sports', { state: { soprtsLink: data.response.response.embed_code } });
-           
-    
-            
-    
-          } else {
-            setError(data.message || 'An unexpected error occurred');
-          }
-        } catch (error) {
-          console.error('Error fetching game details:', error);
-          setError('An unexpected error occurred');
+      try {
+        // Fetch the user's authentication token from localStorage
+        const token = localStorage.getItem('token');
+        
+        // Ensure that the user is logged in before making the request
+        if (!token) {
+          setError('User not logged in');
+          return;
         }
-      };
-
+    
+        // Fetch the game details from the Laravel backend
+        const response = await fetch('https://six6.site/api/get-game-direct', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`, // Include the authentication token
+          },
+          body: JSON.stringify({
+            game_id: gameId,
+            lang: 'en', // Replace with the desired language
+            play_for_fun: false, // Replace with the desired play_for_fun value
+            home_url: 'https://www.six6.online', // Replace with your actual home URL
+          }),
+        });
+    
+        const data = await response.json();
+    
+        if (response.ok) {
+          navigate('/sports', { state: { soprtsLink: data.response.response.embed_code } });
+          console.log(data.response.response.e);
+        } else {
+          setError(data.message || 'An unexpected error occurred');
+        }
+      } catch (error) {
+        console.error('Error fetching game details:', error);
+        setError('An unexpected error occurred');
+      }
+    };
+    
+  
     
 
     return(
