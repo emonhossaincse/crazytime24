@@ -18,6 +18,8 @@ const Sports = () => {
   const location = useLocation();
   const { sportsLink } = location.state || {}; // Assuming sportsLink contains the URL to fetch the content from
 
+  console.log(sportsLink);
+
   useEffect(() => {
     // Ensure sportsLink is defined and is a string URL
     if (typeof sportsLink === 'string' && sportsLink !== '') {
