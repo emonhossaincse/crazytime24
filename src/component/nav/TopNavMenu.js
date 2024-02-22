@@ -24,8 +24,7 @@ function TopNavMenu (){
             headers: {
               'Accept': 'application/json',
               'Content-Type': 'application/json',
-              // Include your authentication token if required
-              'Authorization': `Bearer ${localStorage.getItem('token')}`,
+              'Authorization': `Bearer ${token}`, // Include the authentication token
             },
             body: JSON.stringify({
               game_id: gameId,
