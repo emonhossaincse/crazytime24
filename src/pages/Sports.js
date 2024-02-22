@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 // Mock function to simulate fetching data from an API
 const fetchContentFromAPI = () => {
-    return Promise.resolve();
+    return Promise.resolve(soprtsLink);
   };
   
 
