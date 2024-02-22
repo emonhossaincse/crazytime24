@@ -18,7 +18,7 @@ const Sports = () => {
   const location = useLocation();
   // Correctly accessing sportsLink from location.state
   const { sportsLink } = location.state || {};
-
+  console.log(sportsLink);
   useEffect(() => {
     // Check if sportsLink is provided and is a string
     if (typeof sportsLink === 'string' && sportsLink.trim() !== '') {
