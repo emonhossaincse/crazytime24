@@ -16,14 +16,15 @@ const loadScript = (src) => {
 const Sports = () => {
   const containerRef = useRef(null);
   const location = useLocation();
-  const { sportsLink } = location.state || {}; // Assuming sportsLink contains the URL to fetch the content from
+  const { soprtsLink } = location.state || {}; 
 
-  console.log(sportsLink);
+
+  console.log(soprtsLink);
 
   useEffect(() => {
     // Ensure sportsLink is defined and is a string URL
-    if (typeof sportsLink === 'string' && sportsLink !== '') {
-      fetch(sportsLink) // Fetch the content from the sportsLink URL
+    if (typeof soprtsLink === 'string' && soprtsLink !== '') {
+      fetch(soprtsLink) // Fetch the content from the sportsLink URL
         .then(response => response.text())
         .then(htmlContent => {
           if (containerRef.current) {
@@ -58,7 +59,7 @@ const Sports = () => {
         })
         .catch(error => console.error('Failed to fetch content:', error));
     }
-  }, [sportsLink]); // Dependency on sportsLink to re-run if it changes
+  }, [soprtsLink]); // Dependency on sportsLink to re-run if it changes
 
   return <div ref={containerRef}>Loading content...</div>;
 };
