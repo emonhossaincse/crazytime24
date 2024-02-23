@@ -26,7 +26,7 @@ function BottomNavMenu (){
           
           // Ensure that the user is logged in before making the request
           if (!token) {
-            setError('User not logged in');
+            console.log('User not logged in');
             return;
           }
       
