@@ -49,7 +49,7 @@ function BottomNavMenu (){
           const data = await response.json();
       
           if (response.ok) {
-            navigate('/sports', { state: { soprtsLink: data} });
+            navigate('/sports', { state: { soprtsLink: data.response.response.embed_code } });
          
           } else {
             setError(data.message || 'An unexpected error occurred');
