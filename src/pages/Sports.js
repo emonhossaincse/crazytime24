@@ -24,6 +24,8 @@ const Sports = () => {
  
   const { soprtsLink } = location.state || {};
 
+  console.log(soprtsLink);
+
   const fetchContentFromAPI = () => {
     return Promise.resolve(soprtsLink);
   };
