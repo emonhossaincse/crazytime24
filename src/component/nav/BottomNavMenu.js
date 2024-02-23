@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import SignUp from "../modal/SignUp";
 import SignIn from "../modal/SignIn";
 import Wallet from "../sidebar/Wallet";
@@ -7,7 +7,9 @@ import { useNavigate } from 'react-router-dom';
 import { faWallet, faRightFromBracket, faUser, faXmark} from '@fortawesome/free-solid-svg-icons';
 function BottomNavMenu (){
     const [soprtsLink, setsoprtsLink] = useState(null);
+    const [error, setError] = useState(null);
     const navigate = useNavigate();
+
     const handleChatOpen = () =>{
         const bodyElements = document.querySelector('.chat');
     bodyElements.classList.add('open');
