@@ -1330,27 +1330,22 @@
     --18w92jy: #17181b;
     --35p5sb: #1e2024;
     --7h9g04: #17181b;
-    --whdmoy: #f5f6f7
+    --whdmoy: #f5f6f7;
   }
   
   .ui-dialog {
     position: absolute;
-    right: 0;
-    top: 0;
     width: 464px;
     height: 720px;
     max-width: 90vw;
     max-height: 90vh;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     overflow: hidden;
-    background-color: var(--7h9g04)
-  }
+    background-color: var(--7h9g04);
+    transform: translate3d(50%,5%,0);
+    left: 50%;
+}
   
   .ui-dialog>div:last-child {
     padding: 1.25rem;

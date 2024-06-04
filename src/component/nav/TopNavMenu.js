@@ -3,6 +3,7 @@ import SignUp from "../modal/SignUp";
 import SignIn from "../modal/SignIn";
 import Wallet from "../sidebar/Wallet";
 import { useNavigate } from 'react-router-dom';
+import VIPClub from '../modal/VIPClub';
 function TopNavMenu (){
     const [soprtsLink, setsoprtsLink] = useState(null);
     const navigate = useNavigate();
@@ -111,7 +112,7 @@ function TopNavMenu (){
                 <SignIn/>
                    <SignUp/>
                    <Wallet/>
-
+                  
                    <span className="nav-action">
                     <span onClick={handleChatOpen}  className="seen">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">

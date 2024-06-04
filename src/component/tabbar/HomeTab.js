@@ -157,7 +157,7 @@ const HomeTab = () => {
 	</svg>
 	<div>
 		<div className="cplgt7d">
-			<div className="contest__top nologin">
+			<div className="contest__top ">
 				<div className="p185pbp2">
 					<div className="trophy">
 						<img src="/assets/trophy.424f8523.png"/>
@@ -205,6 +205,28 @@ const HomeTab = () => {
 					</div>
 				</div>
 			</div>
+            <div className="page-userinfo-contest">
+    <div className="m1ri3hr6 contest-user-info">
+        <div className="user">
+            <div className="head">
+                <img className="avatar " src="//img2.bc.game/avatar/21016203/s?t=1709970310300"/>
+            </div>
+            <div className="user-name">Sgbjpvgxnyb</div>
+        </div>
+        <div className="position myinfo-item">
+            <div className="label">My Position</div>
+            <div className="value">50th+</div>
+        </div>
+            <div className="wager myinfo-item">
+                <div className="label">Wagered</div>
+                <div className="value">BDT&nbsp;0.00</div>
+            </div>
+            <div className="reach myinfo-item">
+                <div className="flex-middle">Wager <div className="coin-fait">BDT&nbsp;124,834,818.30</div> To reach <span className="color-top ttu">Top 10</span>
+            </div>
+        </div>
+    </div>
+</div>
 			<div className="c1gh2bs4 contest-table-wrap is-active">
 				<div className="title">
 					<div className="active-icon">

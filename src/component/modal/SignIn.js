@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import AuthService from '../../Auth/AuthService';
 import { Modal } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWallet, faRightFromBracket, faUser, faXmark} from '@fortawesome/free-solid-svg-icons';
-import { set } from 'mongoose';
+
 
 
 const MyModal = ({ showModal, handleClose }) => {
@@ -61,12 +60,14 @@ const MyModal = ({ showModal, handleClose }) => {
         localStorage.setItem('token', data.token);
         localStorage.setItem('sessionid', data.response.response.sessionid);
         localStorage.setItem('remote_id', data.response.response.id);
+        localStorage.setItem('username', data.response.response.username);
         
 
-        
+
         setIsLoggedIn(true);
         handleClose();
         window.location.reload();
+        
 
       } else {
         setError(data.message || 'An unexpected error occurred');  // Assuming the server sends an error message in the response
@@ -339,7 +340,7 @@ function SignIn() {
     localStorage.removeItem('token');
     localStorage.removeItem('sessionid');
     localStorage.removeItem('token');
-    
+    window.location.reload();
     setIsLoggedIn(false);
     
     
@@ -366,7 +367,7 @@ useEffect(() => {
 
 
   return (
-    <div style={{ lineHeight: '64px' }}>
+    <div>
       {!isLoggedIn && (
        
          <span onClick={handleShow} className="nav-action">
@@ -387,22 +388,36 @@ useEffect(() => {
        
       
      
-       <span onClick={handleWalletOpen} className='nav-action display-none'>
-        <FontAwesomeIcon icon={faWallet} />
+       <span onClick={handleWalletOpen} className=' display-none'>
+       <button className="ui-button button-normal s-conic2 b1roz03j">
+    <div className="button-inner">
+        <svg className="s1ff97qc icon">
+             <FontAwesomeIcon icon={faWallet} />
+        </svg>
+        <span>Deposit</span>
+    </div>
+</button>
       </span>
 
       
       )}
 
 
-      {isLoggedIn && (
-         <span  onClick={handleLogOut} className='nav-action'>
-         <FontAwesomeIcon icon={faRightFromBracket} />
-       </span>
-      )}
+     
       {isLoggedIn &&(
-        <span  onClick={handleLogOut} className='nav-action display-none'>
-        <FontAwesomeIcon icon={faUser} />
+        <span className='nav-action display-none drop-hover'>
+        <img src='assets/avatar.png' className='avatar ' />
+          <div className='drop-down-menu'>
+              <ul>
+                <li> <FontAwesomeIcon icon={faWallet} /> <a href='#'>Wallet</a></li>
+                <li> <a href='#'>wihtdraw</a></li>
+                <li> <a href='#'>Transaction</a></li>
+                <li> <a href='#'>Rollover Overview</a></li>
+                <li> <a href='#'>VIP Club</a></li>
+                <li> <a href='#'>Affilliate</a></li>
+
+              </ul>
+          </div>
       </span>
       )}
      

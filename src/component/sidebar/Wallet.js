@@ -13,19 +13,23 @@ const Wallet = () => {
   const closeWallet = () => {
   const chatElement = document.querySelector('.wallet');
     chatElement.classList.remove('open');
-    
-
-
-
+  
 };
-const [transactionType, setTransactionType] = useState('deposit'); // Default to 'deposit'
+const [transactionType, setTransactionType] = useState(''); // Default to 'deposit'
 const [remoteId, setRemoteId] = useState(localStorage.getItem('remote_id'));
 const [amount, setAmount] = useState('');
 const [transactionId, setTransactionId] = useState('');
 const [provider, setProvider] = useState('');
 const [key, setKey] = useState('0');
 const [errors, setErrors] = useState('');
-const [responseData, setResponseData] = useState(null);
+
+useEffect(() => {
+  if (transactionType) {
+    handleCreateTransaction();
+  }
+  // Reset transactionType to avoid re-triggering on component re-render
+  // You may choose to handle this differently based on your application's flow
+}, [transactionType]);
 
 const handleCreateTransaction = async () => {
   const action = transactionType; // Use the transactionType directly
@@ -48,8 +52,7 @@ const handleCreateTransaction = async () => {
     const responseData = await response.json();
 
     if (response.ok) {
-      console.log(`${action} Success:`, responseData);
-      setResponseData(responseData);
+      window.location.reload();
     } else {
       setErrors(responseData.error);
     }
@@ -59,9 +62,12 @@ const handleCreateTransaction = async () => {
 };
 
 const setTransactionTypeAndExecute = (type) => {
-  setTransactionType(type); // Dynamically set the transaction type
-  handleCreateTransaction(); // Then execute the transaction
+  setTransactionType(type); 
+ 
 };
+
+
+
 
 useEffect(() => {
   const errorTimer = setTimeout(() => {
