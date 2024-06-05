@@ -79,6 +79,51 @@ useEffect(() => {
 
   
 }, []);
+
+  const [transactions, setTransactions] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    // Replace 'your-authentication-token' with the actual token
+    const token = localStorage.getItem('token');
+        
+    // Ensure that the user is logged in before making the request
+    if (!token) {
+      setError('User not logged in');
+      return;
+    }
+
+    fetch('https://six6.site/api/transactions', {
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      setTransactions(data);
+      setLoading(false);
+    })
+    .catch(error => {
+      setError(error);
+      setLoading(false);
+    });
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
   return (
     
     <>
@@ -299,31 +344,20 @@ useEffect(() => {
     <thead>
       <tr>
         <th>SL</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Username</th>
+        <th>Action</th>
+        <th>Transaction Id</th>
+        <th>Amount</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-      {/* ... other rows ... */}
+    {transactions.map((transaction, index) => (
+          <tr key={transaction.transaction_id}>
+            <td>{index + 1}</td>
+            <td>{transaction.action}</td>
+            <td>{transaction.transaction_id}</td>
+            <td>{transaction.amount}</td>
+          </tr>
+        ))}
     </tbody>
   </Table>
       </Tab.Pane>
