@@ -407,6 +407,7 @@ img.common-left-img.mobile {
     visibility: visible; /* Make visible */
     transform: none; /* Reset transform */
     transition-delay: 0s, 0s, 0s; /* Apply visibility transition without delay */
+    top: 0;
   }
 .balance-bg{
     background-color: var(--background-color);
