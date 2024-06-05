@@ -93,7 +93,7 @@ const TopRatedGames = () => {
   
       if (response.ok) {
         navigate('/game', { state: { iframeUrl: data.response.response.url } });
-        console.log(data.response.response.e);
+        console.log(data.response);
       } else {
         setError(data.message || 'An unexpected error occurred');
       }
