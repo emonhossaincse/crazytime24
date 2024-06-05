@@ -28,7 +28,7 @@ function TopNavMenu (){
         }
     
         // Fetch the game details from the Laravel backend
-        const response = await fetch('https://six6.site/api/get-game-direct', {
+        const response = await fetch('https://joy88.xyz/api/get-game-direct', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
