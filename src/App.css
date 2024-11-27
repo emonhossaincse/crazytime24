@@ -4659,3 +4659,21 @@
 .smamgpm .buttons .button-inner {
   text-transform: capitalize
 }
+
+.action p {
+   display: flex;
+  width: 100%;
+}
+
+.social-links{
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(0.25rem, 1fr)); */
+display: flex;
+
+}
+
+ .socile{
+  height: 16px !important;
+width: 16px !important;
+display: block;
+}
