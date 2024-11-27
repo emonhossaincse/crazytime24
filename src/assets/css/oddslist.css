@@ -1,0 +1,629 @@
+.ss-HomepageSpotlight {
+  margin-top: 20px;
+  margin: 0 auto;
+  color: var(--text-color);
+}
+
+.ss-HomepageSpotlight_Width-1 .ss-HomeSpotlightHeader {
+  padding: 0 30px;
+}
+.ss-HomeSpotlightHeader {
+  display: flex;
+  height: 45px;
+  padding: 0 var(--gutter);
+  align-items: center;
+  margin-bottom: 3px;
+  cursor: pointer;
+}
+
+.ss-HomeSpotlightHeader_HeaderImage {
+  height: 25px;
+  width: 25px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.ss-HomeSpotlightHeader_Title {
+  display: flex;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  word-break: break-word;
+  word-wrap: break-word;
+  line-height: 26px;
+  max-height: calc(26px * 2);
+  align-items: center;
+  color: var(--color-greyFF);
+  font-family: FuturaPTCond-Bold, -apple-system, "sans-serif-condensed",
+    BlinkMacSystemFont, Segoe UI, Roboto, Open Sans Condensed, sans-serif;
+  font-variation-settings: "wght" 700, "wdth" 40;
+  font-size: 23px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.ss-HomepageSpotlight_Modules {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+}
+
+.wcl-PageContainer-scrollable {
+  scrollbar-color: var(--color-white20p) var(--color-grey2);
+}
+
+.cpm-CouponPodModule.cpm-CouponPodModule-spotlight {
+  margin-top: 0;
+}
+.cpm-CouponPodModule {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  --border: var(--color-white10p);
+}
+
+.ss-HomepageSpotlight_Pod .cpm-Header {
+  display: none;
+}
+.cpm-CouponPodModule-1 .cpm-Header {
+  padding: 0 30px;
+}
+.cpm-Header {
+  display: flex;
+  height: 45px;
+  padding: 0 var(--gutter);
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+.cpm-Header_HeaderImage {
+  height: 22px;
+  width: 22px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-right: 10px;
+}
+
+.cpm-Header_Title {
+  display: flex;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  word-break: break-word;
+  word-wrap: break-word;
+  line-height: 20px;
+  max-height: calc(20px * 2);
+  align-items: center;
+  color: var(--color-greyFF);
+  font-family: FuturaPTCond-Bold, -apple-system, "sans-serif-condensed",
+    BlinkMacSystemFont, Segoe UI, Roboto, Open Sans Condensed, sans-serif;
+  font-variation-settings: "wght" 700, "wdth" 40;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 27px;
+  text-transform: uppercase;
+}
+
+.cpm-Header_LinkContainer {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  flex: 0 0 auto;
+  color: var(--color-grey7);
+  height: 100%;
+}
+
+.cpm-Header_Link {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  height: 25px;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 0 10px;
+  border: solid 1px var(--color-white50p);
+  border-radius: 15px;
+  color: var(--color-greyFF);
+}
+
+.cpm-CouponPodModule-1 .cpm-OffersBar, .gl-MarketGrid-wide .cpm-OffersBar {
+    margin: 0 30px;
+  }
+  .cpm-OffersBar {
+    margin: 0 var(--gutter);
+    position: relative;
+  }
+
+  .cpm-CouponPodMarketGrid {
+    position: relative;
+  }
+
+  .cpm-CouponPodModule-1 .cpm-CouponPodMarketGroup, .gl-MarketGrid-wide .cpm-CouponPodMarketGroup {
+    padding: 0 30px;
+  }
+  .cpm-CouponPodMarketGroup.gl-MarketGroup {
+    border-top: none;
+    border-bottom: none;
+  }
+  .cpm-CouponPodMarketGroup {
+    padding: 0 var(--gutter);
+  }
+  .gl-MarketGroup {
+    position: relative;
+  }
+
+  .gl-MarketGroup_Wrapper {
+    transition-timing-function: cubic-bezier(.215,.61,.355,1);
+    transition-property: max-height;
+  }
+
+  .cpm-CouponPodMarketGroup_MarketGroupContainer {
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: var(--color-white7p);
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .gl-MarketGroupContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: 0;
+    background-color: var(--oddbody);
+    box-shadow: 5px 5px 10px var(--shadow-color);
+  }
+
+  .cpm-MarketFixture {
+    display: grid;
+    grid-template-rows: 30px;
+    grid-auto-rows: -webkit-min-content;
+    grid-auto-rows: min-content;
+    overflow: hidden;
+    position: relative;
+    flex: 0 0 50%;
+  }
+
+  .cpm-MarketFixtureDateHeader {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-greyFF);
+    padding: 0 10px;
+    height: 30px;
+    background-color: var(--oddsHeader);
+    border-bottom: 1px solid var(--oddsHeader);
+  }
+
+  .cpm-ParticipantFixtureDetails.rcl-MarketCouponAdvancedBase_LastChild, .cpm-ParticipantFixtureDetails:last-child {
+    border-bottom: 1px solid transparent;
+  }
+  .cpm-ParticipantFixtureDetails {
+    width: 100%;
+    min-height: 100px;
+    position: relative;
+    padding: 10px 10px 0;
+    border-bottom: 1px solid var(--color-white10p);
+    display: flex;
+    cursor: pointer;
+    min-width: 0;
+  }
+
+  .cpm-ParticipantFixtureDetails_LhsContainer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+
+  .cpm-ParticipantFixtureDetails_TeamsContainer {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    order: 1;
+    display: flex;
+    margin-bottom: 3px;
+    width: 100%;
+  }
+
+  .cpm-ParticipantFixtureDetails_TeamNames {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .cpm-ParticipantFixtureDetails_Team, .cpm-ParticipantFixtureDetails_TeamNames {
+    white-space: nowrap;
+  }
+  .cpm-ParticipantFixtureDetails_TeamNames {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 20px;
+  }
+
+  .cpm-ParticipantFixtureDetails_TeamKitContainer {
+    width: 15px;
+    height: 17px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tk-TeamKit-1, .tk-TeamKit-2, .tk-TeamKit-3, .tk-TeamKit-4, .tk-TeamKit-5, .tk-TeamKit-10, .tk-TeamKit-11, .tk-TeamKit-12, .tk-TeamKit-15, .tk-TeamKit-16 {
+    width: 15px;
+    height: 14px;
+    color: var(--text-color);
+  }
+
+  .cpm-ParticipantFixtureDetails_TeamInfoWrapper {
+    overflow: hidden;
+  }
+
+  .cpm-ParticipantFixtureDetails_Team, .cpm-ParticipantFixtureDetails_TeamNames {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .cpm-ParticipantFixtureDetails_TeamContainer {
+    display: flex;
+    align-items: center;
+    min-height: 25px;
+  }
+
+  .cpm-ParticipantFixtureDetails_TeamKitContainer {
+    width: 15px;
+    height: 17px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cpm-ParticipantFixtureDetails_TeamKitContainer {
+    width: 15px;
+    height: 17px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tk-TeamKit-1, .tk-TeamKit-2, .tk-TeamKit-3, .tk-TeamKit-4, .tk-TeamKit-5, .tk-TeamKit-10, .tk-TeamKit-11, .tk-TeamKit-12, .tk-TeamKit-15, .tk-TeamKit-16 {
+    width: 15px;
+    height: 14px;
+    color: var(--text-color);
+  }
+
+  .tk-TeamKit_SVG {
+    width: 100%;
+    height: 100%;
+  }
+  svg {
+    pointer-events: all;
+    overflow: auto;
+  }
+
+  .cpm-ParticipantFixtureDetails_TeamInfoWrapper {
+    overflow: hidden;
+  }
+
+  .cpm-ParticipantFixtureDetails_Team, .cpm-ParticipantFixtureDetails_TeamNames {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: var(--text-color);
+  }
+
+  .cpm-ParticipantFixtureDetails_Details {
+    margin-right: 0;
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 25px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    line-height: 25px;
+  }
+
+  .cpm-CouponPodModule-1 .cpm-ParticipantFixtureDetails_BookCloses {
+    font-size: 11px;
+  }
+  .cpm-ParticipantFixtureDetails_BookCloses {
+    font-size: 10px;
+    color: var(--sub-text-color);
+    margin-right: 10px;
+    white-space: nowrap;
+  }
+
+  .cpm-FixtureIconBlock {
+    display: flex;
+    align-items: center;
+    height: 17px;
+    margin-right: 10px;
+  }
+
+  .cpm-FixtureIconBlock_AudioIcon:last-child {
+    margin-right: 0;
+  }
+  .cpm-FixtureIconBlock_AudioIcon {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 12 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23B5B5B5' fill-rule='evenodd'%3E%3Cpath d='M9.027 9.025c1.149-1.572 1.516-2.746 1.516-4.038 0-1.297-.383-2.577-1.516-4.127l.566-.405.06.083c1.165 1.615 1.63 3.057 1.63 4.449 0 1.413-.467 2.796-1.69 4.468z'/%3E%3Cpath d='M7.522 7.41C8.238 6.518 8.568 6 8.568 4.955c0-1.074-.312-1.589-1.046-2.459l.68-.406.082.1c.728.88 1.119 1.606 1.119 2.765 0 1.241-.528 2.024-1.202 2.862zM3.01 2.91C3.616 2.377 5.279.454 5.266.454h.752v9h-.752L3.009 7H.752C.107 6.992-.005 6.716 0 6.182V3.727c.01-.54.467-.846.752-.818.73-.022 2.257 0 2.257 0z'/%3E%3C/g%3E%3C/svg%3E");
+    width: 12px;
+    height: 10px;
+    background-size: 12px 10px;
+    margin-right: 10px;
+  }
+
+  .cpm-ParticipantFixtureDetails_Details .cpm-ParticipantFixtureDetails_Boosts:last-child {
+    margin-right: 0;
+  }
+  .cpm-ParticipantFixtureDetails_Details .cpm-ParticipantFixtureDetails_Boosts {
+    display: flex;
+    margin-right: 10px;
+  }
+  .cpm-ParticipantFixtureDetails_Boosts {
+    margin-left: 0;
+  }
+  .bbb-BetBoostCount {
+    display: flex;
+    position: relative;
+    background-color: var(--color-green3);
+    color: var(--color-grey1);
+    cursor: pointer;
+    height: 13px;
+    border-radius: 1px;
+    padding: 0 3px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 13px;
+    margin-left: 10px;
+  }
+
+  .bbb-BetBoostCount::after {
+    content: "";
+    background-color: var(--color-grey1);
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    height: 100%;
+    width: 9px;
+    margin-left: 1px;
+  }
+  .bbb-BetBoostCount::after {
+    --mixin-svg-inlined: url("data:image/svg+xml;charset=utf-8,%3Csvg height='{0}' viewBox='0 0 12 9' width='{1}' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.043 0l4.46 4.502-4.548 4.501H.85l4.534-4.501L.85 0zm4.5 0l4.46 4.502-4.548 4.501H5.35l4.543-4.501L5.422.001z' fill='{2}'/%3E%3C/svg%3E");
+    -webkit-mask-image: var(--mixin-svg-inlined);
+    mask-image: var(--mixin-svg-inlined);
+  }
+
+  
+.cpm-ParticipantFixtureDetails::after {
+    content: " ";
+  
+    border-right: 1px solid var(--color-white10p);
+  
+    position: absolute;
+  
+    right: 0;
+  
+    top: 10px;
+  
+    bottom: 10px;
+  
+  }
+
+  .cpm-MarketOdds {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: 30px;
+    grid-auto-rows: -webkit-min-content;
+    grid-auto-rows: min-content;
+    flex: 1 1 16.667%;
+  }
+
+  .cpm-MarketOddsHeader {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-greyFF);
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0 5px;
+    background-color: var(--color-white7p);
+  }
+
+  .gl-Market_General-haslabels + .gl-Market_General .gl-Participant_General {
+    border-left-width: 0;
+  }
+  .gl-Market_General + .gl-Market_General .gl-Participant_General {
+    border-left-width: 1px;
+    border-left-style: solid;
+  }
+  .cpm-ParticipantOddsOnly100.rcl-MarketCouponAdvancedBase_LastChild, .cpm-ParticipantOddsOnly100:last-child {
+    border-bottom: none;
+  }
+  .gl-Participant_General.gl-Market_General-cn2:nth-last-child(2), .gl-Participant_General.gl-Market_General-cn3:nth-last-child(-n+3), .gl-Participant_General:last-child {
+    border-bottom: none;
+  }
+  .cpm-ParticipantOddsOnly100 {
+    height: 100px;
+  }
+  .cpm-ParticipantOdds {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 12px;
+    border-left: 1px solid transparent;
+      border-left-width: 1px;
+      border-left-style: solid;
+    cursor: pointer;
+    width: 100%;
+    line-height: 17px;
+  }
+  .gl-Participant_General {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--border,transparent);
+  }
+  .gl-Participant_General {
+    position: relative;
+    border-left-color: var(--border,transparent);
+  }
+
+  .cpm-ParticipantOdds_Odds {
+    color: #ffdf1b;
+  }
+
+  .cpm-MarketOdds {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: 30px;
+    grid-auto-rows: -webkit-min-content;
+    grid-auto-rows: min-content;
+    flex: 1 1 16.667%;
+  }
+
+  .cpm-MarketOddsHeader {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-greyFF);
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0 5px;
+    background-color: var(--color-white7p);
+  }
+
+  .gl-Market_General + .gl-Market_General .gl-Participant_General {
+    border-left-width: 1px;
+    border-left-style: solid;
+  }
+  .cpm-ParticipantOddsOnly100.rcl-MarketCouponAdvancedBase_LastChild, .cpm-ParticipantOddsOnly100:last-child {
+    border-bottom: none;
+  }
+  .gl-Participant_General.gl-Market_General-cn2:nth-last-child(2), .gl-Participant_General.gl-Market_General-cn3:nth-last-child(-n+3), .gl-Participant_General:last-child {
+    border-bottom: none;
+  }
+  .cpm-ParticipantOddsOnly100 {
+    height: 100px;
+  }
+  .cpm-ParticipantOdds {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 12px;
+    border-left: 1px solid transparent;
+      border-left-width: 1px;
+      border-left-style: solid;
+    cursor: pointer;
+    width: 100%;
+    line-height: 17px;
+  }
+  .gl-Participant_General {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--border,transparent);
+  }
+  .gl-Participant_General {
+    position: relative;
+    border-left-color: var(--border,transparent);
+  }
+
+  .cpm-ParticipantOdds_Odds {
+    color: #ffdf1b;
+  }
+
+  .cpm-MarketOdds {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: 30px;
+    grid-auto-rows: -webkit-min-content;
+    grid-auto-rows: min-content;
+    flex: 1 1 16.667%;
+  }
+
+  .cpm-MarketOddsHeader {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-greyFF);
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0 5px;
+    background-color: var(--oddsHeader);
+  }
+
+  .gl-Market_General + .gl-Market_General .gl-Participant_General {
+    border-left-width: 1px;
+    border-left-style: solid;
+  }
+  .cpm-ParticipantOddsOnly100.rcl-MarketCouponAdvancedBase_LastChild, .cpm-ParticipantOddsOnly100:last-child {
+    border-bottom: none;
+  }
+  .gl-Participant_General.gl-Market_General-cn2:nth-last-child(2), .gl-Participant_General.gl-Market_General-cn3:nth-last-child(-n+3), .gl-Participant_General:last-child {
+    border-bottom: none;
+  }
+  .cpm-ParticipantOddsOnly100 {
+    height: 100px;
+  }
+  .cpm-ParticipantOdds {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 12px;
+    border-left: 1px solid transparent;
+      border-left-width: 1px;
+      border-left-style: solid;
+    cursor: pointer;
+    width: 100%;
+    line-height: 17px;
+  }
+  .gl-Participant_General {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--border,transparent);
+  }
+  .gl-Participant_General {
+    position: relative;
+    border-left-color: var(--border,transparent);
+  }
+
+  .cpm-ParticipantOdds_Odds {
+    color: var(--sub-text-color);
+  }

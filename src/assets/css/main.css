@@ -115,7 +115,6 @@
     background: var(--standard-color);
     transition: var(--transt-05);
     z-index: 100;
-    box-shadow: 0 .125rem .5rem #0002;
 }
 img.common-left-img.mobile {
     display: none;
@@ -552,25 +551,25 @@ img.common-left-img.mobile {
 .aside-header{
     display: flex;
     align-items: center;
-    box-shadow: 0 .125rem .5rem #0002;
+    box-shadow: 0 .125rem .5rem transparent;
     padding: 0px 10px;
-    height: 65.5px;
-    border-bottom: solid 2px #0002;
+    height: 64.5px;
+    background-color: var(--primary-color);
 }
 
 
 .aside-icon{
-    background: var(--background-color);
+    background: var(--primary-color);
     padding: 15px 20px;
     border-radius: var(--border-radius);
-    color: var(--sub-text-color);
+    color: white;
     font-weight: 900;
 }
 .aside.close .aside-icon {
-    background: var(--background-color);
+    background: var(--primary-color);
     padding: 0;
     border-radius: var(--border-radius);
-    color: var(--sub-text-color);
+    color: white;
     font-weight: 900;
     width: 100%;
     height: 46px;
@@ -674,9 +673,8 @@ img.common-left-img.mobile {
 .top-nav{
     position: fixed;
     display: flex;
-    background: var(--standard-color);
+    background: var(--primary-color);
     transition: var(--transt-05);
-    box-shadow: 0 .125rem .5rem #0002;
     z-index: 100;
     height: 64px;
 }
@@ -698,17 +696,24 @@ img.common-left-img.mobile {
     margin: 0px 5px;
 }
 .top-menu .nav-link{
-    color: var(--text-color);
+    color: #fff !important;
     border-radius: var(--border-radius);
     padding: 0px 10px;
-    
+   
+    /* & span svg{
+        color: #fff !important;
+    } */
+}
+
+.top-menu .nav-link span svg{
+    color: #fff !important;
 }
 
 .nav-action{
     line-height: 45px;
     margin: 8px;
     
-    color: var(--text-color);
+    color: #fff;
 }
 .unseen{
     display: none;
@@ -716,7 +721,7 @@ img.common-left-img.mobile {
 .top-action button{
     color: #fff;
     background-color: #1d803ab3;
-    background-image: conic-gradient(from 1turn,rgba(88,175,16,1),rgba(29,128,58,1));
+    background-image: conic-gradient(from 1turn,rgba(88,175,16,1),rgba(29,128,58,1),rgba(88,175,16,1) );
     width: 112px;
     height: 44px;
     margin-right: 24px;

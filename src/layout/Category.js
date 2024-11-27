@@ -1,5 +1,5 @@
 import React from "react";
-function Category(){
+function Category(){ 
     return(
         <div className="max-width">
             <div className="container">

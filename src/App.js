@@ -17,11 +17,6 @@ import TopNavMenu from './component/nav/TopNavMenu';
 import Chat from './component/sidebar/Chat';
 import HomeBigBanner from './component/banner/HomeBigBanner';
 import HomeSlider from './component/slider/HomeSlider';
-import RecentWins from './component/slider/RecentWins';
-import TopRatedGames from './component/slider/TopRatedGames';
-import PaymentBanner from './component/banner/PaymentBanner';
-import HomeTab from './component/tabbar/HomeTab';
-import ExclusiveBanner from './component/banner/ExclusiveBanner';
 import Footer from './layout/Footer';
 import Category from './layout/Category';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -30,8 +25,7 @@ import Wallet from './component/sidebar/Wallet';
 import BottomNavMenu from './component/nav/BottomNavMenu';
 import Sports from './pages/Sports';
 import Affiliate from './pages/Affiliate';
-
-import SignIn from './component/modal/SignIn';
+import OddsList from './layout/OddsList';
 
 function App() {
   
@@ -50,12 +44,8 @@ function App() {
           <Route path="/" element={<>
             <HomeBigBanner/>
             <HomeSlider/>
-             <Category/>
-            <RecentWins/>
-            <TopRatedGames/>
-            <PaymentBanner/>
-            <HomeTab/>
-            <ExclusiveBanner/>
+            <Category/>
+            <OddsList />
             <Footer/>
           </>} />
           <Route path="/game" element={<GameLunch />} />

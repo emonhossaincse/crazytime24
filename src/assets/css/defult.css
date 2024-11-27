@@ -4,16 +4,18 @@
     --text-color: #31373D;
     --sub-text-color: #5F6975;
     --placeholder-color: #BEC1CC;
-    --background-color: #F6F7FA;
+    --background-color: #DFE8DB;
     --standard-color: #FFFFFF;
-    --shadow-color: #EAECF3;
+    --shadow-color: #7d7e86;
     --page-shadow: linear-gradient(to right, #DADDE6, rgba(218, 221, 230, 0));
     --autofill-color: #31373d;
     --yellow-color: #FFAD00;
-    --primary-color: #3BC117;
-    --border-radius: .25rem
+    --primary-color: #005440;
+    --border-radius: .25rem;
+    --oddsHeader: #96ff88;
+    --oddbody: #cdf7b9;
   }
-  
+   
   .darken {
     --title-color: #ffffff;
     --text-color: #98A7B5;
@@ -24,7 +26,9 @@
     --shadow-color: #111415;
     --page-shadow: linear-gradient(to right, #111415, rgba(17, 20, 21, 0));
     --autofill-color: #f5f6f7;
-    --yellow-color: #FFBF39
+    --yellow-color: #FFBF39;
+    --oddsHeader: #1f2125;
+    --oddbody: #2f3238;
   }
   
   :focus {
