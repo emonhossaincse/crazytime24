@@ -14,7 +14,7 @@ const PaymentBanner = () => {
             <img className='light-mode' src="assets/media/thumbnail/payment-07.webp" alt="" /></a>
             <a href="#"><img className='dark-mode' src="assets/media/thumbnail/payment-03.png" alt="" />
             <img className='light-mode' src="assets/media/thumbnail/payment-08.webp" alt="" /></a>
-            
+             
           </div>
           <div className="payment_getway">
            

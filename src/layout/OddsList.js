@@ -212,7 +212,7 @@ function OddsList() {
                                         Sri Lanka
                                       </div>
                                     </div>
-                                  </div>
+                                  </div> 
                                 </div>
                               </div>
                               <div className="cpm-ParticipantFixtureDetails_Details">

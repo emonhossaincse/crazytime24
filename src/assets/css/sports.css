@@ -1,0 +1,7 @@
+.sports-container{
+    position: relative;
+    left: 0;
+    padding: 5rem 0.5rem;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+} 
