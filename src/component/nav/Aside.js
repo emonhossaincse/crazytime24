@@ -46,10 +46,10 @@ function Aside() {
           <FontAwesomeIcon icon={faBars} />
         </div>
         <div className='logo'>
-          <img src='./assets/media/logo/logo_w.png' alt='Logo' />
+          <img src='./assets/media/logo/logo.svg' alt='Logo' />
         </div>
         <div className='logo-darken'>
-          <img src='./assets/media/logo/logo.webp' alt='Logo' />
+          <img src='./assets/media/logo/logo.svg' alt='Logo' />
         </div>
       </div>
       <div className='aside-nav'>

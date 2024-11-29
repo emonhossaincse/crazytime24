@@ -97,7 +97,7 @@ const MyModal = ({ showModal, handleClose }) => {
                               <img alt="" src="/assets/bg_w-9476816a.png" className="common-left-img light-mode"/>
                               <img alt="" src="/assets/media/thumbnail/mobile_01.jpg" className="common-left-img mobile"/>
                               <div className="left-text">
-                                  <p className="t">Welcome to<span>bc.game</span></p>
+                                  <p className="t">Welcome to<span>BET 365</span></p>
                                   <p className="st">Start your game journey now!</p>
                               </div>
                           </div>

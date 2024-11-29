@@ -342,21 +342,21 @@ function Footer (){
             </div>
             <div className="fzoz0z4 footer-text-wrap">
               <div className="left-text">
-                <img alt="logo" className="logo light-mode" src="/assets/media/logo/logo_w.png"/>
-                <img alt="logo" className="logo dark-mode" src="/assets/media/logo/logo_pure.png"/>
-                <p className="text-color">A multi-award winning crypto casino. With a player-centric approach, <span>BC.GAME</span> is able to satisfy millions of gamblers across the globe. <span>BC.GAME</span> has its priority set on its community, ensuring an everlasting and endlessly entertaining gambling experience.</p>
+                <img alt="logo" className="logo light-mode" src="/assets/media/logo/logo.svg"/>
+                <img alt="logo" className="logo dark-mode" src="/assets/media/logo/logo.svg"/>
+                <p className="text-color">A multi-award winning crypto casino. With a player-centric approach, <span></span> is able to satisfy millions of gamblers across the globe. <span></span> has its priority set on its community, ensuring an everlasting and endlessly entertaining gambling experience.</p>
               </div>
               <div className="right-text">
                 <div className="licensed-t">
                   <a href="https://knoxxit2.sharepoint.com/:b:/s/CIL-Validations/ES3IKThD11JIp7Nt65rIIskBqDKJPUz4cK23-a6gV7UwFQ?e=geGYID" target="_blank" className="license">
                     <img alt="license" src="/assets/license_w.49183d91.png"/>
                   </a>
-                  <p className="text-color"><span>BC.GAME</span> is operated by BlockDance B.V. (Commercial register of Curaçao no.158182, Emancipatie Boulevard Dominico F. "Don" Martina 31, Curaçao) under a sublicense CIL pursuant to Master gaming License #5536/JAZ.</p>
+                  <p className="text-color"><span></span> is operated by BlockDance B.V. (Commercial register of Curaçao no.158182, Emancipatie Boulevard Dominico F. "Don" Martina 31, Curaçao) under a sublicense CIL pursuant to Master gaming License #5536/JAZ.</p>
                 </div>
                 <div className="copyright-top">
                   <div className="copyright-info">
-                    <p className="ttu text-color">©2024 BC.GAME ALL RIGHTS RESERVED</p>
-                    <p className="btc-info text-color">1BTC=$43,396.18</p>
+                    <p className="ttu text-color">©2024  ALL RIGHTS RESERVED</p>
+                    
                   </div>
                   <div className="to-top">
                     <svg className="s1ff97qc icon">
