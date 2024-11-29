@@ -33,7 +33,7 @@ function Footer (){
         </div>
       </div>
     </div>
-    <div className="contact">Or Email us:<a href="#" className="cl-primary">feedback@bcgame.com</a>
+    <div className="contact">Or Email us:<a href="#" className="cl-primary">feedback@site.com</a>
     </div>
   </div>
 </div>
