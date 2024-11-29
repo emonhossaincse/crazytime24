@@ -91,11 +91,11 @@ function HomeBigBanner() {
             <div className="thumbnail col-lg-7">
               <img
                 className="light-mode"
-                src="/assets/media/thumbnail/.png"
+                src="/assets/media/thumbnail/169018078930595.png"
               />
               <img
                 className="dark-mode"
-                src="/assets/media/thumbnail/.png"
+                src="/assets/media/thumbnail/16901807926590.png"
               />
             </div>
           </div>
