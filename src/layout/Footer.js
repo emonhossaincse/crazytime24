@@ -208,7 +208,7 @@ function Footer (){
                   <div className="fd-ci">
                     <div className="cgapchl Bitcoin icon-Bitcoin img-fill">
                     
-                    </div>
+                    </div> 
                   </div>
                   <div className="fd-ci">
                     <div className="cgapchl Ethereum icon-Ethereum img-fill">
