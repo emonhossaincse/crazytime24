@@ -16,7 +16,7 @@ function Category(){
 						
 					</path>
 				</svg>
-				<div className="title">Crazy Time</div>
+				<div className="title">Casino</div>
 			</div>
 			<div className="desc">Dive into our in-house games, live casino and slots</div>
 			<button className="ui-button button-normal go-btn">

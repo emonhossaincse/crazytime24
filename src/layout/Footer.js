@@ -203,7 +203,7 @@ function Footer (){
                 </div>
               </div>
               <div className="fdn9ps2 footer-coins-wrap">
-                <p className="coins-t">Accepted Networks</p>
+                <p className="coins-t">Accepted Payment Method</p>
                 <div className="coins-list">
                   <div className="fd-ci">
                     <div className="cgapchl Bitcoin icon-Bitcoin img-fill">
@@ -305,26 +305,14 @@ function Footer (){
                       <a href="https://sigmaawards.org/" keep-scroll-position="true" rel="noopener noreferrer" target="_blank" className="">
                       <img alt="sigma" src="/assets/sigma_w.e8608c37.png"/></a>
                     </div>
-                    <div className="cloudnine">
-                      <a href="https://cloud9.gg/" keep-scroll-position="true" rel="noopener noreferrer" target="_blank" className="">
-                      <img alt="cloudnine" src="/assets/cloudnine_w.f7b7f128.png"/>
-                    </a>
-                  </div>
-                  <div className="afa">
-                    <a href="https://www.afa.com.ar/" keep-scroll-position="true" rel="noopener noreferrer" target="_blank" className="">
-                      <img alt="afa" src="/assets/afa.4900db57.png"/>
-                    </a>
-                  </div>
+                    
+                 
                   <div className="verify">
                     <a href="https://cryptogambling.org" keep-scroll-position="true" rel="noopener noreferrer" target="_blank" className="">
                       <img alt="verify" src="/assets/verify_w.a13100a8.png"/>
                     </a>
                   </div>
-                  <div className="itech">
-                    <a href="http://www.itechlabs.com/certificates/BCGame/RNG_Certificate_UK_BCGame_ITL2002455_12Oct20.pdf" keep-scroll-position="true" rel="noopener noreferrer" target="_blank" className="">
-                      <img alt="itech" src="/assets/itech_w.ffaa4578.png"/>
-                    </a>
-                  </div>
+                
                   <div className="respon">
                     <a href="https://www.responsiblegambling.org/" keep-scroll-position="true" rel="noopener noreferrer" target="_blank" className="">
                       <img alt="respon" src="/assets/respon_w.38884bf7.png"/>
