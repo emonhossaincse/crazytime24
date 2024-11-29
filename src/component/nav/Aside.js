@@ -147,7 +147,7 @@ function Aside() {
           </svg>
             </span>
             <a href='#' className='nav-link'>
-            BC exclusive
+             Exclusive
             </a>
           </li>
           {/* end::item */}

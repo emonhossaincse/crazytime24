@@ -9,8 +9,8 @@ function Footer (){
       <div className="h1ux4v4o home-text-wrap">
         <div className="center-box">
           <div className="crypto-text">
-            <h2>Crypto Online Casino</h2>
-<p>Casinos online have not always been around, but we can safely say that online casinos have been used a lot since they came on the market. And it's not in short demand nor options, and now in 2023, we have 1000s and 1000s to pick from – it's just a matter of what you like and what payment options you would like to see at the casino.</p>
+            <h2>Online Casino</h2>
+<p>Casinos online have not always been around, but we can safely say that online casinos have been used a lot since they came on the market. And it's not in short demand nor options, and now in 2024, we have 1000s and 1000s to pick from – it's just a matter of what you like and what payment options you would like to see at the casino.</p>
 <p>Players are always looking for something new, which will help make the gaming experience so much better and more accessible. Allowing the player to focus on the absolute fun of a casino, that's right, the games themselves.</p>
 
 

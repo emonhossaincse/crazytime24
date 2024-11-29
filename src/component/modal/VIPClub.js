@@ -93,7 +93,7 @@ const MyModal = ({ showModal, handleClose }) => {
 				
 				<Tab.Container id="left-tabs-example" defaultActiveKey="bronze" Key={activeKey} onSelect={(k) => setActive(k)}>
        <div  className="b17t3u0t">
-        <p className="b-t">Discover the ultimate gaming experience with BC.GAME's exclusive VIP system!</p>
+        <p className="b-t">Discover the ultimate gaming experience with  exclusive VIP system!</p>
         <div className="b-list-wrap">
 
                         <Nav variant="tabs">
@@ -908,7 +908,7 @@ const MyModal = ({ showModal, handleClose }) => {
 
                  
 					<button className="ui-button button-normal vip-btn">
-						<div className="button-inner">Learn more about BC.GAME’s VIP system</div>
+						<div className="button-inner">Learn more about VIP system</div>
 					</button>
 				</div>
 			</div>
