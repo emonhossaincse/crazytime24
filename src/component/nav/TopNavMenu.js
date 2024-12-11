@@ -88,10 +88,7 @@ function TopNavMenu (){
             <div className="top-action">
                 <SignIn/>
                    <SignUp/>
-                   <Wallet/>
-                  
-                 
-                   
+                   <Wallet/> 
             </div>
         </div>
         </div>

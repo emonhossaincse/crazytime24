@@ -11,7 +11,8 @@ import './assets/css/footer.css';
 import './assets/css/modal.css';
 import './assets/css/singup.css';
 import './assets/css/vipclub.css';
-import'./assets/css/affiliate.css'
+import'./assets/css/affiliate.css';
+import'./assets/css/Casino.css';
 import Aside from './component/nav/Aside';
 import TopNavMenu from './component/nav/TopNavMenu';
 import Chat from './component/sidebar/Chat';
@@ -26,6 +27,7 @@ import BottomNavMenu from './component/nav/BottomNavMenu';
 import Sports from './pages/Sports';
 import Affiliate from './pages/Affiliate';
 import OddsList from './layout/OddsList';
+import Casino from './pages/Casino';
 
 function App() {
   
@@ -51,6 +53,7 @@ function App() {
           <Route path="/game" element={<GameLunch />} />
           <Route path="/sports" element={<Sports />} />
           <Route path='/affiliate' element={<Affiliate/>}/>
+          <Route path='/casino' element={<Casino/>}/>
         </Routes>
       </Router>
 
