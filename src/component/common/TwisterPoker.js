@@ -19,7 +19,7 @@ export default function TwisterPoker() {
 
   return (
     <div className="twisterPoker">
-      <CardLists cardTitle="Live Dealer" dataList={TwisterPokerImgList} />
+      <CardLists cardTitle="Twister Poker Tournaments" dataList={TwisterPokerImgList} />
     </div>
   );
 }

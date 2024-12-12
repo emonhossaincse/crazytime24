@@ -29,6 +29,13 @@
   --card-height: 11rem;
   --aspect-ratio: 20/11;
   --gap: 1rem;
+
+  .card-lists-header{
+    button{
+        display: none;
+    }
+  }
+  
   .card-lists {
     .card-lists-cards {
       &:hover :is(.card-lists-prev, .card-lists-next) {
@@ -49,6 +56,8 @@
 
     h1 {
       font-size: 1.5rem;
+      font-family: FuturaPtDemi;
+      font-weight: bolder;
     }
   }
 

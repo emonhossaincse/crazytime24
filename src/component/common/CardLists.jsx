@@ -35,7 +35,7 @@ export default function CardLists({cardTitle, dataList}) {
               d="m30.9 43 3.1-3.1L18.1 24 34 8.1 30.9 5 12 24z"
             />
           </svg>
-        </div>
+        </div> 
 
         <div className="card-lists-card">
           {dataList.map((data) => (
