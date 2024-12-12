@@ -38,7 +38,6 @@ function App() {
         <Chat/>
         <TopNavMenu/>
         <BottomNavMenu/>
-        
         <Wallet/>
         <Routes>
           <Route path="/" element={<>
