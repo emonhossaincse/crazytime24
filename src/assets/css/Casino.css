@@ -1,2136 +1,2220 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  .casino-page{
-    position: relative;
-    top: 64px;
-    height: 100vh;
-  }
-  body {
-    background-color: #1a1c1f;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.casino-page {
+  position: relative;
+  top: 64px;
+  height: 100vh;
+  color: #ffffff;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.search {
+  padding: 1rem;
+  width: 90%;
+  margin-inline: auto;
+  position: relative;
+  color: #ffffff;
+
+  #search-input {
+    padding: 0.75rem 1rem 0.75rem 2.25rem;
+    border-radius: 0.75rem;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #3d3d3d;
     color: #ffffff;
+    outline: none;
+    border: none;
   }
-  
-  a {
-    color: #ffffff;
-    text-decoration: none;
-  }
-  
-  .search {
-    padding: 1rem;
-    width: 90%;
-    margin-inline: auto;
-    position: relative;
-    color: #ffffff;
-  
-    #search-input {
-      padding: 0.75rem 1rem 0.75rem 2.25rem;
-      border-radius: 0.75rem;
-      width: 100%;
-      font-size: 1rem;
-      background-color: #3d3d3d;
-      color: #ffffff;
-      outline: none;
-      border: none;
-    }
-    label {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-48%);
-      left: 1.5rem;
-  
-      svg {
-        width: 1.5rem;
-        height: 1.5rem;
-      }
+  label {
+    position: absolute;
+    top: 48%;
+    transform: translateY(-50%);
+    left: 1.5rem;
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
-  
-  .main-nav-items {
+}
+
+.main-nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  text-wrap: nowrap;
+  width: 90%;
+  margin-inline: auto;
+  overflow-x: auto;
+
+  .nav-item {
     display: flex;
+    flex-direction: column;
+    gap: 0.325rem;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-  
-    .nav-item {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      align-items: center;
-      justify-content: center;
-  
-      svg {
-        height: 2rem;
-        width: 2rem;
-        fill: #ffffffcc;
-      }
+    font-size: 0.825rem;
+    min-width: 5.5rem;
+    aspect-ratio: 4/3;
+    text-align: center;
+    color: #ffffff;
+
+    svg {
+      height: 2.25rem;
+      width: 2.25rem;
+      fill: #ffffffcc;
     }
   }
-  
-  .secondary-nav-items {
+}
+
+.secondary-nav-items {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  text-wrap: nowrap;
+  width: 90%;
+  margin-inline: auto;
+  overflow-x: auto;
+  color: #ffffff;
+
+  .nav-links {
     display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    margin-top: 3rem;
-  
-    .nav-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      align-items: center;
-      justify-content: center;
-  
-      svg {
-        height: 2rem;
-        width: 2rem;
-        fill: #ffffffcc;
-      }
+    font-size: 0.625rem;
+    min-width: 4.5rem;
+    aspect-ratio: 4/3;
+    color: #ffffff;
+
+    svg {
+      height: 1.5rem;
+      width: 1.5rem;
+      fill: #ffffffcc;
     }
   }
-  
-  .cards{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-      gap: 1rem;
-      text-align: center;
-      margin-top: 3rem;
-      padding: 1.5rem;
-  
-      .card{
-          padding: 1rem;
-          height: 20rem;
-          border: 1px solid white;
-          border-radius: 0.5rem;
-          position: relative;
-          background-image: url(./assets/bg.jpg);
-        
-          background-size: cover;
-  
-          .info{
-              position: absolute;
-              top: 0.75rem;
-              right: 0.75rem;
-              width: 1.5rem;
-              height: 1.5rem;
-              background-color: #ffffff;
-              border-radius: 50%;
-          }
-  
-          h2{
-              margin-top: 6rem;
-          }
-  
-          p{
-              margin-block: 0.5rem;
-          }
-  
-          .footer{
-              margin-top: 4rem;
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-          }
-      }
+}
+
+.casino-cards {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  margin-top: 3rem;
+  padding-left: 2rem;
+  margin-left: 1rem;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 93%;
+
+  &:hover :is(.prev, .next) {
+    display: grid;
   }
 
-  /* account */
-  
-  .main {
-    color: black;
-    display: flex;
-    gap: 3rem;
-  
-    .left-sidebar {
-      width: 20rem;
-  
-      h2 {
-        margin-bottom: var(--gap-8);
-      }
-  
-      .left-sidebar-tab {
-        .tab {
-          display: block;
-          padding: var(--spacing-10-12);
-  
-          &:hover {
-            background-color: var(--white);
-          }
-        }
-      }
+  .prev,
+  .next {
+    position: absolute;
+    height: 100%;
+    width: 2rem;
+    top: 0;
+    background-color: #00000094;
+    backdrop-filter: blur(0.75rem);
+    display: none;
+    place-content: center;
+    z-index: 5;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
     }
-  
-    #contact:checked ~ .left-sidebar .left-sidebar-tab .contact-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
+  }
+
+  .prev {
+    left: 0;
+  }
+  .next {
+    right: 0;
+  }
+
+  .card {
+    min-width: 25rem;
+    padding: 1rem;
+    height: 15rem;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    position: relative;
+    background-image: url(./assets/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    transition: transform 0.3s ease-in-out;
+
+    .info {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: #ffffff;
+      border-radius: 50%;
     }
-    #residential:checked ~ .left-sidebar  .left-sidebar-tab .residential-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
+
+    h2 {
+      margin-top: 3.5rem;
     }
-    #preferences:checked ~ .left-sidebar  .left-sidebar-tab .preferences-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
+
+    p {
+      margin-block: 0 0.25rem;
     }
-    #password:checked ~ .left-sidebar  .left-sidebar-tab .password-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
+
+    .footer {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    #verification:checked ~ .left-sidebar  .left-sidebar-tab .verification-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
+  }
+}
+
+.card:hover{
+  transform: scale(1.05);
+}
+
+.card:hover + .card{
+  transform: translateX(0.5rem);
+}
+
+.card:has(+ .card:hover){
+  transform: translateX(-0.5rem);
+}
+
+@keyframes running-forward {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes running-backward {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.card {
+  animation: running-backward 2s linear forwards, running-forward 2s linear backwards;
+  animation-play-state: paused;
+}
+
+.prev:hover ~ .card {
+  animation: running-backward 2s linear;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+}
+
+.next:hover ~ .card {
+  animation: running-forward 2s linear;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+}
+
+/* account */
+
+.main {
+  color: black;
+  display: flex;
+  gap: 3rem;
+
+  .left-sidebar {
+    width: 20rem;
+
+    h2 {
+      margin-bottom: var(--gap-8);
     }
-  
-    #contact:checked ~ .right-content .contact-content {
-      display: block;
-  
-      .contact-content-form {
-        .update-btn {
-          margin-top: var(--gap-12);
-          margin-bottom: var(--gap-8);
-          width: 100%;
-          background-color: wheat;
-  
-          &:hover {
-            background-color: rgb(206, 187, 151);
-          }
-        }
-        .cancel-btn {
-          width: 100%;
-        }
-      }
-    }
-    #residential:checked ~ .right-content .residential-content {
-      display: block;
-  
-      ul {
-        margin-block: var(--gap-12);
-        font-size: 17px;
-      }
-    }
-    #preferences:checked ~ .right-content .preferences-content {
-      display: block;
-  
-      select {
-        width: 100%;
+
+    .left-sidebar-tab {
+      .tab {
+        display: block;
         padding: var(--spacing-10-12);
-        margin-bottom: var(--gap-12);
-        font-size: 1rem;
-      }
-  
-      h3 {
-        padding-block: var(--gap-12);
-      }
-  
-      h4 {
-        padding-block: var(--gap-8);
-      }
-  
-      .text-message {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-  
-        .radio-buttons {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-  
-          label {
-            background-color: rgb(255, 255, 255);
-            padding: var(--spacing-10-12) 1rem;
-          }
-          #yes:checked ~ .Yes{
-          background-color: #e7c687;
-          }
-           #no:checked ~ .No{
-          background-color: #e7c687;
-          }
-        }
-      }
-  
-      .emails {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-block: var(--gap-12);
-  
-        .radio-buttons {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-  
-          label {
-            background-color: rgb(255, 255, 255);
-            padding: var(--spacing-10-12) 1rem;
-          }
-          #email-yes:checked ~ .EmailYes{
-          background-color: #e7c687;
-          }
-           #email-no:checked ~ .EmailNo{
-          background-color: #e7c687;
-          }
-        }
-      }
-  
-      .bet-title{
-      margin-top: 1rem;
-      }
-  
-      .message-bet {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 1rem;
-  
-        .radio-buttons {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-  
-          label {
-            background-color: rgb(255, 255, 255);
-            padding: var(--spacing-10-12) 1rem;
-          }
-          #bet-yes:checked ~ .BetYes{
-          background-color: #e7c687;
-          }
-           #bet-no:checked ~ .BetNo{
-          background-color: #e7c687;
-          }
-        }
-      }
-  
-      .update-btn{
-          width: 100%;
-          margin-top: 1rem;
-      }
-  
-    }
-    #password:checked ~ .right-content .password-content {
-      display: block;
-  
-      h4 {
-        margin-block: var(--gap-8) var(--gap-12);
-      }
-  
-      p {
-        padding-block: var(--gap-8);
-      }
-  
-      .update-btn {
-        width: 100%;
-        margin-top: var(--gap-12);
-      }
-    }
-    #verification:checked ~ .right-content .verification-content {
-      display: block;
-  
-      h4 {
-        margin-block: var(--gap-8) var(--gap-12);
-      }
-  
-      p {
-        padding-block: var(--gap-8);
-      }
-  
-      details {
-        position: relative;
-        margin-block: var(--gap-12);
-        border-block: 2px solid wheat;
-        padding-block: var(--spacing-10-12);
-  
-        &::after {
-          content: "ᨆ";
-          position: absolute;
-          top: 0.325rem;
-          right: 0.5rem;
-          transition: transform 0.3s ease-in-out;
-          transform-origin: center;
-        }
-        &[open]::after {
-          transform: rotate(180deg);
-        }
-        summary {
-          list-style-type: none;
-        }
-        .details-identity-content {
-          margin-top: var(--gap-12);
-        }
-      }
-    }
-  
-    .right-content {
-      width: 35rem;
-  
-      .content {
-        display: none;
-  
-        h2 {
-          margin-bottom: var(--gap-8);
+
+        &:hover {
+          background-color: var(--white);
         }
       }
     }
   }
-  /* activity */
-  .main {
-    color: #000000cc;
-    display: flex;
-    gap: 3rem;
-  
-    .left-sidebar {
-      width: 20rem;
-  
-      h2 {
+
+  #contact:checked ~ .left-sidebar .left-sidebar-tab .contact-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+  #residential:checked ~ .left-sidebar  .left-sidebar-tab .residential-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+  #preferences:checked ~ .left-sidebar  .left-sidebar-tab .preferences-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+  #password:checked ~ .left-sidebar  .left-sidebar-tab .password-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+  #verification:checked ~ .left-sidebar  .left-sidebar-tab .verification-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+
+  #contact:checked ~ .right-content .contact-content {
+    display: block;
+
+    .contact-content-form {
+      .update-btn {
+        margin-top: var(--gap-12);
         margin-bottom: var(--gap-8);
-      }
-  
-      .left-sidebar-tab {
-        .tab {
-          display: block;
-          padding: var(--spacing-10-12);
-  
-          &:hover {
-            background-color: var(--white);
-          }
+        width: 100%;
+        background-color: wheat;
+
+        &:hover {
+          background-color: rgb(206, 187, 151);
         }
       }
-    }
-  
-    #my-activity:checked ~ .left-sidebar .left-sidebar-tab .my-activity-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
-    }
-    #deposit-limits:checked
-      ~ .left-sidebar  .left-sidebar-tab .deposit-limits-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
-    }
-    #time-out:checked ~ .left-sidebar .left-sidebar-tab .time-out-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
-    }
-    #self-exclusion:checked
-      ~ .left-sidebar .left-sidebar-tab .self-exclusion-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
-    }
-    #account-closure:checked
-      ~ .left-sidebar  .left-sidebar-tab .account-closure-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
-    }
-    #reality-checks:checked
-      ~ .left-sidebar  .left-sidebar-tab .reality-checks-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
-    }
-  
-    #my-activity:checked ~ .right-content .my-activity-content {
-      display: block;
-  
-      #day-7:checked ~ .my-activity-tabs .day-7-tab {
-        font-weight: 700;
-        background-color: #afddd1;
+      .cancel-btn {
+        width: 100%;
       }
-      #day-30:checked ~ .my-activity-tabs .day-30-tab {
-        font-weight: 700;
-        background-color: #afddd1;
-      }
-      #months-12:checked ~ .my-activity-tabs .months-12-tab {
-        font-weight: 700;
-        background-color: #afddd1;
-      }
-  
-      .my-activity-tabs {
+    }
+  }
+  #residential:checked ~ .right-content .residential-content {
+    display: block;
+
+    ul {
+      margin-block: var(--gap-12);
+      font-size: 17px;
+    }
+  }
+  #preferences:checked ~ .right-content .preferences-content {
+    display: block;
+
+    select {
+      width: 100%;
+      padding: var(--spacing-10-12);
+      margin-bottom: var(--gap-12);
+      font-size: 1rem;
+    }
+
+    h3 {
+      padding-block: var(--gap-12);
+    }
+
+    h4 {
+      padding-block: var(--gap-8);
+    }
+
+    .text-message {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .radio-buttons {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-block: var(--gap-12);
-  
-        .my-activity-tab {
-          border: 1px solid var(--border-color);
-          text-align: center;
-          width: 100%;
-          padding: var(--spacing-10-12) var(--spacing-14-16);
-  
-          &:hover {
-            font-weight: 700;
-          }
+
+        label {
+          background-color: rgb(255, 255, 255);
+          padding: var(--spacing-10-12) 1rem;
         }
-      }
-  
-      .my-activity-card {
-        padding: var(--spacing-10-12) var(--spacing-14-16);
-        border-radius: var(--br-4);
-        background-color: var(--white);
-        margin-block: var(--gap-8);
-        border-bottom: 1px solid var(--border-color);
-      }
-  
-      .my-activity-card .bottom-message {
-        text-align: center;
-        margin-top: 1rem;
-      }
-  
-      .my-activity-card-top {
-        display: flex;
-        align-items: start;
-        justify-content: space-between;
-      }
-  
-      .my-activity-card-left {
-        display: flex;
-        align-items: center;
-        gap: var(--gap-8);
-      }
-      .my-activity-time {
-        text-align: center;
-  
-        .my-activity-remaining-time {
-          font-size: 1.325rem;
-          font-weight: 700;
+        #yes:checked ~ .Yes {
+          background-color: #e7c687;
         }
-      }
-  
-      .my-activity-card h2 {
-        text-align: center;
-      }
-  
-      .info-icon {
-        width: 1.25rem;
-        height: 1.25rem;
-      }
-  
-      .my-activity-content-bottom {
-        position: relative;
-        background-image: url(./assets/bg-img.jpg);
-        display: grid;
-        place-content: center;
-        gap: var(--gap-8);
-        height: 15rem;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.692);
-        background-blend-mode: darken;
-        padding-top: 6rem;
-  
-        p {
-          text-align: center;
-        }
-  
-        .find-more-btn {
-          background-color: #ffffffcc;
-          border: none;
+        #no:checked ~ .No {
+          background-color: #e7c687;
         }
       }
     }
-  
-    #deposit-limits:checked ~ .right-content .deposit-limits-content {
-      display: block;
-  
-      p {
-        margin-block: 1rem;
-      }
-      h4 {
-        margin-block: 0.75rem;
-      }
-      .deposit-content-bottom {
+
+    .emails {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-block: var(--gap-12);
+
+      .radio-buttons {
         display: flex;
         align-items: center;
-        gap: 4rem;
+        justify-content: center;
+
+        label {
+          background-color: rgb(255, 255, 255);
+          padding: var(--spacing-10-12) 1rem;
+        }
+        #email-yes:checked ~ .EmailYes {
+          background-color: #e7c687;
+        }
+        #email-no:checked ~ .EmailNo {
+          background-color: #e7c687;
+        }
       }
-      .change-btn {
+    }
+
+    .bet-title {
+      margin-top: 1rem;
+    }
+
+    .message-bet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      .radio-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        label {
+          background-color: rgb(255, 255, 255);
+          padding: var(--spacing-10-12) 1rem;
+        }
+        #bet-yes:checked ~ .BetYes {
+          background-color: #e7c687;
+        }
+        #bet-no:checked ~ .BetNo {
+          background-color: #e7c687;
+        }
+      }
+    }
+
+    .update-btn {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+  #password:checked ~ .right-content .password-content {
+    display: block;
+
+    h4 {
+      margin-block: var(--gap-8) var(--gap-12);
+    }
+
+    p {
+      padding-block: var(--gap-8);
+    }
+
+    .update-btn {
+      width: 100%;
+      margin-top: var(--gap-12);
+    }
+  }
+  #verification:checked ~ .right-content .verification-content {
+    display: block;
+
+    h4 {
+      margin-block: var(--gap-8) var(--gap-12);
+    }
+
+    p {
+      padding-block: var(--gap-8);
+    }
+
+    details {
+      position: relative;
+      margin-block: var(--gap-12);
+      border-block: 2px solid wheat;
+      padding-block: var(--spacing-10-12);
+
+      &::after {
+        content: "ᨆ";
+        position: absolute;
+        top: 0.325rem;
+        right: 0.5rem;
+        transition: transform 0.3s ease-in-out;
+        transform-origin: center;
+      }
+      &[open]::after {
+        transform: rotate(180deg);
+      }
+      summary {
+        list-style-type: none;
+      }
+      .details-identity-content {
+        margin-top: var(--gap-12);
+      }
+    }
+  }
+
+  .right-content {
+    width: 35rem;
+
+    .content {
+      display: none;
+
+      h2 {
+        margin-bottom: var(--gap-8);
+      }
+    }
+  }
+}
+/* activity */
+.main {
+  color: #000000cc;
+  display: flex;
+  gap: 3rem;
+
+  .left-sidebar {
+    width: 20rem;
+
+    h2 {
+      margin-bottom: var(--gap-8);
+    }
+
+    .left-sidebar-tab {
+      .tab {
+        display: block;
+        padding: var(--spacing-10-12);
+
+        &:hover {
+          background-color: var(--white);
+        }
+      }
+    }
+  }
+
+  #my-activity:checked ~ .left-sidebar .left-sidebar-tab .my-activity-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+  #deposit-limits:checked
+    ~ .left-sidebar  .left-sidebar-tab .deposit-limits-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+  #time-out:checked ~ .left-sidebar .left-sidebar-tab .time-out-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+  #self-exclusion:checked
+    ~ .left-sidebar .left-sidebar-tab .self-exclusion-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+  #account-closure:checked
+    ~ .left-sidebar  .left-sidebar-tab .account-closure-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+  #reality-checks:checked
+    ~ .left-sidebar  .left-sidebar-tab .reality-checks-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+
+  #my-activity:checked ~ .right-content .my-activity-content {
+    display: block;
+
+    #day-7:checked ~ .my-activity-tabs .day-7-tab {
+      font-weight: 700;
+      background-color: #afddd1;
+    }
+    #day-30:checked ~ .my-activity-tabs .day-30-tab {
+      font-weight: 700;
+      background-color: #afddd1;
+    }
+    #months-12:checked ~ .my-activity-tabs .months-12-tab {
+      font-weight: 700;
+      background-color: #afddd1;
+    }
+
+    .my-activity-tabs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-block: var(--gap-12);
+
+      .my-activity-tab {
+        border: 1px solid var(--border-color);
+        text-align: center;
+        width: 100%;
+        padding: var(--spacing-10-12) var(--spacing-14-16);
+
+        &:hover {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .my-activity-card {
+      padding: var(--spacing-10-12) var(--spacing-14-16);
+      border-radius: var(--br-4);
+      background-color: var(--white);
+      margin-block: var(--gap-8);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .my-activity-card .bottom-message {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .my-activity-card-top {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+    }
+
+    .my-activity-card-left {
+      display: flex;
+      align-items: center;
+      gap: var(--gap-8);
+    }
+    .my-activity-time {
+      text-align: center;
+
+      .my-activity-remaining-time {
+        font-size: 1.325rem;
+        font-weight: 700;
+      }
+    }
+
+    .my-activity-card h2 {
+      text-align: center;
+    }
+
+    .info-icon {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    .my-activity-content-bottom {
+      position: relative;
+      background-image: url(./assets/bg-img.jpg);
+      display: grid;
+      place-content: center;
+      gap: var(--gap-8);
+      height: 15rem;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.692);
+      background-blend-mode: darken;
+      padding-top: 6rem;
+
+      p {
+        text-align: center;
+      }
+
+      .find-more-btn {
+        background-color: #ffffffcc;
+        border: none;
+      }
+    }
+  }
+
+  #deposit-limits:checked ~ .right-content .deposit-limits-content {
+    display: block;
+
+    p {
+      margin-block: 1rem;
+    }
+    h4 {
+      margin-block: 0.75rem;
+    }
+    .deposit-content-bottom {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+    }
+    .change-btn {
+      width: 100%;
+      margin-top: 1rem;
+      background-color: var(--bg-button);
+      border: none;
+
+      &:hover {
+        background-color: var(--bg-button-hover);
+      }
+    }
+  }
+
+  #time-out:checked ~ .right-content .time-out-content {
+    display: block;
+
+    .time-out-tab-contents-btns {
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    #create:checked ~ .time-out-tab-contents-btns .create-tab {
+      border-bottom: 2px solid blueviolet;
+      font-weight: 700;
+    }
+    #existing:checked ~ .time-out-tab-contents-btns .existing-tab {
+      border-bottom: 2px solid blueviolet;
+      font-weight: 700;
+    }
+
+    .timeout-tab {
+      padding-block: var(--spacing-14-16);
+      font-size: var(--font-16-18);
+
+      &:hover {
+        font-weight: 700;
+      }
+    }
+
+    .timeout-content-tab {
+      display: none;
+    }
+
+    #create:checked ~ .timeout-create-tab-content {
+      display: block;
+
+      p {
+        margin-block: var(--gap-12);
+      }
+      select {
+        padding: var(--spacing-10-12) var(--spacing-14-16);
+        width: 100%;
+        font-size: var(--font-16-18);
+        margin-block: var(--gap-12);
+        background-color: var(--white);
+        border: none;
+        border-bottom: 1px solid var(--border-color);
+        outline: none;
+      }
+      .continue-btn {
+        width: 100%;
+      }
+    }
+    #existing:checked ~ .timeout-existing-tab-content {
+      display: block;
+      text-align: center;
+      p {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+  #self-exclusion:checked ~ .right-content .self-exclusion-content {
+    display: block;
+
+    .self-exclusion-tab-content {
+      p {
+        margin-block: var(--gap-12);
+      }
+
+      select {
+        padding: var(--spacing-10-12) var(--spacing-14-16);
+        width: 100%;
+        font-size: var(--font-16-18);
+        margin-block: var(--gap-12);
+        background-color: var(--white);
+        border: none;
+        border-bottom: 1px solid var(--border-color);
+        outline: none;
+      }
+
+      h3 {
+        margin-block: 1rem;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: var(--gap-8);
+
+        input {
+          width: 1rem;
+          height: 1rem;
+          margin-top: 0.5rem;
+        }
+        label {
+          display: block;
+        }
+      }
+
+      .continue-btn {
         width: 100%;
         margin-top: 1rem;
         background-color: var(--bg-button);
         border: none;
-  
+
         &:hover {
           background-color: var(--bg-button-hover);
         }
       }
     }
-  
-    #time-out:checked ~ .right-content .time-out-content {
-      display: block;
-  
-      .time-out-tab-contents-btns {
+  }
+
+  #account-closure:checked ~ .right-content .account-closure-content {
+    display: block;
+
+    .account-closure-tab-content {
+      p {
+        margin-block: var(--gap-12);
+      }
+
+      select {
+        padding: var(--spacing-10-12) var(--spacing-14-16);
+        width: 100%;
+        font-size: var(--font-16-18);
+        margin-block: var(--gap-12);
+        background-color: var(--white);
+        border: none;
         border-bottom: 1px solid var(--border-color);
+        outline: none;
+      }
+
+      h3 {
+        margin-block: 1rem;
+      }
+
+      .closure-period {
+        .du-tabs {
+          display: flex;
+          border-bottom: 1px solid var(--border-color);
+          gap: var(--gap-8);
+
+          .radio {
+            width: 100%;
+            padding-block: var(--spacing-10-12);
+            font-size: 1.25rem;
+
+            &:hover {
+              font-weight: bold;
+            }
+          }
+        }
+
+        .du-content {
+          display: none;
+        }
+
+        #duration:checked ~ .du-tabs .duration-radio {
+          border-bottom: 2px solid blueviolet;
+          font-weight: bold;
+        }
+
+        #until:checked ~ .du-tabs .until-radio {
+          border-bottom: 2px solid blueviolet;
+          font-weight: bold;
+        }
+
+        #duration:checked ~ .tab-content .duration-tab-content {
+          display: block;
+        }
+
+        #until:checked ~ .tab-content .until-tab-content {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+
+          select {
+            border: 1px solid var(--border-color);
+          }
+        }
+      }
+
+      .continue-btn {
+        width: 100%;
+        margin-top: 1rem;
+        background-color: var(--bg-button);
+        border: none;
+
+        &:hover {
+          background-color: var(--bg-button-hover);
+        }
+      }
+    }
+  }
+
+  #reality-checks:checked ~ .right-content .reality-checks-content {
+    display: block;
+
+    .reality-checks-tab-content {
+      p {
+        margin-block: var(--gap-12);
+      }
+
+      h3 {
+        margin-block: 1rem;
+      }
+
+      .change-btn {
+        width: 100%;
+        margin-top: 1rem;
+        background-color: var(--bg-button);
+        border: none;
+
+        &:hover {
+          background-color: var(--bg-button-hover);
+        }
+      }
+    }
+  }
+
+  .right-content {
+    width: 35rem;
+
+    .content {
+      display: none;
+
+      h2 {
+        margin-bottom: var(--gap-8);
+      }
+    }
+
+    .history-tab-contents {
+      display: block;
+
+      .hours-tab-contents-btns {
         display: flex;
         align-items: center;
-        gap: 2rem;
-      }
-  
-      #create:checked ~ .time-out-tab-contents-btns .create-tab {
-        border-bottom: 2px solid blueviolet;
-        font-weight: 700;
-      }
-      #existing:checked ~ .time-out-tab-contents-btns .existing-tab {
-        border-bottom: 2px solid blueviolet;
-        font-weight: 700;
-      }
-  
-      .timeout-tab {
-        padding-block: var(--spacing-14-16);
-        font-size: var(--font-16-18);
-  
-        &:hover {
-          font-weight: 700;
+        margin-top: 1rem;
+
+        .hours-tab {
+          width: 100%;
+          padding: var(--spacing-10-12) var(--spacing-14-16);
+          text-align: center;
+          font-size: 1.125rem;
+          border: 1px solid #afddd1;
+
+          &:hover {
+            font-weight: 700;
+          }
         }
       }
-  
-      .timeout-content-tab {
+
+      .show-history-btn {
+        width: 100%;
+        background-color: #afddd1;
+        margin-top: 0.75rem;
+        text-align: center;
+      }
+    }
+
+    .show-history-content {
+      display: none;
+
+      .show-history-tab {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: var(--gap-8);
+
+        svg {
+          margin-top: 0.5rem;
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+
+      .time {
+        margin-top: var(--gap-8);
+        font-size: 1.25rem;
+      }
+
+      p {
+        margin-top: 0.325rem;
+      }
+    }
+  }
+}
+/* bank */
+.main {
+  color: #000000dd;
+  display: flex;
+  gap: 3rem;
+
+  .left-sidebar {
+    width: 20rem;
+
+    h2 {
+      margin-bottom: var(--gap-8);
+    }
+
+    .left-sidebar-tab {
+      .tab {
+        display: block;
+        padding: var(--spacing-10-12);
+
+        &:hover {
+          background-color: var(--white);
+        }
+      }
+    }
+  }
+
+  #balance:checked ~ .left-sidebar .left-sidebar-tab .balance-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+  #deposit:checked ~ .left-sidebar  .left-sidebar-tab .deposit-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+  #withdraw:checked ~ .left-sidebar  .left-sidebar-tab .withdraw-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+
+  #balance:checked ~ .right-content .balance-content {
+    display: block;
+
+    .balance-content-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+
+      .balance-content-title {
+        font-size: 1.25rem;
+      }
+
+      .balance-content-top-amount {
+        font-size: 1.75rem;
+        font-weight: 700;
+      }
+    }
+
+    .balance-content-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding-inline: 2rem;
+      margin-bottom: 0.75rem;
+
+      .button {
+        color: #000000dd;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+      }
+    }
+    h3 {
+      margin-block: 0.75rem;
+    }
+    ul {
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block: var(--gap-8);
+
+        & span:last-child {
+          font-size: var(--font-22-24);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  #deposit:checked ~ .right-content .deposit-content {
+    display: block;
+
+    .deposit-option-content {
+      .du-tabs {
+        display: flex;
+        border-bottom: 1px solid var(--border-color);
+        gap: var(--gap-8);
+
+        .radio {
+          width: 100%;
+          padding-block: var(--spacing-10-12);
+          font-size: 1.25rem;
+
+          &:hover {
+            font-weight: bold;
+          }
+        }
+      }
+
+      .du-content {
         display: none;
       }
-  
-      #create:checked ~ .timeout-create-tab-content {
+
+      #cashout:checked ~ .du-tabs .cashout-radio {
+        border-bottom: 2px solid blueviolet;
+        font-weight: bold;
+      }
+
+      #sendmoney:checked ~ .du-tabs .sendmoney-radio {
+        border-bottom: 2px solid blueviolet;
+        font-weight: bold;
+      }
+
+      #cashout:checked ~ .tab-content .cashout-tab-content {
         display: block;
-  
-        p {
-          margin-block: var(--gap-12);
-        }
-        select {
-          padding: var(--spacing-10-12) var(--spacing-14-16);
-          width: 100%;
-          font-size: var(--font-16-18);
-          margin-block: var(--gap-12);
-          background-color: var(--white);
-          border: none;
-          border-bottom: 1px solid var(--border-color);
-          outline: none;
-        }
-        .continue-btn {
-          width: 100%;
-        }
-      }
-      #existing:checked ~ .timeout-existing-tab-content {
-        display: block;
-        text-align: center;
-        p {
-          margin-top: 1.5rem;
-        }
-      }
-    }
-    #self-exclusion:checked ~ .right-content .self-exclusion-content {
-      display: block;
-  
-      .self-exclusion-tab-content {
-        p {
-          margin-block: var(--gap-12);
-        }
-  
-        select {
-          padding: var(--spacing-10-12) var(--spacing-14-16);
-          width: 100%;
-          font-size: var(--font-16-18);
-          margin-block: var(--gap-12);
-          background-color: var(--white);
-          border: none;
-          border-bottom: 1px solid var(--border-color);
-          outline: none;
-        }
-  
-        h3 {
-          margin-block: 1rem;
-        }
-  
-        div {
-          display: flex;
-          align-items: center;
-          gap: var(--gap-8);
-  
-          input {
-            width: 1rem;
-            height: 1rem;
-            margin-top: 0.5rem;
-          }
-          label {
-            display: block;
-          }
-        }
-  
-        .continue-btn {
-          width: 100%;
-          margin-top: 1rem;
-          background-color: var(--bg-button);
-          border: none;
-  
-          &:hover {
-            background-color: var(--bg-button-hover);
-          }
-        }
-      }
-    }
-  
-    #account-closure:checked ~ .right-content .account-closure-content {
-      display: block;
-  
-      .account-closure-tab-content {
-        p {
-          margin-block: var(--gap-12);
-        }
-  
-        select {
-          padding: var(--spacing-10-12) var(--spacing-14-16);
-          width: 100%;
-          font-size: var(--font-16-18);
-          margin-block: var(--gap-12);
-          background-color: var(--white);
-          border: none;
-          border-bottom: 1px solid var(--border-color);
-          outline: none;
-        }
-  
-        h3 {
-          margin-block: 1rem;
-        }
-  
-        .closure-period {
-          .du-tabs {
-            display: flex;
-            border-bottom: 1px solid var(--border-color);
-            gap: var(--gap-8);
-  
-            .radio {
-              width: 100%;
-              padding-block: var(--spacing-10-12);
-              font-size: 1.25rem;
-  
-              &:hover{
-                  font-weight: bold;
-              }
-            }
-          }
-  
-          .du-content {
-            display: none;
-          }
-  
-          #duration:checked ~ .du-tabs .duration-radio{
-              border-bottom: 2px solid blueviolet;
-              font-weight: bold;
-          }
-  
-          #until:checked ~ .du-tabs .until-radio{
-              border-bottom: 2px solid blueviolet;
-              font-weight: bold;
-          }
-  
-          #duration:checked ~ .tab-content .duration-tab-content {
-            display: block;
-          }
-  
-          #until:checked ~ .tab-content .until-tab-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-  
-            select{
-              border: 1px solid var(--border-color);
-            }
-  
-          }
-        }
-  
-        .continue-btn {
-          width: 100%;
-          margin-top: 1rem;
-          background-color: var(--bg-button);
-          border: none;
-  
-          &:hover {
-            background-color: var(--bg-button-hover);
-          }
-        }
-      }
-    }
-  
-    #reality-checks:checked ~ .right-content .reality-checks-content {
-      display: block;
-  
-      .reality-checks-tab-content {
-          p {
-            margin-block: var(--gap-12);
-          }
-  
-          h3 {
-            margin-block: 1rem;
-          }
-    
-          .change-btn {
+
+        .cashout-form {
+          margin-top: 2rem;
+          .submit-btn {
             width: 100%;
             margin-top: 1rem;
             background-color: var(--bg-button);
             border: none;
-    
+
             &:hover {
               background-color: var(--bg-button-hover);
             }
           }
         }
-    }
-  
-    .right-content {
-      width: 35rem;
-  
-      .content {
-        display: none;
-  
-        h2 {
-          margin-bottom: var(--gap-8);
-        }
       }
-  
-      .history-tab-contents {
+
+      #sendmoney:checked ~ .tab-content .sendmoney-tab-content {
         display: block;
-  
-        .hours-tab-contents-btns {
-          display: flex;
-          align-items: center;
-          margin-top: 1rem;
-  
-          .hours-tab {
+
+        .sendmoney-form {
+          margin-top: 2rem;
+          .submit-btn {
             width: 100%;
-            padding: var(--spacing-10-12) var(--spacing-14-16);
-            text-align: center;
-            font-size: 1.125rem;
-            border: 1px solid #afddd1;
-  
+            margin-top: 1rem;
+            background-color: var(--bg-button);
+            border: none;
+
             &:hover {
-              font-weight: 700;
+              background-color: var(--bg-button-hover);
             }
           }
-        }
-  
-        .show-history-btn {
-          width: 100%;
-          background-color: #afddd1;
-          margin-top: 0.75rem;
-          text-align: center;
-        }
-      }
-  
-      .show-history-content {
-        display: none;
-  
-        .show-history-tab {
-          display: flex;
-          align-items: center;
-          gap: 0.25rem;
-          font-size: 1rem;
-          font-weight: 600;
-          margin-bottom: var(--gap-8);
-  
-          svg {
-            margin-top: 0.5rem;
-            width: 1rem;
-            height: 1rem;
-          }
-        }
-  
-        .time {
-          margin-top: var(--gap-8);
-          font-size: 1.25rem;
-        }
-  
-        p {
-          margin-top: 0.325rem;
         }
       }
     }
   }
-  /* bank */
-  .main {
-    color: #000000dd;
-    display: flex;
-    gap: 3rem;
-  
-    .left-sidebar {
-      width: 20rem;
-  
-      h2 {
-        margin-bottom: var(--gap-8);
-      }
-  
-      .left-sidebar-tab {
-        .tab {
-          display: block;
-          padding: var(--spacing-10-12);
-  
-          &:hover {
-            background-color: var(--white);
-          }
-        }
-      }
+  #withdraw:checked ~ .right-content .withdraw-content {
+    display: block;
+
+    select {
+      width: 100%;
+      padding: var(--spacing-10-12);
+      margin-bottom: var(--gap-12);
+      font-size: 1rem;
     }
-  
-    #balance:checked ~ .left-sidebar .left-sidebar-tab .balance-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
+
+    h3 {
+      padding-block: var(--gap-12);
     }
-    #deposit:checked ~ .left-sidebar  .left-sidebar-tab .deposit-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
+
+    h4 {
+      padding-block: var(--gap-8);
     }
-    #withdraw:checked ~ .left-sidebar  .left-sidebar-tab .withdraw-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
-    }
-  
-    #balance:checked ~ .right-content .balance-content {
-      display: block;
-  
-      .balance-content-top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 0.75rem;
-  
-        .balance-content-title {
-          font-size: 1.25rem;
-        }
-  
-        .balance-content-top-amount {
-          font-size: 1.75rem;
-          font-weight: 700;
-        }
-      }
-  
-      .balance-content-buttons {
+
+    .text-message {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .radio-buttons {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
-        padding-inline: 2rem;
-        margin-bottom: 0.75rem;
-  
-        .button {
-          color: #000000dd;
+
+        label {
+          background-color: rgb(255, 255, 255);
+          padding: var(--spacing-10-12) 1rem;
+        }
+        #yes:checked ~ .Yes {
+          background-color: #e7c687;
+        }
+        #no:checked ~ .No {
+          background-color: #e7c687;
+        }
+      }
+    }
+
+    .emails {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-block: var(--gap-12);
+
+      .radio-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        label {
+          background-color: rgb(255, 255, 255);
+          padding: var(--spacing-10-12) 1rem;
+        }
+        #email-yes:checked ~ .EmailYes {
+          background-color: #e7c687;
+        }
+        #email-no:checked ~ .EmailNo {
+          background-color: #e7c687;
+        }
+      }
+    }
+
+    .bet-title {
+      margin-top: 1rem;
+    }
+
+    .message-bet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      .radio-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        label {
+          background-color: rgb(255, 255, 255);
+          padding: var(--spacing-10-12) 1rem;
+        }
+        #bet-yes:checked ~ .BetYes {
+          background-color: #e7c687;
+        }
+        #bet-no:checked ~ .BetNo {
+          background-color: #e7c687;
+        }
+      }
+    }
+
+    .update-btn {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+
+  .right-content {
+    width: 35rem;
+
+    .content {
+      display: none;
+
+      h2 {
+        margin-bottom: var(--gap-8);
+      }
+    }
+  }
+}
+/* offer */
+.main {
+  color: #000000cc;
+  display: flex;
+  gap: 3rem;
+
+  .left-sidebar {
+    width: 20rem;
+
+    h2 {
+      margin-bottom: var(--gap-8);
+    }
+
+    .left-sidebar-tab {
+      .tab {
+        display: block;
+        padding: var(--spacing-10-12);
+
+        &:hover {
+          background-color: var(--white);
+        }
+      }
+    }
+  }
+
+  #settled-bets:checked ~ .left-sidebar .left-sidebar-tab .settled-bets-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+  #unsettled-bets:checked
+    ~ .left-sidebar  .left-sidebar-tab .unsettled-bets-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+  #games-bets:checked ~ .left-sidebar  .left-sidebar-tab .games-bets-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+  #deposits-bets:checked ~ .left-sidebar .left-sidebar-tab .deposits-bets-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+  #withdraw-bets:checked ~ .left-sidebar  .left-sidebar-tab .withdraw-bets-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+  #adjustments-bets:checked
+    ~ .left-sidebar  .left-sidebar-tab .adjustments-bets-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+
+  #settled-bets:checked ~ .right-content .settled-bets-content {
+    display: block;
+
+    #settled-sports:checked ~ .settled-history-tabs .settled-sports-tab {
+      border-bottom: 2px solid blue;
+      font-weight: 700;
+    }
+    #settled-lotto:checked ~ .settled-history-tabs .settled-lotto-tab {
+      border-bottom: 2px solid blue;
+      font-weight: 700;
+    }
+
+    .settled-history-tabs {
+      display: inline-flex;
+      width: 100%;
+      align-items: center;
+      gap: var(--gap-12);
+      border-bottom: 2px solid var(--border-color);
+
+      .settled-tab-item {
+        padding: var(--spacing-10-12) var(--spacing-14-16);
+        font-size: 1.2rem;
+
+        &:hover {
+          font-weight: 700;
+        }
+      }
+    }
+    .settled-history-tab-contents {
+      display: block;
+
+      #settled-last-24:checked
+        ~ .settled-hours-tab-contents-btns .settled-last-24-tab {
+        font-weight: 700;
+        background-color: #afddd1;
+      }
+      #settled-last-48:checked
+        ~ .settled-hours-tab-contents-btns .settled-last-48-tab {
+        font-weight: 700;
+        background-color: #afddd1;
+      }
+      #settled-date-range:checked
+        ~ .settled-hours-tab-contents-btns .settled-date-range-tab {
+        font-weight: 700;
+        background-color: #afddd1;
+      }
+
+      .settled-hours-tab-contents-btns {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+
+        .settled-hours-tab {
           width: 100%;
+          padding: var(--spacing-10-12) var(--spacing-14-16);
+          text-align: center;
+          font-size: 1.125rem;
+          border: 1px solid #afddd1;
+
+          &:hover {
+            font-weight: 700;
+          }
+        }
+      }
+
+      .settled-show-history-btn {
+        width: 100%;
+        background-color: #afddd1;
+        margin-top: 0.75rem;
+        text-align: center;
+      }
+    }
+
+    #settled-show-history:checked ~ .settled-history-tab-contents {
+      display: none;
+    }
+    #settled-show-history:checked ~ .settled-history-tabs {
+      display: none;
+    }
+
+    #settled-show-history:checked ~ .settled-show-history-content {
+      display: block;
+    }
+
+    .settled-show-history-content {
+      display: none;
+
+      .settled-show-history-tab {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: var(--gap-8);
+
+        svg {
+          margin-top: 0.5rem;
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+
+      .settled-time {
+        margin-top: var(--gap-8);
+        font-size: 1.25rem;
+      }
+
+      p {
+        margin-top: 0.325rem;
+      }
+    }
+  }
+
+  #unsettled-bets:checked ~ .right-content .unsettled-bets-content {
+    display: block;
+
+    #unsettled-sports:checked ~ .unsettled-history-tabs .unsettled-sports-tab {
+      border-bottom: 2px solid blue;
+      font-weight: 700;
+    }
+    #unsettled-lotto:checked ~ .unsettled-history-tabs .unsettled-lotto-tab {
+      border-bottom: 2px solid blue;
+      font-weight: 700;
+    }
+
+    .unsettled-history-tabs {
+      display: inline-flex;
+      width: 100%;
+      align-items: center;
+      gap: var(--gap-12);
+      border-bottom: 2px solid var(--border-color);
+
+      .unsettled-tab-item {
+        padding: var(--spacing-10-12) var(--spacing-14-16);
+        font-size: 1.2rem;
+
+        &:hover {
+          font-weight: 700;
+        }
+      }
+    }
+    .unsettled-history-tab-contents {
+      display: block;
+
+      #unsettled-last-24:checked
+        ~ .unsettled-hours-tab-contents-btns .unsettled-last-24-tab {
+        font-weight: 700;
+        background-color: #afddd1;
+      }
+      #unsettled-last-48:checked
+        ~ .unsettled-hours-tab-contents-btns .unsettled-last-48-tab {
+        font-weight: 700;
+        background-color: #afddd1;
+      }
+      #unsettled-date-range:checked
+        ~ .unsettled-hours-tab-contents-btns .unsettled-date-range-tab {
+        font-weight: 700;
+        background-color: #afddd1;
+      }
+
+      .unsettled-hours-tab-contents-btns {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+
+        .unsettled-hours-tab {
+          width: 100%;
+          padding: var(--spacing-10-12) var(--spacing-14-16);
+          text-align: center;
+          font-size: 1.125rem;
+          border: 1px solid #afddd1;
+
+          &:hover {
+            font-weight: 700;
+          }
+        }
+      }
+
+      .unsettled-show-history-btn {
+        width: 100%;
+        background-color: #afddd1;
+        margin-top: 0.75rem;
+        text-align: center;
+      }
+    }
+
+    #unsettled-show-history:checked ~ .unsettled-history-tab-contents {
+      display: none;
+    }
+    #unsettled-show-history:checked ~ .unsettled-history-tabs {
+      display: none;
+    }
+
+    #unsettled-show-history:checked ~ .unsettled-show-history-content {
+      display: block;
+    }
+
+    .unsettled-show-history-content {
+      display: none;
+
+      .unsettled-show-history-tab {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: var(--gap-8);
+
+        svg {
+          margin-top: 0.5rem;
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+
+      .unsettled-time {
+        margin-top: var(--gap-8);
+        font-size: 1.25rem;
+      }
+
+      p {
+        margin-top: 0.325rem;
+      }
+    }
+  }
+
+  #games-bets:checked ~ .right-content .games-bets-content {
+    display: block;
+
+    #games-bets-last-24:checked ~ .hours-tab-contents-btns .last-24-tab {
+      font-weight: 700;
+      background-color: #afddd1;
+    }
+    #games-bets-last-48:checked ~ .hours-tab-contents-btns .last-48-tab {
+      font-weight: 700;
+      background-color: #afddd1;
+    }
+    #games-bets-date-range:checked ~ .hours-tab-contents-btns .date-range-tab {
+      font-weight: 700;
+      background-color: #afddd1;
+    }
+
+    #games-bets-show-history:checked ~ .history-tab-contents {
+      display: none;
+    }
+    #games-bets-show-history:checked ~ .history-tabs {
+      display: none;
+    }
+
+    #games-bets-show-history:checked ~ .show-history-content {
+      display: block;
+    }
+  }
+  #deposits-bets:checked ~ .right-content .deposits-bets-content {
+    display: block;
+
+    #deposits-bets-last-24:checked ~ .hours-tab-contents-btns .last-24-tab {
+      font-weight: 700;
+      background-color: #afddd1;
+    }
+    #deposits-bets-last-48:checked ~ .hours-tab-contents-btns .last-48-tab {
+      font-weight: 700;
+      background-color: #afddd1;
+    }
+    #deposits-bets-date-range:checked
+      ~ .hours-tab-contents-btns .date-range-tab {
+      font-weight: 700;
+      background-color: #afddd1;
+    }
+
+    #deposits-bets-show-history:checked ~ .history-tab-contents {
+      display: none;
+    }
+    #deposits-bets-show-history:checked ~ .history-tabs {
+      display: none;
+    }
+
+    #deposits-bets-show-history:checked ~ .show-history-content {
+      display: block;
+    }
+  }
+
+  #withdraw-bets:checked ~ .right-content .withdraw-bets-content {
+    display: block;
+
+    #withdraw-bets-last-24:checked ~ .hours-tab-contents-btns .last-24-tab {
+      font-weight: 700;
+      background-color: #afddd1;
+    }
+    #withdraw-bets-last-48:checked ~ .hours-tab-contents-btns .last-48-tab {
+      font-weight: 700;
+      background-color: #afddd1;
+    }
+    #withdraw-bets-date-range:checked
+      ~ .hours-tab-contents-btns .date-range-tab {
+      font-weight: 700;
+      background-color: #afddd1;
+    }
+
+    #withdraw-bets-show-history:checked ~ .history-tab-contents {
+      display: none;
+    }
+    #withdraw-bets-show-history:checked ~ .history-tabs {
+      display: none;
+    }
+
+    #withdraw-bets-show-history:checked ~ .show-history-content {
+      display: block;
+    }
+  }
+
+  #adjustments-bets:checked ~ .right-content .adjustments-bets-content {
+    display: block;
+
+    #adjustments-bets-last-24:checked ~ .hours-tab-contents-btns .last-24-tab {
+      font-weight: 700;
+      background-color: #afddd1;
+    }
+    #adjustments-bets-last-48:checked ~ .hours-tab-contents-btns .last-48-tab {
+      font-weight: 700;
+      background-color: #afddd1;
+    }
+    #adjustments-bets-date-range:checked
+      ~ .hours-tab-contents-btns .date-range-tab {
+      font-weight: 700;
+      background-color: #afddd1;
+    }
+
+    #adjustments-bets-show-history:checked ~ .history-tab-contents {
+      display: none;
+    }
+    #adjustments-bets-show-history:checked ~ .history-tabs {
+      display: none;
+    }
+
+    #adjustments-bets-show-history:checked ~ .show-history-content {
+      display: block;
+    }
+  }
+
+  .right-content {
+    width: 35rem;
+
+    .content {
+      display: none;
+
+      h2 {
+        margin-bottom: var(--gap-8);
+      }
+    }
+
+    .history-tab-contents {
+      display: block;
+
+      .hours-tab-contents-btns {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+
+        .hours-tab {
+          width: 100%;
+          padding: var(--spacing-10-12) var(--spacing-14-16);
+          text-align: center;
+          font-size: 1.125rem;
+          border: 1px solid #afddd1;
+
+          &:hover {
+            font-weight: 700;
+          }
+        }
+      }
+
+      .show-history-btn {
+        width: 100%;
+        background-color: #afddd1;
+        margin-top: 0.75rem;
+        text-align: center;
+      }
+    }
+
+    .show-history-content {
+      display: none;
+
+      .show-history-tab {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: var(--gap-8);
+
+        svg {
+          margin-top: 0.5rem;
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+
+      .time {
+        margin-top: var(--gap-8);
+        font-size: 1.25rem;
+      }
+
+      p {
+        margin-top: 0.325rem;
+      }
+    }
+  }
+}
+/*massage  */
+
+.main {
+  color: #000000bb;
+  display: flex;
+  gap: 3rem;
+
+  .left-sidebar {
+    width: 20rem;
+
+    h2 {
+      margin-bottom: var(--gap-8);
+    }
+
+    .left-sidebar-tab {
+      .tab {
+        display: block;
+        padding: var(--spacing-10-12);
+
+        &:hover {
+          background-color: var(--white);
+        }
+      }
+    }
+  }
+
+  #new-message:checked ~ .left-sidebar .left-sidebar-tab .new-message-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+  #inbox:checked ~ .left-sidebar  .left-sidebar-tab .inbox-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+  #sent-messages:checked ~ .left-sidebar  .left-sidebar-tab .sent-messages-tab {
+    font-weight: bold;
+    border-left: 2px solid var(--border-color);
+    background-color: var(--white);
+  }
+
+  #new-message:checked ~ .right-content .new-message-content {
+    display: block;
+
+    .new-message-content-form {
+      #send-message {
+        width: 100%;
+        height: 10rem;
+        border: 1px solid var(--border-color);
+        outline: none;
+        border-radius: var(--br-4);
+        padding: var(--spacing-6-8) var(--spacing-10-12);
+        font-size: 1.125rem;
+      }
+
+      .send-btn {
+        margin-top: var(--gap-12);
+        margin-bottom: var(--gap-8);
+        width: 100%;
+        background-color: wheat;
+
+        &:hover {
+          background-color: rgb(206, 187, 151);
+        }
+      }
+    }
+  }
+
+  #inbox:checked ~ .right-content .inbox-content {
+    display: block;
+
+    #edit-delete-checkbox:checked ~ .edit-delete-message span {
+      display: none;
+    }
+
+    #edit-delete-checkbox:checked
+      ~ .edit-delete-message .delete-confirmation-message {
+      display: inline-block;
+    }
+
+    #edit-delete-checkbox:checked ~ .edit-delete-message .edit-checkbox {
+      display: none;
+    }
+
+    #edit-delete-checkbox:checked ~ .edit-delete-message .cancel-checkbox {
+      display: inline-block;
+    }
+
+    #edit-delete-checkbox:checked ~ .inbox-content-message #delete-message {
+      display: inline-block;
+    }
+
+    .edit-delete-message {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1rem;
+
+      span {
+        display: inline-block;
+      }
+
+      .delete-confirmation-message {
+        display: none;
+      }
+
+      .cancel-checkbox {
+        display: none;
+      }
+    }
+
+    .inbox-content-message {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 0.5rem;
+
+      #delete-message {
+        width: 2rem;
+        margin-top: 0.5rem;
+        display: none;
+      }
+
+      label {
+        line-height: 1.325rem;
+      }
+    }
+  }
+
+  #sent-messages:checked ~ .right-content .sent-messages-content {
+    display: block;
+
+    .sent-message-content {
+      margin-top: var(--spacing-14-16);
+      border: 1px solid var(--border-color);
+      padding: var(--spacing-6-8) var(--spacing-10-12);
+      border-radius: var(--br-4);
+      p {
+        padding-block: 0.25rem;
+      }
+    }
+  }
+
+  .right-content {
+    width: 35rem;
+
+    .content {
+      display: none;
+
+      h2 {
+        margin-bottom: var(--gap-8);
+      }
+    }
+  }
+}
+/*offer  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.offer-title {
+  margin-block: 1rem;
+  padding-inline: 1rem;
+}
+
+.offer-nav-items {
+  background-color: #3d3d3d;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #ffffffcc;
+  cursor: pointer;
+}
+
+.offer-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+  padding: 1rem;
+  color: #9eead5;
+
+  .offer-card {
+    border-radius: 0.5rem;
+    display: grid;
+    background-color: #3d3d3d;
+    grid-row: span 4;
+    gap: 0;
+    padding-bottom: 1rem;
+
+    .offer-card-img {
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 16/9;
+      object-position: center;
+    }
+
+    .offer-icon,
+    .offer-car-title,
+    .subtitle {
+      padding: 0.125rem 1rem;
+    }
+
+    .offer-icon {
+      fill: #9eead5;
+      width: 5rem;
+      height: 5rem;
+    }
+
+    .subtitle {
+      .sub-title {
+        margin-block: 0.25rem;
+      }
+
+      .second-sub-title {
+        margin-top: 0.25rem;
+        color: #9eead5aa;
+      }
+    }
+  }
+}
+/*main  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-input: #f8f8f8;
+  --border-color: rgb(230, 204, 204);
+  --white: #ffffff;
+  --bg-button: #afddd1;
+  --bg-button-hover: #a2d3c6;
+
+  --font-16-18: clamp(1rem, 1vw + 0.5rem, 1.125rem);
+  --font-22-24: clamp(1.375rem, 1vw + 0.75rem, 1.5rem);
+
+  --spacing-4: 0.25rem;
+  --spacing-6-8: clamp(0.375rem, 0.5vw + 0.375rem, 0.5rem);
+  --spacing-10-12: clamp(0.625rem, 0.75vw + 0.625rem, 0.75rem);
+  --spacing-14-16: clamp(0.825rem, 1vw + 0.825rem, 1rem);
+  --spacing-inline-container: clamp(1rem, 2vw + 4rem, 8rem);
+  --spacing-block-container: clamp(1rem, 1vw + 1rem, 2rem);
+
+  --br-4: 0.25rem;
+
+  --gap-2-6: clamp(0.125rem, 0.5vw + 0.25rem, 0.625rem);
+  --gap-8: 0.5rem;
+  --gap-12: 0.75rem;
+}
+
+html {
+  background-color: #f1f1f1;
+  color: #000000dd;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI,
+    Tahoma, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Open Sans, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000000dd;
+}
+
+label {
+  display: block;
+  padding-block: var(--spacing-4);
+}
+
+input {
+  width: 100%;
+  margin-bottom: var(--spacing-4);
+  padding: var(--spacing-10-12) var(--spacing-14-16);
+  border-radius: var(--br-4);
+  background-color: var(--bg-input);
+  outline: none;
+  border: 1px solid var(--border-color);
+  font-size: 1rem;
+}
+.container {
+  padding: var(--spacing-block-container) var(--spacing-inline-container);
+}
+
+.button {
+  padding: var(--spacing-10-12) var(--spacing-14-16);
+  border: 1px solid black;
+  border-radius: var(--br-4);
+  background-color: transparent;
+  font-size: 1rem;
+  color: #000000dd;
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  border: 1px solid blue;
+
+  .profile {
+    position: relative;
+
+    .profile-icon {
+      background-color: blue;
+      color: white;
+      padding: 1rem 1.25rem;
+      border-radius: 50%;
+    }
+
+    #profile-side-bar {
+      font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI,
+        Tahoma, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Open Sans,
+        sans-serif;
+      color: rgba(0, 0, 0, 0.8);
+      padding: var(--spacing-6-8) var(--spacing-10-12);
+      border-radius: 0.25rem;
+      position: absolute;
+      top: 4.5rem;
+      left: calc(100vw - 26rem);
+      width: 25.75rem;
+      max-height: calc(-125px + 100vh);
+      border: 1px solid blue;
+      outline: none;
+
+      & .profile-data-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: var(--spacing-6-8);
+
+        & .profile-data-top-left {
+          & .profile-data-top-left-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--gap-2-6);
+
+            & .profile-data-top-amount {
+              font-size: 1.5rem;
+              font-weight: 700;
+            }
+          }
+        }
+
+        & .profile-data-top-right {
           display: flex;
           align-items: center;
-          justify-content: center;
-  
+          gap: 0.25rem;
+          font-size: var(--font-16-18);
+          font-weight: 600;
+
           svg {
             width: 1.25rem;
             height: 1.25rem;
           }
         }
       }
-      h3 {
-        margin-block: 0.75rem;
+
+      & .profile-data-top-bottom {
+        display: flex;
+        align-items: center;
+        gap: clamp(1.25rem, 4vw + 0.25rem, 8rem);
       }
-      ul {
-        li {
+
+      & .profile-tabs {
+        margin-top: 1.25rem;
+
+        & .tab-items {
           display: flex;
           align-items: center;
-          justify-content: space-between;
-          padding-block: var(--gap-8);
-  
-          & span:last-child {
-            font-size: var(--font-22-24);
-            font-weight: bold;
+          gap: var(--gap-2-6);
+          border-top: 1px solid wheat;
+
+          & label {
+            padding: var(--spacing-14-16) var(--spacing-14-16);
           }
         }
-      }
-    }
-    #deposit:checked ~ .right-content .deposit-content {
-      display: block;
-  
-      .deposit-option-content {
-        .du-tabs {
-          display: flex;
-          border-bottom: 1px solid var(--border-color);
-          gap: var(--gap-8);
-  
-          .radio {
-            width: 100%;
-            padding-block: var(--spacing-10-12);
-            font-size: 1.25rem;
-  
-            &:hover {
-              font-weight: bold;
-            }
-          }
+
+        #profile-tab-account:checked ~ .tab-items .tab-account {
+          border-bottom: 1px solid blueviolet;
         }
-  
-        .du-content {
+        #profile-tab-offers:checked ~ .tab-items .tab-offers {
+          border-bottom: 1px solid blueviolet;
+        }
+        #profile-tab-preferences:checked ~ .tab-items .tab-preferences {
+          border-bottom: 1px solid blueviolet;
+        }
+
+        .tab-content {
           display: none;
-        }
-  
-        #cashout:checked ~ .du-tabs .cashout-radio {
-          border-bottom: 2px solid blueviolet;
-          font-weight: bold;
-        }
-  
-        #sendmoney:checked ~ .du-tabs .sendmoney-radio {
-          border-bottom: 2px solid blueviolet;
-          font-weight: bold;
-        }
-  
-        #cashout:checked ~ .tab-content .cashout-tab-content {
-          display: block;
-  
-          .cashout-form {
-            margin-top: 2rem;
-            .submit-btn {
-              width: 100%;
-              margin-top: 1rem;
-              background-color: var(--bg-button);
-              border: none;
-  
-              &:hover {
-                background-color: var(--bg-button-hover);
-              }
-            }
-          }
-        }
-  
-        #sendmoney:checked ~ .tab-content .sendmoney-tab-content {
-          display: block;
-         
-          .sendmoney-form {
-            margin-top: 2rem;
-            .submit-btn {
-              width: 100%;
-              margin-top: 1rem;
-              background-color: var(--bg-button);
-              border: none;
-  
-              &:hover {
-                background-color: var(--bg-button-hover);
-              }
-            }
-          }
-  
-        }
-      }
-    }
-    #withdraw:checked ~ .right-content .withdraw-content {
-      display: block;
-  
-      select {
-        width: 100%;
-        padding: var(--spacing-10-12);
-        margin-bottom: var(--gap-12);
-        font-size: 1rem;
-      }
-  
-      h3 {
-        padding-block: var(--gap-12);
-      }
-  
-      h4 {
-        padding-block: var(--gap-8);
-      }
-  
-      .text-message {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-  
-        .radio-buttons {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-  
-          label {
-            background-color: rgb(255, 255, 255);
-            padding: var(--spacing-10-12) 1rem;
-          }
-          #yes:checked ~ .Yes {
-            background-color: #e7c687;
-          }
-          #no:checked ~ .No {
-            background-color: #e7c687;
-          }
-        }
-      }
-  
-      .emails {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-block: var(--gap-12);
-  
-        .radio-buttons {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-  
-          label {
-            background-color: rgb(255, 255, 255);
-            padding: var(--spacing-10-12) 1rem;
-          }
-          #email-yes:checked ~ .EmailYes {
-            background-color: #e7c687;
-          }
-          #email-no:checked ~ .EmailNo {
-            background-color: #e7c687;
-          }
-        }
-      }
-  
-      .bet-title {
-        margin-top: 1rem;
-      }
-  
-      .message-bet {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 1rem;
-  
-        .radio-buttons {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-  
-          label {
-            background-color: rgb(255, 255, 255);
-            padding: var(--spacing-10-12) 1rem;
-          }
-          #bet-yes:checked ~ .BetYes {
-            background-color: #e7c687;
-          }
-          #bet-no:checked ~ .BetNo {
-            background-color: #e7c687;
-          }
-        }
-      }
-  
-      .update-btn {
-        width: 100%;
-        margin-top: 1rem;
-      }
-    }
-  
-    .right-content {
-      width: 35rem;
-  
-      .content {
-        display: none;
-  
-        h2 {
-          margin-bottom: var(--gap-8);
-        }
-      }
-    }
-  }
-  /* offer */
-  .main {
-    color: #000000cc;
-    display: flex;
-    gap: 3rem;
-  
-    .left-sidebar {
-      width: 20rem;
-  
-      h2 {
-        margin-bottom: var(--gap-8);
-      }
-  
-      .left-sidebar-tab {
-        .tab {
-          display: block;
-          padding: var(--spacing-10-12);
-  
-          &:hover {
-            background-color: var(--white);
-          }
-        }
-      }
-    }
-  
-    #settled-bets:checked ~ .left-sidebar .left-sidebar-tab .settled-bets-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
-    }
-    #unsettled-bets:checked
-      ~ .left-sidebar  .left-sidebar-tab .unsettled-bets-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
-    }
-    #games-bets:checked ~ .left-sidebar  .left-sidebar-tab .games-bets-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
-    }
-    #deposits-bets:checked ~ .left-sidebar .left-sidebar-tab .deposits-bets-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
-    }
-    #withdraw-bets:checked ~ .left-sidebar  .left-sidebar-tab .withdraw-bets-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
-    }
-    #adjustments-bets:checked
-      ~ .left-sidebar  .left-sidebar-tab .adjustments-bets-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
-    }
-  
-    #settled-bets:checked ~ .right-content .settled-bets-content {
-      display: block;
-  
-      #settled-sports:checked ~ .settled-history-tabs .settled-sports-tab {
-        border-bottom: 2px solid blue;
-        font-weight: 700;
-      }
-      #settled-lotto:checked ~ .settled-history-tabs .settled-lotto-tab {
-        border-bottom: 2px solid blue;
-        font-weight: 700;
-      }
-  
-      .settled-history-tabs {
-        display: inline-flex;
-        width: 100%;
-        align-items: center;
-        gap: var(--gap-12);
-        border-bottom: 2px solid var(--border-color);
-  
-        .settled-tab-item {
-          padding: var(--spacing-10-12) var(--spacing-14-16);
-          font-size: 1.2rem;
-  
-          &:hover {
-            font-weight: 700;
-          }
-        }
-      }
-      .settled-history-tab-contents {
-        display: block;
-  
-        #settled-last-24:checked
-          ~ .settled-hours-tab-contents-btns .settled-last-24-tab {
-          font-weight: 700;
-          background-color: #afddd1;
-        }
-        #settled-last-48:checked
-          ~ .settled-hours-tab-contents-btns .settled-last-48-tab {
-          font-weight: 700;
-          background-color: #afddd1;
-        }
-        #settled-date-range:checked
-          ~ .settled-hours-tab-contents-btns .settled-date-range-tab {
-          font-weight: 700;
-          background-color: #afddd1;
-        }
-  
-        .settled-hours-tab-contents-btns {
-          display: flex;
-          align-items: center;
-          margin-top: 1rem;
-  
-          .settled-hours-tab {
-            width: 100%;
-            padding: var(--spacing-10-12) var(--spacing-14-16);
-            text-align: center;
-            font-size: 1.125rem;
-            border: 1px solid #afddd1;
-  
-            &:hover {
-              font-weight: 700;
-            }
-          }
-        }
-  
-        .settled-show-history-btn {
-          width: 100%;
-          background-color: #afddd1;
-          margin-top: 0.75rem;
-          text-align: center;
-        }
-      }
-  
-      #settled-show-history:checked ~ .settled-history-tab-contents {
-        display: none;
-      }
-      #settled-show-history:checked ~ .settled-history-tabs {
-        display: none;
-      }
-  
-      #settled-show-history:checked ~ .settled-show-history-content {
-        display: block;
-      }
-  
-      .settled-show-history-content {
-        display: none;
-  
-        .settled-show-history-tab {
-          display: flex;
-          align-items: center;
-          gap: 0.25rem;
-          font-size: 1rem;
-          font-weight: 600;
-          margin-bottom: var(--gap-8);
-  
-          svg {
-            margin-top: 0.5rem;
-            width: 1rem;
-            height: 1rem;
-          }
-        }
-  
-        .settled-time {
-          margin-top: var(--gap-8);
-          font-size: 1.25rem;
-        }
-  
-        p {
-          margin-top: 0.325rem;
-        }
-      }
-    }
-  
-    #unsettled-bets:checked ~ .right-content .unsettled-bets-content {
-      display: block;
-  
-      #unsettled-sports:checked ~ .unsettled-history-tabs .unsettled-sports-tab {
-        border-bottom: 2px solid blue;
-        font-weight: 700;
-      }
-      #unsettled-lotto:checked ~ .unsettled-history-tabs .unsettled-lotto-tab {
-        border-bottom: 2px solid blue;
-        font-weight: 700;
-      }
-  
-      .unsettled-history-tabs {
-        display: inline-flex;
-        width: 100%;
-        align-items: center;
-        gap: var(--gap-12);
-        border-bottom: 2px solid var(--border-color);
-  
-        .unsettled-tab-item {
-          padding: var(--spacing-10-12) var(--spacing-14-16);
-          font-size: 1.2rem;
-  
-          &:hover {
-            font-weight: 700;
-          }
-        }
-      }
-      .unsettled-history-tab-contents {
-        display: block;
-  
-        #unsettled-last-24:checked
-          ~ .unsettled-hours-tab-contents-btns .unsettled-last-24-tab {
-          font-weight: 700;
-          background-color: #afddd1;
-        }
-        #unsettled-last-48:checked
-          ~ .unsettled-hours-tab-contents-btns .unsettled-last-48-tab {
-          font-weight: 700;
-          background-color: #afddd1;
-        }
-        #unsettled-date-range:checked
-          ~ .unsettled-hours-tab-contents-btns .unsettled-date-range-tab {
-          font-weight: 700;
-          background-color: #afddd1;
-        }
-  
-        .unsettled-hours-tab-contents-btns {
-          display: flex;
-          align-items: center;
-          margin-top: 1rem;
-  
-          .unsettled-hours-tab {
-            width: 100%;
-            padding: var(--spacing-10-12) var(--spacing-14-16);
-            text-align: center;
-            font-size: 1.125rem;
-            border: 1px solid #afddd1;
-  
-            &:hover {
-              font-weight: 700;
-            }
-          }
-        }
-  
-        .unsettled-show-history-btn {
-          width: 100%;
-          background-color: #afddd1;
-          margin-top: 0.75rem;
-          text-align: center;
-        }
-      }
-  
-      #unsettled-show-history:checked ~ .unsettled-history-tab-contents {
-        display: none;
-      }
-      #unsettled-show-history:checked ~ .unsettled-history-tabs {
-        display: none;
-      }
-  
-      #unsettled-show-history:checked ~ .unsettled-show-history-content {
-        display: block;
-      }
-  
-      .unsettled-show-history-content {
-        display: none;
-  
-        .unsettled-show-history-tab {
-          display: flex;
-          align-items: center;
-          gap: 0.25rem;
-          font-size: 1rem;
-          font-weight: 600;
-          margin-bottom: var(--gap-8);
-  
-          svg {
-            margin-top: 0.5rem;
-            width: 1rem;
-            height: 1rem;
-          }
-        }
-  
-        .unsettled-time {
-          margin-top: var(--gap-8);
-          font-size: 1.25rem;
-        }
-  
-        p {
-          margin-top: 0.325rem;
-        }
-      }
-    }
-  
-    #games-bets:checked ~ .right-content .games-bets-content {
-      display: block;
-  
-      #games-bets-last-24:checked ~ .hours-tab-contents-btns .last-24-tab {
-        font-weight: 700;
-        background-color: #afddd1;
-      }
-      #games-bets-last-48:checked ~ .hours-tab-contents-btns .last-48-tab {
-        font-weight: 700;
-        background-color: #afddd1;
-      }
-      #games-bets-date-range:checked ~ .hours-tab-contents-btns .date-range-tab {
-        font-weight: 700;
-        background-color: #afddd1;
-      }
-  
-      #games-bets-show-history:checked ~ .history-tab-contents {
-        display: none;
-      }
-      #games-bets-show-history:checked ~ .history-tabs {
-        display: none;
-      }
-  
-      #games-bets-show-history:checked ~ .show-history-content {
-        display: block;
-      }
-    }
-    #deposits-bets:checked ~ .right-content .deposits-bets-content {
-      display: block;
-  
-      #deposits-bets-last-24:checked ~ .hours-tab-contents-btns .last-24-tab {
-        font-weight: 700;
-        background-color: #afddd1;
-      }
-      #deposits-bets-last-48:checked ~ .hours-tab-contents-btns .last-48-tab {
-        font-weight: 700;
-        background-color: #afddd1;
-      }
-      #deposits-bets-date-range:checked
-        ~ .hours-tab-contents-btns .date-range-tab {
-        font-weight: 700;
-        background-color: #afddd1;
-      }
-  
-      #deposits-bets-show-history:checked ~ .history-tab-contents {
-        display: none;
-      }
-      #deposits-bets-show-history:checked ~ .history-tabs {
-        display: none;
-      }
-  
-      #deposits-bets-show-history:checked ~ .show-history-content {
-        display: block;
-      }
-    }
-  
-    #withdraw-bets:checked ~ .right-content .withdraw-bets-content {
-      display: block;
-  
-      #withdraw-bets-last-24:checked ~ .hours-tab-contents-btns .last-24-tab {
-        font-weight: 700;
-        background-color: #afddd1;
-      }
-      #withdraw-bets-last-48:checked ~ .hours-tab-contents-btns .last-48-tab {
-        font-weight: 700;
-        background-color: #afddd1;
-      }
-      #withdraw-bets-date-range:checked
-        ~ .hours-tab-contents-btns .date-range-tab {
-        font-weight: 700;
-        background-color: #afddd1;
-      }
-  
-      #withdraw-bets-show-history:checked ~ .history-tab-contents {
-        display: none;
-      }
-      #withdraw-bets-show-history:checked ~ .history-tabs {
-        display: none;
-      }
-  
-      #withdraw-bets-show-history:checked ~ .show-history-content {
-        display: block;
-      }
-    }
-  
-    #adjustments-bets:checked ~ .right-content .adjustments-bets-content {
-      display: block;
-  
-      #adjustments-bets-last-24:checked ~ .hours-tab-contents-btns .last-24-tab {
-        font-weight: 700;
-        background-color: #afddd1;
-      }
-      #adjustments-bets-last-48:checked ~ .hours-tab-contents-btns .last-48-tab {
-        font-weight: 700;
-        background-color: #afddd1;
-      }
-      #adjustments-bets-date-range:checked
-        ~ .hours-tab-contents-btns .date-range-tab {
-        font-weight: 700;
-        background-color: #afddd1;
-      }
-  
-      #adjustments-bets-show-history:checked ~ .history-tab-contents {
-        display: none;
-      }
-      #adjustments-bets-show-history:checked ~ .history-tabs {
-        display: none;
-      }
-  
-      #adjustments-bets-show-history:checked ~ .show-history-content {
-        display: block;
-      }
-    }
-  
-    .right-content {
-      width: 35rem;
-  
-      .content {
-        display: none;
-  
-        h2 {
-          margin-bottom: var(--gap-8);
-        }
-      }
-  
-      .history-tab-contents {
-        display: block;
-  
-        .hours-tab-contents-btns {
-          display: flex;
-          align-items: center;
-          margin-top: 1rem;
-  
-          .hours-tab {
-            width: 100%;
-            padding: var(--spacing-10-12) var(--spacing-14-16);
-            text-align: center;
-            font-size: 1.125rem;
-            border: 1px solid #afddd1;
-  
-            &:hover {
-              font-weight: 700;
-            }
-          }
-        }
-  
-        .show-history-btn {
-          width: 100%;
-          background-color: #afddd1;
-          margin-top: 0.75rem;
-          text-align: center;
-        }
-      }
-  
-      .show-history-content {
-        display: none;
-  
-        .show-history-tab {
-          display: flex;
-          align-items: center;
-          gap: 0.25rem;
-          font-size: 1rem;
-          font-weight: 600;
-          margin-bottom: var(--gap-8);
-  
-          svg {
-            margin-top: 0.5rem;
-            width: 1rem;
-            height: 1rem;
-          }
-        }
-  
-        .time {
-          margin-top: var(--gap-8);
-          font-size: 1.25rem;
-        }
-  
-        p {
-          margin-top: 0.325rem;
-        }
-      }
-    }
-  }
-  /*massage  */
-  
-.main {
-    color: #000000bb;
-    display: flex;
-    gap: 3rem;
-  
-    .left-sidebar {
-      width: 20rem;
-  
-      h2 {
-        margin-bottom: var(--gap-8);
-      }
-  
-      .left-sidebar-tab {
-        .tab {
-          display: block;
-          padding: var(--spacing-10-12);
-  
-          &:hover {
-            background-color: var(--white);
-          }
-        }
-      }
-    }
-  
-    #new-message:checked ~ .left-sidebar .left-sidebar-tab .new-message-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
-    }
-    #inbox:checked ~ .left-sidebar  .left-sidebar-tab .inbox-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
-    }
-    #sent-messages:checked ~ .left-sidebar  .left-sidebar-tab .sent-messages-tab {
-      font-weight: bold;
-      border-left: 2px solid var(--border-color);
-      background-color: var(--white);
-    }
-  
-    #new-message:checked ~ .right-content .new-message-content {
-      display: block;
-  
-      .new-message-content-form {
-  
-        #send-message{
-          width: 100%;
-          height: 10rem;
-          border: 1px solid var(--border-color);
-          outline: none;
-          border-radius: var(--br-4);
           padding: var(--spacing-6-8) var(--spacing-10-12);
-          font-size: 1.125rem;
         }
-  
-        .send-btn {
-          margin-top: var(--gap-12);
-          margin-bottom: var(--gap-8);
-          width: 100%;
-          background-color: wheat;
-  
-          &:hover {
-            background-color: rgb(206, 187, 151);
-          }
-        }
-      }
-    }
-  
-    #inbox:checked ~ .right-content .inbox-content {
-      display: block;
-  
-      #edit-delete-checkbox:checked ~ .edit-delete-message span {
-        display: none;
-      }
-  
-      #edit-delete-checkbox:checked ~ .edit-delete-message .delete-confirmation-message {
-        display: inline-block;
-      }
-  
-      #edit-delete-checkbox:checked ~ .edit-delete-message .edit-checkbox {
-        display: none;
-      }
-  
-      #edit-delete-checkbox:checked ~ .edit-delete-message .cancel-checkbox {
-        display: inline-block;
-      }
-  
-      #edit-delete-checkbox:checked ~ .inbox-content-message #delete-message{
-        display: inline-block;
-      }
-  
-      .edit-delete-message{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 1rem;
-  
-        span{
-          display: inline-block;
-        }
-  
-        .delete-confirmation-message{
-          display: none;
-        }
-  
-        .cancel-checkbox{
-          display: none;
-        }
-      }
-  
-      .inbox-content-message{
-        display: flex;
-        align-items: flex-start;
-        margin-top: 0.5rem;
-  
-        #delete-message{
-          width: 2rem;
-          margin-top: 0.5rem;
-          display: none;
-        }
-  
-        label{
-          line-height: 1.325rem;
-        }
-        
-      }
-      
-    }
-  
-    #sent-messages:checked ~ .right-content .sent-messages-content {
-      display: block;
-  
-      .sent-message-content{
-        margin-top: var(--spacing-14-16);
-        border: 1px solid var(--border-color);
-        padding: var(--spacing-6-8) var(--spacing-10-12);
-        border-radius: var(--br-4);
-        p{
-          padding-block: 0.25rem;
-        }
-      }
-  
-    }
-  
-    .right-content {
-      width: 35rem;
-  
-      .content {
-        display: none;
-  
-        h2 {
-          margin-bottom: var(--gap-8);
-        }
-      }
-    }
-  }
-  /*offer  */
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #1a1c1f;
-    color: #ffffff;
-  }
-  
-  a {
-    color: #ffffff;
-    text-decoration: none;
-  }
-  
-  .offer-title {
-    margin-block: 1rem;
-    padding-inline: 1rem;
-  }
-  
-  .offer-nav-items {
-    background-color: #3d3d3d;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: #ffffffcc;
-    cursor: pointer;
-  }
-  
-  .offer-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap: 1rem;
-    margin-top: 3rem;
-    padding: 1rem;
-    color: #9eead5;
-  
-    .offer-card {
-      border-radius: 0.5rem;
-      display: grid;
-      background-color: #3d3d3d;
-      grid-row: span 4;
-      gap: 0;
-      padding-bottom: 1rem;
-  
-      .offer-card-img {
-        width: 100%;
-        object-fit: cover;
-        aspect-ratio: 16/9;
-        object-position: center;
-      }
-  
-      .offer-icon,
-      .offer-car-title,
-      .subtitle {
-        padding: 0.125rem 1rem;
-      }
-  
-      .offer-icon {
-        fill: #9eead5;
-        width: 5rem;
-        height: 5rem;
-      }
-  
-      .subtitle {
-        .sub-title {
-          margin-block: 0.25rem;
-        }
-  
-        .second-sub-title {
-          margin-top: 0.25rem;
-          color: #9eead5aa;
-        }
-      }
-    }
-  }
-  /*main  */
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  :root {
-    --bg-input: #f8f8f8;
-    --border-color: rgb(230, 204, 204);
-    --white: #ffffff;
-    --bg-button: #afddd1;
-    --bg-button-hover: #a2d3c6;
-  
-    --font-16-18: clamp(1rem, 1vw + 0.5rem, 1.125rem);
-    --font-22-24: clamp(1.375rem, 1vw + 0.75rem, 1.5rem);
-  
-    --spacing-4: 0.25rem;
-    --spacing-6-8: clamp(0.375rem, 0.5vw + 0.375rem, 0.5rem);
-    --spacing-10-12: clamp(0.625rem, 0.75vw + 0.625rem, 0.75rem);
-    --spacing-14-16: clamp(0.825rem, 1vw + 0.825rem, 1rem);
-    --spacing-inline-container: clamp(1rem, 2vw + 4rem, 8rem);
-    --spacing-block-container: clamp(1rem, 1vw + 1rem, 2rem);
-  
-    --br-4: 0.25rem;
-  
-    --gap-2-6: clamp(0.125rem, 0.5vw + 0.25rem, 0.625rem);
-    --gap-8: 0.5rem;
-    --gap-12: 0.75rem;
-  }
-  
-  html {
-    background-color: #f1f1f1;
-    color: #000000dd;
-    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI,
-    Tahoma, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Open Sans,
-    sans-serif;
-  }
-  
-  a{
-    text-decoration: none;
-    color: #000000dd;
-  }
-  
-  label {
-    display: block;
-    padding-block: var(--spacing-4);
-  }
-  
-  input {
-    width: 100%;
-    margin-bottom: var(--spacing-4);
-    padding: var(--spacing-10-12) var(--spacing-14-16);
-    border-radius: var(--br-4);
-    background-color: var(--bg-input);
-    outline: none;
-    border: 1px solid var(--border-color);
-    font-size: 1rem;
-  }
-  .container {
-    padding: var(--spacing-block-container) var(--spacing-inline-container);
-  }
-  
-  .button {
-    padding: var(--spacing-10-12) var(--spacing-14-16);
-    border: 1px solid black;
-    border-radius: var(--br-4);
-    background-color: transparent;
-    font-size: 1rem;
-    color: #000000dd;
-    font-weight: 600;
-  }
-  
-  .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 2rem;
-    border: 1px solid blue;
-  
-    .profile {
-      position: relative;
-  
-      .profile-icon {
-        background-color: blue;
-        color: white;
-        padding: 1rem 1.25rem;
-        border-radius: 50%;
-      }
-  
-      #profile-side-bar {
-        font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI,
-          Tahoma, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Open Sans,
-          sans-serif;
-        color: rgba(0, 0, 0, 0.8);
-        padding: var(--spacing-6-8) var(--spacing-10-12);
-        border-radius: 0.25rem;
-        position: absolute;
-        top: 4.5rem;
-        left: calc(100vw - 26rem);
-        width: 25.75rem;
-        max-height: calc(-125px + 100vh);
-        border: 1px solid blue;
-        outline: none;
-  
-        & .profile-data-top {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin-bottom: var(--spacing-6-8);
-  
-          & .profile-data-top-left {
-            & .profile-data-top-left-bottom {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              gap: var(--gap-2-6);
-  
-              & .profile-data-top-amount {
-                font-size: 1.5rem;
-                font-weight: 700;
+
+        #profile-tab-account:checked ~ .profile-tab-content-account {
+          display: block;
+
+          .tab-content-cards {
+            display: grid;
+            place-items: center;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+            border-bottom: 1px solid wheat;
+            padding-bottom: var(--spacing-14-16);
+
+            & .tab-content-card {
+              text-align: center;
+              svg {
+                width: 2.5rem;
+                height: 2.5rem;
               }
             }
           }
-  
-          & .profile-data-top-right {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-            font-size: var(--font-16-18);
-            font-weight: 600;
-  
-            svg {
-              width: 1.25rem;
-              height: 1.25rem;
-            }
+
+          h3 {
+            padding: var(--spacing-6-8);
           }
-        }
-  
-        & .profile-data-top-bottom {
-          display: flex;
-          align-items: center;
-          gap: clamp(1.25rem, 4vw + 0.25rem, 8rem);
-        }
-  
-        & .profile-tabs {
-          margin-top: 1.25rem;
-  
-          & .tab-items {
-            display: flex;
-            align-items: center;
-            gap: var(--gap-2-6);
+          & .logout {
             border-top: 1px solid wheat;
-  
-            & label {
-              padding: var(--spacing-14-16) var(--spacing-14-16);
-            }
           }
-  
-          #profile-tab-account:checked ~ .tab-items .tab-account {
-            border-bottom: 1px solid blueviolet;
+        }
+
+        #profile-tab-offers:checked ~ .profile-tab-content-offers {
+          display: block;
+
+          h4 {
+            padding-bottom: 0.25rem;
           }
-          #profile-tab-offers:checked ~ .tab-items .tab-offers {
-            border-bottom: 1px solid blueviolet;
+
+          p {
+            padding-block: 0.25rem;
           }
-          #profile-tab-preferences:checked ~ .tab-items .tab-preferences {
-            border-bottom: 1px solid blueviolet;
-          }
-  
-          .tab-content {
-            display: none;
-            padding: var(--spacing-6-8) var(--spacing-10-12);
-          }
-  
-          #profile-tab-account:checked ~ .profile-tab-content-account {
-            display: block;
-  
-            .tab-content-cards {
-              display: grid;
-              place-items: center;
-              gap: 1rem;
-              grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
-              border-bottom: 1px solid wheat;
-              padding-bottom: var(--spacing-14-16);
-  
-              & .tab-content-card {
-                text-align: center;
-                svg {
-                  width: 2.5rem;
-                  height: 2.5rem;
-                }
-              }
+        }
+
+        #profile-tab-preferences:checked ~ .profile-tab-content-preferences {
+          display: block;
+
+          details {
+            position: relative;
+
+            &::after {
+              content: "ᨆ";
+              position: absolute;
+              top: 1rem;
+              right: 0.5rem;
+              transition: transform 0.3s ease-in-out;
+              transform-origin: center;
             }
-  
-            h3 {
-              padding: var(--spacing-6-8);
+            &[open]::after {
+              transform: rotate(180deg);
             }
-            & .logout {
-              border-top: 1px solid wheat;
-            }
-          }
-  
-          #profile-tab-offers:checked ~ .profile-tab-content-offers {
-            display: block;
-  
-            h4 {
-              padding-bottom: 0.25rem;
-            }
-  
-            p {
-              padding-block: 0.25rem;
-            }
-          }
-  
-          #profile-tab-preferences:checked ~ .profile-tab-content-preferences {
-            display: block;
-  
-            details {
-              position: relative;
-  
-              &::after {
-                content: "ᨆ";
-                position: absolute;
-                top: 1rem;
-                right: 0.5rem;
-                transition: transform 0.3s ease-in-out;
-                transform-origin: center;
-              }
-              &[open]::after {
-                transform: rotate(180deg);
-              }
-              summary {
-                padding: var(--spacing-6-8) var(--spacing-10-12);
-                border-block: 1px solid wheat;
-                list-style-type: none;
-  
-                h4 {
-                  margin-top: 0.325rem;
-                }
-              }
-  
-              .data {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-  
-                li {
-                  padding: var(--spacing-6-8);
-                }
-              }
-            }
-  
-            .toggle-label {
+            summary {
               padding: var(--spacing-6-8) var(--spacing-10-12);
               border-block: 1px solid wheat;
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-  
-              input[type="checkbox"] {
-                display: none;
+              list-style-type: none;
+
+              h4 {
+                margin-top: 0.325rem;
               }
             }
-  
-            .toggle-switch {
-              position: relative;
-              width: 40px;
-              height: 20px;
-              background: #ccc;
-              border-radius: 20px;
-              transition: background 0.3s;
+
+            .data {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+
+              li {
+                padding: var(--spacing-6-8);
+              }
             }
-  
-            .toggle-switch::before {
-              content: "";
-              position: absolute;
-              top: 2px;
-              left: 2px;
-              width: 16px;
-              height: 16px;
-              background: white;
-              border-radius: 50%;
-              transition: transform 0.3s;
+          }
+
+          .toggle-label {
+            padding: var(--spacing-6-8) var(--spacing-10-12);
+            border-block: 1px solid wheat;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            input[type="checkbox"] {
+              display: none;
             }
-  
-            .toggle-label input[type="checkbox"]:checked + .toggle-switch {
-              background: blueviolet;
-            }
-  
-            .toggle-label input[type="checkbox"]:checked
-              + .toggle-switch::before {
-              transform: translateX(20px);
-            }
+          }
+
+          .toggle-switch {
+            position: relative;
+            width: 40px;
+            height: 20px;
+            background: #ccc;
+            border-radius: 20px;
+            transition: background 0.3s;
+          }
+
+          .toggle-switch::before {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 16px;
+            height: 16px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.3s;
+          }
+
+          .toggle-label input[type="checkbox"]:checked + .toggle-switch {
+            background: blueviolet;
+          }
+
+          .toggle-label input[type="checkbox"]:checked
+            + .toggle-switch::before {
+            transform: translateX(20px);
           }
         }
       }
     }
   }
-  
+}
