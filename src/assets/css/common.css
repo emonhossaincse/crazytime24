@@ -1,14 +1,41 @@
-
-:root{
-    --card-width: 13rem;
-    --card-height: 11rem;
-    --aspect-ratio: 13/11;
+:root {
+  --card-width: 13rem;
+  --card-height: 11rem;
+  --aspect-ratio: 13/11;
+  --gap: 0.75rem;
 }
 
-.santa-list{
-    --card-width: 16rem;
-    --card-height: 11rem;
-    --aspect-ratio: 16/11;
+.promotion{
+    --card-width: 21rem;
+  --card-height: 12rem;
+  --aspect-ratio: 21/12;
+  --gap: 1rem;
+
+  .card-lists-header{
+    button{
+        display: none;
+    }
+  }
+}
+
+.santa-list {
+  --card-width: 16rem;
+  --card-height: 11rem;
+  --aspect-ratio: 16/11;
+}
+
+.twisterPoker {
+  --card-width: 20rem;
+  --card-height: 11rem;
+  --aspect-ratio: 20/11;
+  --gap: 1rem;
+  .card-lists {
+    .card-lists-cards {
+      &:hover :is(.card-lists-prev, .card-lists-next) {
+        display: none;
+      }
+    }
+  }
 }
 
 .card-lists {
@@ -62,17 +89,20 @@
     .card-lists-card {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: var(--gap);
       overflow-x: clip;
 
       .card-list-card {
         width: var(--card-width);
         height: var(--card-height);
-        transition: transform 0.3s ease;
+        transition: transform 0.2s ease-in-out;
         position: relative;
+        border-radius: 0.325rem;
+        overflow: clip;
+        display: grid;
 
         &:hover {
-          transform: scale(1.05);
+          transform: scale(1.075);
         }
 
         img {
@@ -80,25 +110,49 @@
           aspect-ratio: var(--aspect-ratio);
           object-fit: cover;
           object-position: center;
+          grid-column: 1/2;
+          grid-row: 1/2;
+        }
+
+        .upperText {
+          grid-column: 1/2;
+          grid-row: 1/2;
+          text-align: left;
+          padding: 0.125rem 0.75rem;
+
+          .upperSubtitle{
+            font-size: 0.8rem;
+            font-weight: 600;
+          }
+
+          .upperTitle{
+            font-size: 1.25rem;
+            font-weight: 700;
+           font-family: FuturaPTCondBoldOblique, "FuturaPTWebBook", Futura, Arial, sans-serif;
+            line-height: 1.625rem;
+            padding-right: 3.5rem;
+          }
+
+
         }
 
         .info {
-            position: absolute;
-            bottom: 0.75rem;
-            right: 0.75rem;
-            width: 1.5rem;
-            height: 1.5rem;
-            background-color: #ffffff;
-            border-radius: 50%;
-          }
+          position: absolute;
+          bottom: 0.75rem;
+          right: 0.75rem;
+          width: 1.5rem;
+          height: 1.5rem;
+          background-color: #ffffff;
+          border-radius: 50%;
+        }
       }
 
-      .card-list-card:hover + .card-list-card {
-        transform: translateX(0.125rem) scale(1.025);
+      .card-list-card:hover ~ .card-list-card {
+        transform: translateX(0.25rem) scale(1.01);
       }
 
-      .card-list-card:has(+ .card-list-card:hover) {
-        transform: translateX(-0.125rem) scale(1.025);
+      .card-list-card:has(~ .card-list-card:hover) {
+        transform: translateX(-0.25rem) scale(1.01);
       }
     }
   }

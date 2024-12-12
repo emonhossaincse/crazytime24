@@ -41,6 +41,10 @@ export default function CardLists({cardTitle, dataList}) {
           {dataList.map((data) => (
              <div key={data.id} className="card-list-card">
              <img src={data.img}  alt="" />
+             <div className="upperText">
+              <p className="upperSubtitle">{data?.cardUpperSubtitle} </p>
+              <p className="upperTitle">{data?.cardUpperTitle} </p>
+             </div>
              <svg
                className="info"
                xmlns="http://www.w3.org/2000/svg"
@@ -63,4 +67,4 @@ export default function CardLists({cardTitle, dataList}) {
       </div>
     </section>
   );
-}
+} 

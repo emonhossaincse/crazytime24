@@ -1,11 +1,13 @@
 import React from "react";
 import CasinoNav from "../component/nav/CasinoNav";
 import CasinoSearch from "../component/nav/CasinoSearch";
-import CasinoList from "../component/common/CasinoList";
 import WhatsNew from "../component/common/WhatsNew";
 import Exclusive from "../component/common/Exclusive";
 import Santa from "../component/common/Santa";
 import BestBigTime from "../component/common/BestBigTime";
+import LiveDealer from "../component/common/LiveDealer";
+import TwisterPoker from "../component/common/TwisterPoker";
+import Promotion from "../component/common/Promotion";
 
 function Casino() {
   return (
@@ -13,11 +15,13 @@ function Casino() {
       <div className="casino-page">
         <CasinoSearch />
         <CasinoNav />
-        <CasinoList />
+        <Promotion />
         <WhatsNew />
         <Exclusive />
         <Santa />
         <BestBigTime />
+        <LiveDealer />
+        <TwisterPoker />
       </div>
     </main>
   );
