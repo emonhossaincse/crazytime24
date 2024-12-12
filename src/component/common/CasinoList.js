@@ -217,7 +217,7 @@ function CasinoList() {
       country: "USA"
     }
   ];
-
+ 
   return (
     <div className="casino-cards" >
       <div className="prev">

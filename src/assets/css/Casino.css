@@ -12,7 +12,7 @@
 a {
   color: #ffffff;
   text-decoration: none;
-}
+} 
 
 .search {
   padding: 1rem;
@@ -121,7 +121,7 @@ a {
   &:hover :is(.prev, .next) {
     display: grid;
   }
-
+ 
   .prev,
   .next {
     position: absolute;
