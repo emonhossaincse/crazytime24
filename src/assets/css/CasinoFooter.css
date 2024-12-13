@@ -1,0 +1,41 @@
+:root{
+    --gap: 0.75rem;
+    --footer-color: #adadad;
+}
+
+.casino-footer{
+    text-align: left;
+    padding: 2rem 1rem;
+    color: var(--footer-color);
+
+    a{
+        text-decoration: none;
+        color: var(--footer-color);
+    }
+
+    .footer-body{
+        display: grid;
+        place-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+        gap: var(--gap);
+        font-size: 0.8rem;
+
+        .footer-body-right{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+        }
+    }
+
+    .footer-para{
+        font-size: 0.75rem;
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid var(--footer-color);
+    }
+
+    .footer-nav{
+        display: flex;
+        gap: var(--gap);
+        align-items: center;
+        padding-top: 0.5rem;
+    }
+}

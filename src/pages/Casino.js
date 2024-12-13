@@ -8,6 +8,7 @@ import BestBigTime from "../component/common/BestBigTime";
 import LiveDealer from "../component/common/LiveDealer";
 import TwisterPoker from "../component/common/TwisterPoker";
 import Promotion from "../component/common/Promotion";
+import CasinoFooter from "../component/common/CasinoFooter";
 
 function Casino() {
   return (
@@ -22,6 +23,7 @@ function Casino() {
         <BestBigTime />
         <LiveDealer />
         <TwisterPoker />
+        <CasinoFooter />
       </div>
     </main>
   );
