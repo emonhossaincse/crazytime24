@@ -14,7 +14,8 @@ import './assets/css/vipclub.css';
 import'./assets/css/affiliate.css';
 import'./assets/css/Casino.css';
 import "./assets/css/common.css"
-import "./assets/css/CasinoFooter.css"
+import "./assets/css/CasinoFooter.css";
+import "./assets/css/casinoFooterCss.css"
 import Aside from './component/nav/Aside';
 import TopNavMenu from './component/nav/TopNavMenu';
 import Chat from './component/sidebar/Chat';
