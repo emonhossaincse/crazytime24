@@ -12,7 +12,7 @@
 a {
   color: #ffffff;
   text-decoration: none;
-} 
+}
 
 .search {
   padding: 1rem;
@@ -121,7 +121,7 @@ a {
   &:hover :is(.prev, .next) {
     display: grid;
   }
- 
+
   .prev,
   .next {
     position: absolute;
@@ -187,15 +187,15 @@ a {
   }
 }
 
-.card:hover{
+.card:hover {
   transform: scale(1.05);
 }
 
-.card:hover + .card{
+.card:hover + .card {
   transform: translateX(0.5rem);
 }
 
-.card:has(+ .card:hover){
+.card:has(+ .card:hover) {
   transform: translateX(-0.5rem);
 }
 
@@ -218,7 +218,8 @@ a {
 }
 
 .card {
-  animation: running-backward 2s linear forwards, running-forward 2s linear backwards;
+  animation: running-backward 2s linear forwards,
+    running-forward 2s linear backwards;
   animation-play-state: paused;
 }
 
@@ -1922,6 +1923,7 @@ a {
     }
   }
 }
+
 /*main  */
 * {
   padding: 0;
@@ -1980,7 +1982,8 @@ input {
   border: 1px solid var(--border-color);
   font-size: 1rem;
 }
-.container {
+
+.profile-container {
   padding: var(--spacing-block-container) var(--spacing-inline-container);
 }
 
