@@ -2,7 +2,8 @@ import React from 'react'
 
 export default function Account() {
   return (
-    <div className="profile-container main">
+   <div className='max-width'>
+     <div className="profile-container main">
     <input type="radio" id="contact" name="tabs" defaultChecked hidden />
     <input type="radio" id="residential" name="tabs" hidden />
     <input type="radio" id="preferences" name="tabs" hidden />
@@ -250,5 +251,6 @@ export default function Account() {
       </div>
     </div>
   </div>  
+   </div>
   )
 }

@@ -2,7 +2,8 @@ import React from 'react'
 
 export default function Message() {
   return (
-    <div className="profile-container main">
+   <div className='max-width'>
+     <div className="profile-container main">
   <input
     type="radio"
     id="new-message"
@@ -72,6 +73,7 @@ export default function Message() {
     </div>
   </div>
 </div>
+   </div>
 
   )
 }

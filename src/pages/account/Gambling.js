@@ -2,7 +2,8 @@ import React from "react";
 
 export default function Gambling() {
   return (
-    <div className="profile-container main">
+   <div className="max-width">
+     <div className="profile-container main">
       <input
         type="radio"
         id="my-activity"
@@ -466,5 +467,6 @@ export default function Gambling() {
         </div>
       </div>
     </div>
+   </div>
   );
 }

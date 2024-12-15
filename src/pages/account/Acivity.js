@@ -2,7 +2,8 @@ import React from "react";
 
 export default function Acivity() {
   return (
-    <div className="profile-container main">
+    <div className="max-width">
+       <div className="profile-container main">
       <input
         type="radio"
         id="my-activity"
@@ -465,6 +466,7 @@ export default function Acivity() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

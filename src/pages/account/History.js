@@ -2,7 +2,8 @@ import React from 'react'
 
 export default function History() {
   return (
-    <div className="profile-container main">
+    <div className='max-width'>
+      <div className="profile-container main">
   <input
     type="radio"
     id="settled-bets"
@@ -495,6 +496,7 @@ export default function History() {
     </div>
   </div>
 </div>
+    </div>
 
   )
 }

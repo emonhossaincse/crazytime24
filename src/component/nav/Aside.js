@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import VIPClub from '../modal/VIPClub';
 import Profile from '../modal/Profile';
+import { Link } from 'react-router-dom';
 
 function Aside() {
   // Load the aside state and dark mode from local storage on component mount
@@ -45,12 +46,14 @@ function Aside() {
         <div className='aside-icon' onClick={handleIconClick}>
           <FontAwesomeIcon icon={faBars} />
         </div>
-        <div className='logo'>
-          <img src='./assets/media/logo/logo.svg' alt='Logo' />
+       <Link to={'/'}>
+       <div className='logo'>
+          <img src='/assets/media/logo/logo.svg' alt='Logo' />
         </div>
         <div className='logo-darken'>
-          <img src='./assets/media/logo/logo.svg' alt='Logo' />
+          <img src='/assets/media/logo/logo.svg' alt='Logo' />
         </div>
+       </Link>
       </div>
       <div className='aside-nav'>
         <nav>
