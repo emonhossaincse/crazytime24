@@ -58,7 +58,6 @@ const MyModal = ({ showModal, handleClose }) => {
       if (response.ok) {
         console.log(data);
         localStorage.setItem('token', data.token);
-        localStorage.setItem('sessionid', data.response.response.sessionid);
         localStorage.setItem('remote_id', data.response.response.id);
         localStorage.setItem('username', data.response.response.username);
         
