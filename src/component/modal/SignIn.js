@@ -429,15 +429,6 @@ function SignIn() {
           Sign In
         </span>}
       {isLoggedIn &&
-        <span className="balance-bg">
-          <img
-            style={{ width: "20px", margin: "5px" }}
-            src="/assets/BDT.black.png"
-          />
-          {balance}
-        </span>}
-
-      {isLoggedIn &&
         <span onClick={handleWalletOpen} className=" display-none">
           <button className="ui-button button-normal s-conic2 b1roz03j">
             <div className="button-inner">
