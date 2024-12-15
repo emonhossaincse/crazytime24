@@ -504,7 +504,6 @@ function Footer() {
                 <img src="/icon/pay60.png" alt="Icon" />
                 <img src="/icon/pay91.png" alt="Icon" />
                 <img src="/icon/pay61.png" alt="Icon" className="tap" />
-           
 
                 {/* <div className="fd-ci">
                  
@@ -602,8 +601,8 @@ function Footer() {
             <div className="f19tyczm footer-gaming-wrap">
               <p className="tit">Sponsorship and Gaming Responsibilities</p>
               <div className="partner-list-wrap">
-                <div className="wrap-one">
-                  <div className="sigma">
+                <div className="footer-wrap-left">
+                  <div className="sigma ">
                     <a
                       href="https://sigmaawards.org/"
                       keep-scroll-position="true"
@@ -614,7 +613,6 @@ function Footer() {
                       <img alt="sigma" src="/assets/sigma_w.e8608c37.png" />
                     </a>
                   </div>
-
                   <div className="verify">
                     <a
                       href="https://cryptogambling.org"
@@ -626,7 +624,6 @@ function Footer() {
                       <img alt="verify" src="/assets/verify_w.a13100a8.png" />
                     </a>
                   </div>
-
                   <div className="respon">
                     <a
                       href="https://www.responsiblegambling.org/"
@@ -638,8 +635,6 @@ function Footer() {
                       <img alt="respon" src="/assets/respon_w.38884bf7.png" />
                     </a>
                   </div>
-                </div>
-                <div className="wrap-two">
                   <div className="eighteen">
                     <a
                       href="@"
@@ -653,6 +648,17 @@ function Footer() {
                       />
                     </a>
                   </div>
+                </div>
+                <div className="footer-wrap-right">
+                  <a href="">Help</a>
+                  <a href="">Banking</a>
+                  <a href="">Terms & Conditions</a>
+                  <a href="">Cookie Policy</a>
+                  <a href="">Complaints Procedure</a>
+                  <a href="">Contact Us</a>
+                  <a href="">Privacy Policy</a>
+                  <a href="">Fair Payouts</a>
+                  <a href="">Games LIst</a>
                 </div>
               </div>
             </div>

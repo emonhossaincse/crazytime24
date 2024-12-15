@@ -10715,3 +10715,37 @@ button.l1gdc94o {
 .chat-open button.l1gdc94o {
     right: 380px
 }
+
+.partner-list-wrap{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr));
+    gap: 1rem;
+
+    .footer-wrap-left{
+        display: grid;
+        place-content: center;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+
+        img{
+            display: block;
+            width: 10rem;
+            aspect-ratio: 7 /5;
+        }
+        
+    }
+
+    .footer-wrap-right{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr)) ;
+        gap: 1rem;
+        align-items: center;
+       
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+}
+

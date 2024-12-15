@@ -27,7 +27,6 @@ export default function CasinoFooter() {
             <a href="">Cookie Policy</a>
             <a href="">Complaints Procedure</a>
             <a href="">Contact Us</a>
-            <a href="" >Responsible Gambling</a>
             <a href="">Privacy Policy</a>
             <a href="">Fair Payouts</a>
             <a href="">Games LIst</a>

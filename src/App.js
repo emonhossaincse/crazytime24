@@ -33,7 +33,6 @@ import OddsList from './layout/OddsList';
 import Casino from './pages/Casino';
 
 function App() {
-  
 
   return (
     <div className="App">
