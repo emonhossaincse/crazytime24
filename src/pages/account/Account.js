@@ -2,12 +2,12 @@ import React from 'react'
 
 export default function Account() {
   return (
-    <div className="container main">
-    <input type="radio" id="contact" name="tabs" defaultChecked="" hidden="" />
-    <input type="radio" id="residential" name="tabs" hidden="" />
-    <input type="radio" id="preferences" name="tabs" hidden="" />
-    <input type="radio" id="password" name="tabs" hidden="" />
-    <input type="radio" id="verification" name="tabs" hidden="" />
+    <div className="profile-container main">
+    <input type="radio" id="contact" name="tabs" defaultChecked hidden />
+    <input type="radio" id="residential" name="tabs" hidden />
+    <input type="radio" id="preferences" name="tabs" hidden />
+    <input type="radio" id="password" name="tabs" hidden />
+    <input type="radio" id="verification" name="tabs" hidden />
     <div className="left-sidebar">
       <h2>My Account</h2>
       <div className="left-sidebar-tab">
@@ -140,7 +140,7 @@ export default function Account() {
         <div className="text-message">
           <span>Text Message</span>
           <div className="radio-buttons">
-            <input type="radio" name="message" id="yes" hidden="" />
+            <input type="radio" name="message" id="yes" hidden />
             <label htmlFor="yes" className="Yes">
               Yes
             </label>
@@ -148,8 +148,8 @@ export default function Account() {
               type="radio"
               id="no"
               name="message"
-              hidden=""
-              defaultChecked=""
+              hidden
+              defaultChecked
             />
             <label htmlFor="no" className="No">
               No
@@ -159,7 +159,7 @@ export default function Account() {
         <div className="emails">
           <span>Email</span>
           <div className="radio-buttons">
-            <input type="radio" name="email" id="email-yes" hidden="" />
+            <input type="radio" name="email" id="email-yes" hidden />
             <label htmlFor="email-yes" className="EmailYes">
               Yes
             </label>
@@ -167,8 +167,8 @@ export default function Account() {
               type="radio"
               id="email-no"
               name="email"
-              hidden=""
-              defaultChecked=""
+              hidden
+              defaultChecked
             />
             <label htmlFor="email-no" className="EmailNo">
               No
@@ -179,7 +179,7 @@ export default function Account() {
         <div className="message-bet">
           <span>Message in bet365</span>
           <div className="radio-buttons">
-            <input type="radio" name="message-bet" id="bet-yes" hidden="" />
+            <input type="radio" name="message-bet" id="bet-yes" hidden />
             <label htmlFor="bet-yes" className="BetYes">
               Yes
             </label>
@@ -187,8 +187,8 @@ export default function Account() {
               type="radio"
               id="bet-no"
               name="message-bet"
-              hidden=""
-              defaultChecked=""
+              hidden
+              defaultChecked
             />
             <label htmlFor="bet-no" className="BetNo">
               No

@@ -2,19 +2,19 @@ import React from "react";
 
 export default function Acivity() {
   return (
-    <div className="container main">
+    <div className="profile-container main">
       <input
         type="radio"
         id="my-activity"
         name="activity-tabs"
-        defaultChecked=""
-        hidden=""
+        defaultChecked
+        hidden
       />
-      <input type="radio" id="deposit-limits" name="activity-tabs" hidden="" />
-      <input type="radio" id="time-out" name="activity-tabs" hidden="" />
-      <input type="radio" id="self-exclusion" name="activity-tabs" hidden="" />
-      <input type="radio" id="account-closure" name="activity-tabs" hidden="" />
-      <input type="radio" id="reality-checks" name="activity-tabs" hidden="" />
+      <input type="radio" id="deposit-limits" name="activity-tabs" hidden />
+      <input type="radio" id="time-out" name="activity-tabs" hidden />
+      <input type="radio" id="self-exclusion" name="activity-tabs" hidden />
+      <input type="radio" id="account-closure" name="activity-tabs" hidden />
+      <input type="radio" id="reality-checks" name="activity-tabs" hidden />
       <div className="left-sidebar">
         <h2>Account Activity</h2>
         <div className="left-sidebar-tab">
@@ -45,11 +45,11 @@ export default function Acivity() {
             type="radio"
             id="day-7"
             name="my-activity"
-            hidden=""
-            defaultChecked=""
+            hidden
+            defaultChecked
           />
-          <input type="radio" id="day-30" name="my-activity" hidden="" />
-          <input type="radio" id="months-12" name="my-activity" hidden="" />
+          <input type="radio" id="day-30" name="my-activity" hidden />
+          <input type="radio" id="months-12" name="my-activity" hidden />
           <div className="my-activity-tabs">
             <label htmlFor="day-7" className="day-7-tab my-activity-tab">
               7 Day
@@ -187,10 +187,10 @@ export default function Acivity() {
             type="radio"
             id="create"
             name="create-radio"
-            hidden=""
-            defaultChecked=""
+            hidden
+            defaultChecked
           />
-          <input type="radio" id="existing" name="create-radio" hidden="" />
+          <input type="radio" id="existing" name="create-radio" hidden />
           <div className="time-out-tab-contents-btns">
             <label htmlFor="create" className="create-tab timeout-tab">
               Create a Time-Out
@@ -341,10 +341,10 @@ export default function Acivity() {
                 type="radio"
                 id="duration"
                 name="setting-time"
-                hidden=""
-                defaultChecked=""
+                hidden
+                defaultChecked
               />
-              <input type="radio" id="until" name="setting-time" hidden="" />
+              <input type="radio" id="until" name="setting-time" hidden />
               <div className="du-tabs">
                 <label htmlFor="duration" className="duration-radio radio">
                   Duration

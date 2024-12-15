@@ -1,17 +1,32 @@
 import React from "react";
 
-export default function ProfileModal() {
+export default function ProfileModal({ id }) {
   return (
-    <dialog popover="" id="profile-side-bar">
+    <dialog popover="" id={id}>
       <div className="profile-data-top">
         <div className="profile-data-top-left">
           <p>Username</p>
           <div className="profile-data-top-left-bottom">
             <p className="profile-data-top-amount">$0.00</p>
-            <div className="profile-data-refresh-icon">icon</div>
+            <div className="profile-data-refresh-icon">
+              <svg
+                width={800}
+                height={800}
+                viewBox="0 -4 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m1167.53 396.073-3.79 2.563c-.03.033-.05.076-.08.1-.02.085-.03.174-.05.259h-2.07a6 6 0 0 0 .17-.736l-3.24-2.191a1.215 1.215 0 0 1-.35-1.517.88.88 0 0 1 1.3-.407l2.57 1.739a9.992 9.992 0 0 0-17.13-6.883h-2.59a11.982 11.982 0 0 1 21.72 6.9l2.59-1.747a.88.88 0 0 1 1.3.407 1.215 1.215 0 0 1-.35 1.513m-21.65-.628a.88.88 0 0 1-1.3.406l-2.41-1.626A10.4 10.4 0 0 0 1142 396a10 10 0 0 0 17.14 7h2.59a11.989 11.989 0 0 1-21.73-7 11.3 11.3 0 0 1 .2-2.028l-2.78 1.879a.88.88 0 0 1-1.3-.406 1.216 1.216 0 0 1 .35-1.518l3.79-2.562a.88.88 0 0 1 .65-.344.5.5 0 0 1 .18 0 .88.88 0 0 1 .65.344l3.79 2.562a1.216 1.216 0 0 1 .35 1.518"
+                  transform="translate(-1136 -384)"
+                  style={{
+                    fillRule: "evenodd"
+                  }}
+                />
+              </svg>
+            </div>
           </div>
         </div>
-        <button className="button deposit-btn profile-data-top-right">
+        <button className=" deposit-btn profile-data-top-right">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -26,7 +41,7 @@ export default function ProfileModal() {
             <g id="SVGRepo_iconCarrier">
               <path
                 d="M5.625 15C5.625 14.5858 5.28921 14.25 4.875 14.25C4.46079 14.25 4.125 14.5858 4.125 15H5.625ZM4.875 16H4.125H4.875ZM19.275 15C19.275 14.5858 18.9392 14.25 18.525 14.25C18.1108 14.25 17.775 14.5858 17.775 15H19.275ZM11.1086 15.5387C10.8539 15.8653 10.9121 16.3366 11.2387 16.5914C11.5653 16.8461 12.0366 16.7879 12.2914 16.4613L11.1086 15.5387ZM16.1914 11.4613C16.4461 11.1347 16.3879 10.6634 16.0613 10.4086C15.7347 10.1539 15.2634 10.2121 15.0086 10.5387L16.1914 11.4613ZM11.1086 16.4613C11.3634 16.7879 11.8347 16.8461 12.1613 16.5914C12.4879 16.3366 12.5461 15.8653 12.2914 15.5387L11.1086 16.4613ZM8.39138 10.5387C8.13662 10.2121 7.66533 10.1539 7.33873 10.4086C7.01212 10.6634 6.95387 11.1347 7.20862 11.4613L8.39138 10.5387ZM10.95 16C10.95 16.4142 11.2858 16.75 11.7 16.75C12.1142 16.75 12.45 16.4142 12.45 16H10.95ZM12.45 5C12.45 4.58579 12.1142 4.25 11.7 4.25C11.2858 4.25 10.95 4.58579 10.95 5H12.45ZM4.125 15V16H5.625V15H4.125ZM4.125 16C4.125 18.0531 5.75257 19.75 7.8 19.75V18.25C6.61657 18.25 5.625 17.2607 5.625 16H4.125ZM7.8 19.75H15.6V18.25H7.8V19.75ZM15.6 19.75C17.6474 19.75 19.275 18.0531 19.275 16H17.775C17.775 17.2607 16.7834 18.25 15.6 18.25V19.75ZM19.275 16V15H17.775V16H19.275ZM12.2914 16.4613L16.1914 11.4613L15.0086 10.5387L11.1086 15.5387L12.2914 16.4613ZM12.2914 15.5387L8.39138 10.5387L7.20862 11.4613L11.1086 16.4613L12.2914 15.5387ZM12.45 16V5H10.95V16H12.45Z"
-                fill="#000000"
+                fill="#ffffff"
               />
             </g>
           </svg>
@@ -47,26 +62,34 @@ export default function ProfileModal() {
         <input
           type="radio"
           id="profile-tab-account"
-          defaultChecked=""
+          defaultChecked="true"
           name="tab"
-          hidden=""
+          hidden="true"
         />
-        <input type="radio" id="profile-tab-offers" name="tab" hidden="" />
-        <input type="radio" id="profile-tab-preferences" name="tab" hidden="" />
+        <input type="radio" id="profile-tab-offers" name="tab" hidden="true" />
+        <input
+          type="radio"
+          id="profile-tab-preferences"
+          name="tab"
+          hidden="true"
+        />
         <div className="tab-items">
-          <label htmlFor="profile-tab-account" className="tab-account">
+          <label htmlFor="profile-tab-account" className="tab-account tab-item">
             Account
           </label>
-          <label htmlFor="profile-tab-offers" className="tab-offers">
+          <label htmlFor="profile-tab-offers" className="tab-offers tab-item">
             My Offers
           </label>
-          <label htmlFor="profile-tab-preferences" className="tab-preferences">
+          <label
+            htmlFor="profile-tab-preferences"
+            className="tab-preferences tab-item"
+          >
             Preferences
           </label>
         </div>
         <div className="profile-tab-content-account tab-content">
           <div className="tab-content-cards">
-            <a href="./bank.html" className="tab-content-card">
+            <a href="/account/bank" className="tab-content-card">
               <svg
                 fill="#000000bb"
                 viewBox="0 0 32 32"
@@ -85,7 +108,7 @@ export default function ProfileModal() {
               </svg>
               <h5>Bank</h5>
             </a>
-            <a href="./message.html" className="tab-content-card">
+            <a href="/account/message" className="tab-content-card">
               <svg
                 fill="#000000bb"
                 viewBox="0 0 1920 1920"
@@ -106,7 +129,7 @@ export default function ProfileModal() {
               </svg>
               <h5>Messages</h5>
             </a>
-            <a href="./account.html" className="tab-content-card">
+            <a href="/account/profile" className="tab-content-card">
               <svg
                 viewBox="0 0 24 24"
                 id="Layer_1"
@@ -138,7 +161,7 @@ export default function ProfileModal() {
               </svg>
               <h5>My Account</h5>
             </a>
-            <a href="./gambling.html" className="tab-content-card">
+            <a href="/account/gambling" className="tab-content-card">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -167,7 +190,7 @@ export default function ProfileModal() {
               </svg>
               <h5>Gambling Controls</h5>
             </a>
-            <a href="./activity.html" className="tab-content-card">
+            <a href="/account/activity" className="tab-content-card">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -214,7 +237,7 @@ export default function ProfileModal() {
               </svg>
               <h5>My Activity</h5>
             </a>
-            <a href="./history.html" className="tab-content-card">
+            <a href="/account/hisory" className="tab-content-card">
               <svg
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -238,8 +261,9 @@ export default function ProfileModal() {
               <h5>History</h5>
             </a>
           </div>
-          <h3>Responsible Gambling</h3>
+
           <h3>Help</h3>
+          <h3>Responsible Gambling</h3>
           <h3 className="logout">Log Out</h3>
         </div>
         <div className="profile-tab-content-offers tab-content">

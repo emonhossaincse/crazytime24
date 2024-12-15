@@ -2,19 +2,19 @@ import React from 'react'
 
 export default function History() {
   return (
-    <div className="container main">
+    <div className="profile-container main">
   <input
     type="radio"
     id="settled-bets"
     name="tabs"
-    defaultChecked=""
-    hidden=""
+    defaultChecked
+    hidden
   />
-  <input type="radio" id="unsettled-bets" name="tabs" hidden="" />
-  <input type="radio" id="games-bets" name="tabs" hidden="" />
-  <input type="radio" id="deposits-bets" name="tabs" hidden="" />
-  <input type="radio" id="withdraw-bets" name="tabs" hidden="" />
-  <input type="radio" id="adjustments-bets" name="tabs" hidden="" />
+  <input type="radio" id="unsettled-bets" name="tabs" hidden />
+  <input type="radio" id="games-bets" name="tabs" hidden />
+  <input type="radio" id="deposits-bets" name="tabs" hidden />
+  <input type="radio" id="withdraw-bets" name="tabs" hidden />
+  <input type="radio" id="adjustments-bets" name="tabs" hidden />
   <div className="left-sidebar">
     <h2>Bank</h2>
     <div className="left-sidebar-tab">
@@ -45,11 +45,11 @@ export default function History() {
         type="radio"
         id="settled-sports"
         name="settled-history"
-        hidden=""
-        defaultChecked=""
+        hidden
+        defaultChecked
       />
-      <input type="radio" id="settled-lotto" name="settled-history" hidden="" />
-      <input type="checkbox" id="settled-show-history" hidden="" />
+      <input type="radio" id="settled-lotto" name="settled-history" hidden />
+      <input type="checkbox" id="settled-show-history" hidden />
       <div className="settled-history-tabs">
         <label htmlFor="settled-sports" className="settled-sports-tab tab-item">
           Sports
@@ -63,20 +63,20 @@ export default function History() {
           type="radio"
           id="settled-last-24"
           name="settled-hours"
-          hidden=""
-          defaultChecked=""
+          hidden
+          defaultChecked
         />
         <input
           type="radio"
           id="settled-last-48"
           name="settled-hours"
-          hidden=""
+          hidden
         />
         <input
           type="radio"
           id="settled-date-range"
           name="settled-hours"
-          hidden=""
+          hidden
         />
         <div className="settled-hours-tab-contents-btns">
           <label
@@ -131,16 +131,16 @@ export default function History() {
         type="radio"
         id="unsettled-sports"
         name="unsettled-history"
-        hidden=""
-        defaultChecked=""
+        hidden
+        defaultChecked
       />
       <input
         type="radio"
         id="unsettled-lotto"
         name="unsettled-history"
-        hidden=""
+        hidden
       />
-      <input type="checkbox" id="unsettled-show-history" hidden="" />
+      <input type="checkbox" id="unsettled-show-history" hidden />
       <div className="unsettled-history-tabs">
         <label
           htmlFor="unsettled-sports"
@@ -160,20 +160,20 @@ export default function History() {
           type="radio"
           id="unsettled-last-24"
           name="unsettled-hours"
-          hidden=""
-          defaultChecked=""
+          hidden
+          defaultChecked
         />
         <input
           type="radio"
           id="unsettled-last-48"
           name="unsettled-hours"
-          hidden=""
+          hidden
         />
         <input
           type="radio"
           id="unsettled-date-range"
           name="unsettled-hours"
-          hidden=""
+          hidden
         />
         <div className="unsettled-hours-tab-contents-btns">
           <label
@@ -224,26 +224,26 @@ export default function History() {
     </div>
     <div className="games-bets-content content">
       <h2>Instant Games Bets</h2>
-      <input type="checkbox" id="games-bets-show-history" hidden="" />
+      <input type="checkbox" id="games-bets-show-history" hidden />
       <div className="history-tab-contents">
         <input
           type="radio"
           id="games-bets-last-24"
           name="games-bets-hours"
-          hidden=""
-          defaultChecked=""
+          hidden
+          defaultChecked
         />
         <input
           type="radio"
           id="games-bets-last-48"
           name="games-bets-hours"
-          hidden=""
+          hidden
         />
         <input
           type="radio"
           id="games-bets-date-range"
           name="games-bets-hours"
-          hidden=""
+          hidden
         />
         <div className="hours-tab-contents-btns">
           <label htmlFor="games-bets-last-24" className="last-24-tab hours-tab">
@@ -285,26 +285,26 @@ export default function History() {
     </div>
     <div className="deposits-bets-content content">
       <h2>Deposit</h2>
-      <input type="checkbox" id="deposits-bets-show-history" hidden="" />
+      <input type="checkbox" id="deposits-bets-show-history" hidden />
       <div className="history-tab-contents">
         <input
           type="radio"
           id="deposits-bets-last-24"
           name="deposits-bets-hours"
-          hidden=""
-          defaultChecked=""
+          hidden
+          defaultChecked
         />
         <input
           type="radio"
           id="deposits-bets-last-48"
           name="deposits-bets-hours"
-          hidden=""
+          hidden
         />
         <input
           type="radio"
           id="deposits-bets-date-range"
           name="deposits-bets-hours"
-          hidden=""
+          hidden
         />
         <div className="hours-tab-contents-btns">
           <label
@@ -355,26 +355,26 @@ export default function History() {
     </div>
     <div className="withdraw-bets-content content">
       <h2>Withdrawals</h2>
-      <input type="checkbox" id="withdraw-bets-show-history" hidden="" />
+      <input type="checkbox" id="withdraw-bets-show-history" hidden />
       <div className="history-tab-contents">
         <input
           type="radio"
           id="withdraw-bets-last-24"
           name="withdraw-bets-hours"
-          hidden=""
-          defaultChecked=""
+          hidden
+          defaultChecked
         />
         <input
           type="radio"
           id="withdraw-bets-last-48"
           name="withdraw-bets-hours"
-          hidden=""
+          hidden
         />
         <input
           type="radio"
           id="withdraw-bets-date-range"
           name="withdraw-bets-hours"
-          hidden=""
+          hidden
         />
         <div className="hours-tab-contents-btns">
           <label
@@ -425,26 +425,26 @@ export default function History() {
     </div>
     <div className="adjustments-bets-content content">
       <h2>Adjustments</h2>
-      <input type="checkbox" id="adjustments-bets-show-history" hidden="" />
+      <input type="checkbox" id="adjustments-bets-show-history" hidden />
       <div className="history-tab-contents">
         <input
           type="radio"
           id="adjustments-bets-last-24"
           name="adjustments-bets-hours"
-          hidden=""
-          defaultChecked=""
+          hidden
+          defaultChecked
         />
         <input
           type="radio"
           id="adjustments-bets-last-48"
           name="adjustments-bets-hours"
-          hidden=""
+          hidden
         />
         <input
           type="radio"
           id="adjustments-bets-date-range"
           name="adjustments-bets-hours"
-          hidden=""
+          hidden
         />
         <div className="hours-tab-contents-btns">
           <label

@@ -2,10 +2,10 @@ import React from 'react'
 
 export default function Bank() {
   return (
-    <div className="container main">
-    <input type="radio" id="balance" name="tabs" defaultChecked="" hidden="" />
-    <input type="radio" id="deposit" name="tabs" hidden="" />
-    <input type="radio" id="withdraw" name="tabs" hidden="" />
+    <div className="profile-container main">
+    <input type="radio" id="balance" name="tabs" defaultChecked="true" hidden="true" />
+    <input type="radio" id="deposit" name="tabs" hidden="true" />
+    <input type="radio" id="withdraw" name="tabs" hidden="true" />
     <div className="left-sidebar">
       <h2>Bank</h2>
       <div className="left-sidebar-tab">
@@ -85,10 +85,10 @@ export default function Bank() {
             type="radio"
             id="cashout"
             name="deposit-option"
-            hidden=""
-            defaultChecked=""
+            hidden
+            defaultChecked
           />
-          <input type="radio" id="sendmoney" name="deposit-option" hidden="" />
+          <input type="radio" id="sendmoney" name="deposit-option" hidden />
           <div className="du-tabs">
             <label htmlFor="cashout" className="cashout-radio radio">
               Cash Out

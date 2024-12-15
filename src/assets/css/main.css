@@ -736,6 +736,15 @@ img.common-left-img.mobile {
     align-items: center;
 }
 
+.top-action button.profile-btn{
+    background-color: transparent !important;
+    background-image: none;
+
+    img{
+        width: 2.75rem;
+    }
+
+}
 
 /* chat component */
 .chat.open{

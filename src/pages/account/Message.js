@@ -2,16 +2,16 @@ import React from 'react'
 
 export default function Message() {
   return (
-    <div className="container main">
+    <div className="profile-container main">
   <input
     type="radio"
     id="new-message"
     name="tabs"
-    defaultChecked=""
-    hidden=""
+    defaultChecked
+    hidden
   />
-  <input type="radio" id="inbox" name="tabs" hidden="" />
-  <input type="radio" id="sent-messages" name="tabs" hidden="" />
+  <input type="radio" id="inbox" name="tabs" hidden />
+  <input type="radio" id="sent-messages" name="tabs" hidden />
   <div className="left-sidebar">
     <h2>Messaging</h2>
     <div className="left-sidebar-tab">
@@ -44,7 +44,7 @@ export default function Message() {
     </div>
     <div className="inbox-content content">
       <h2>Inbox</h2>
-      <input type="checkbox" id="edit-delete-checkbox" hidden="" />
+      <input type="checkbox" id="edit-delete-checkbox" hidden />
       <div className="edit-delete-message">
         <span />
         <h3 className="delete-confirmation-message">Delete selected message</h3>
@@ -56,7 +56,7 @@ export default function Message() {
         </label>
       </div>
       <div className="inbox-content-message">
-        <input type="checkbox" id="delete-message" />
+        <input type="checkbox" id="delete-message" hidden />
         <label htmlFor="delete-message">
           <p>Welcome to bet365</p>
           <p>22/10/2024 12:25</p>

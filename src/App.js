@@ -31,6 +31,12 @@ import Sports from './pages/Sports';
 import Affiliate from './pages/Affiliate';
 import OddsList from './layout/OddsList';
 import Casino from './pages/Casino';
+import Bank from "./pages/account/Bank";
+import Message from "./pages/account/Message"
+import Profile from "./pages/account/Account"
+import Gambling from "./pages/account/Gambling"
+import Activity from "./pages/account/Acivity"
+import History from "./pages/account/History"
 
 function App() {
 
@@ -54,7 +60,13 @@ function App() {
           <Route path="/game" element={<GameLunch />} />
           <Route path="/sports" element={<Sports />} />
           <Route path='/affiliate' element={<Affiliate/>}/>
-          <Route path='/casino' element={<Casino/>}/>
+          <Route path='/casino' element={<Casino />} />
+          <Route path='/account/bank' element={<Bank />}/>
+          <Route path='/account/message' element={<Message />}/>
+          <Route path='/account/profile' element={<Profile />}/>
+          <Route path='/account/gambling' element={<Gambling />}/>
+          <Route path='/account/activity' element={<Activity />}/>
+          <Route path='/account/hisory' element={<History />}/>
         </Routes>
       </Router>
 
