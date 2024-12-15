@@ -44,7 +44,7 @@ const MyModal = ({ showModal, handleClose }) => {
   
   const handleLogin = async () => {
     try {
-      const response = await fetch('https://joy88.xyz/api/login', {
+      const response = await fetch('https://six6.site/api/login', {
         method: 'POST',
         headers: {
           'ACCEPT': 'application/json',
