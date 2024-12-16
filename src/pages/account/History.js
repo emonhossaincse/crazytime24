@@ -2,7 +2,6 @@ import React from "react";
 
 export default function History() {
   return (
-<<<<<<< HEAD
     <div className="profile-container main">
       <input type="radio" id="settled-bets" name="tabs" defaultChecked hidden />
       <input type="radio" id="unsettled-bets" name="tabs" hidden />
@@ -11,7 +10,6 @@ export default function History() {
       <input type="radio" id="withdraw-bets" name="tabs" hidden />
       <input type="radio" id="adjustments-bets" name="tabs" hidden />
       <input type="checkbox" id="account-toggle" hidden />
-=======
     <div className='max-width'>
       <div className="profile-container main">
   <input
@@ -507,7 +505,6 @@ export default function History() {
   </div>
 </div>
     </div>
->>>>>>> 79ecfe6cfd89c972332787f78dd8022ce3cdc343
 
       <div className="left-sidebar">
         <h2>Bank</h2>
@@ -536,7 +533,7 @@ export default function History() {
         </div>
       </div>
       <div className="right-content">
-        
+
         <label for="account-toggle" class="account-toggle-open">
           <svg
             width="24"
