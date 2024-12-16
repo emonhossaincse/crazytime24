@@ -6,6 +6,8 @@ export default function Bank() {
     <input type="radio" id="balance" name="tabs" defaultChecked="true" hidden="true" />
     <input type="radio" id="deposit" name="tabs" hidden="true" />
     <input type="radio" id="withdraw" name="tabs" hidden="true" />
+    <input type="checkbox" id="account-toggle" hidden />
+
     <div className="left-sidebar">
       <h2>Bank</h2>
       <div className="left-sidebar-tab">
@@ -21,6 +23,21 @@ export default function Bank() {
       </div>
     </div>
     <div className="right-content">
+
+    <label for="account-toggle" class="account-toggle-open">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 16h18v2H3zm0-5h18v2H3zm0-5h18v2H3z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </label>
+        
       <div className="balance-content content">
         <h2>Balances</h2>
         <div className="balance-content-top">

@@ -12,6 +12,9 @@ export default function Message() {
   />
   <input type="radio" id="inbox" name="tabs" hidden />
   <input type="radio" id="sent-messages" name="tabs" hidden />
+
+  <input type="checkbox" id="account-toggle" hidden />
+  
   <div className="left-sidebar">
     <h2>Messaging</h2>
     <div className="left-sidebar-tab">
@@ -27,6 +30,21 @@ export default function Message() {
     </div>
   </div>
   <div className="right-content">
+    
+  <label for="account-toggle" class="account-toggle-open">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 16h18v2H3zm0-5h18v2H3zm0-5h18v2H3z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </label>
+
     <div className="new-message-content content">
       <h2>New Message</h2>
       <form action="" className="new-message-content-form">

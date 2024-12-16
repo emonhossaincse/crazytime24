@@ -15,6 +15,8 @@ export default function Gambling() {
       <input type="radio" id="self-exclusion" name="activity-tabs" hidden />
       <input type="radio" id="account-closure" name="activity-tabs" hidden />
       <input type="radio" id="reality-checks" name="activity-tabs" hidden />
+      <input type="checkbox" id="account-toggle" hidden />
+      
       <div className="left-sidebar">
         <h2>Account Activity</h2>
         <div className="left-sidebar-tab">
@@ -39,6 +41,20 @@ export default function Gambling() {
         </div>
       </div>
       <div className="right-content">
+
+      <label for="account-toggle" class="account-toggle-open">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 16h18v2H3zm0-5h18v2H3zm0-5h18v2H3z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </label>
         <div className="my-activity-content content">
           <h2>My Activity</h2>
           <input
