@@ -3,6 +3,7 @@ import React from "react";
 export default function ProfileModal({ id }) {
   return (
     <dialog popover="" id={id}>
+      <button className="overlay" popovertarget={id} popovertargetaction="hide" ></button>
       <div className="profile-data-top">
         <div className="profile-data-top-left">
           <p>Username</p>
@@ -47,7 +48,7 @@ export default function ProfileModal({ id }) {
           </svg>
           <p>Deposit</p>
         </button>
-      </div>
+      </div> 
       <div className="profile-data-top-bottom">
         <div>
           <p>Withdrawable</p>

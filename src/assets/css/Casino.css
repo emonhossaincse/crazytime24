@@ -276,7 +276,7 @@ a {
 /* account */
 
 .main {
-  color: black;
+  color: #000000aa;
   display: flex;
   gap: 3rem;
 
@@ -1148,6 +1148,7 @@ a {
 
       #cashout:checked ~ .du-tabs .cashout-radio {
         border-bottom: 2px solid blueviolet;
+      
         font-weight: bold;
       }
 
@@ -1304,6 +1305,7 @@ a {
     }
   }
 }
+
 /* offer */
 .main {
   color: #000000cc;
@@ -1396,17 +1398,17 @@ a {
       #settled-last-24:checked
         ~ .settled-hours-tab-contents-btns .settled-last-24-tab {
         font-weight: 700;
-        background-color: #afddd1;
+        background-color: var(--white);
       }
       #settled-last-48:checked
         ~ .settled-hours-tab-contents-btns .settled-last-48-tab {
         font-weight: 700;
-        background-color: #afddd1;
+        background-color: var(--white);
       }
       #settled-date-range:checked
         ~ .settled-hours-tab-contents-btns .settled-date-range-tab {
         font-weight: 700;
-        background-color: #afddd1;
+        background-color: var(--white);
       }
 
       .settled-hours-tab-contents-btns {
@@ -1509,17 +1511,17 @@ a {
       #unsettled-last-24:checked
         ~ .unsettled-hours-tab-contents-btns .unsettled-last-24-tab {
         font-weight: 700;
-        background-color: #afddd1;
+        background-color: var(--white);
       }
       #unsettled-last-48:checked
         ~ .unsettled-hours-tab-contents-btns .unsettled-last-48-tab {
         font-weight: 700;
-        background-color: #afddd1;
+        background-color: var(--white);
       }
       #unsettled-date-range:checked
         ~ .unsettled-hours-tab-contents-btns .unsettled-date-range-tab {
         font-weight: 700;
-        background-color: #afddd1;
+        background-color: var(--white);
       }
 
       .unsettled-hours-tab-contents-btns {
@@ -1594,15 +1596,15 @@ a {
 
     #games-bets-last-24:checked ~ .hours-tab-contents-btns .last-24-tab {
       font-weight: 700;
-      background-color: #afddd1;
+      background-color: var(--white);
     }
     #games-bets-last-48:checked ~ .hours-tab-contents-btns .last-48-tab {
       font-weight: 700;
-      background-color: #afddd1;
+      background-color: var(--white);
     }
     #games-bets-date-range:checked ~ .hours-tab-contents-btns .date-range-tab {
       font-weight: 700;
-      background-color: #afddd1;
+      background-color: var(--white);
     }
 
     #games-bets-show-history:checked ~ .history-tab-contents {
@@ -1621,16 +1623,16 @@ a {
 
     #deposits-bets-last-24:checked ~ .hours-tab-contents-btns .last-24-tab {
       font-weight: 700;
-      background-color: #afddd1;
+      background-color: var(--white);
     }
     #deposits-bets-last-48:checked ~ .hours-tab-contents-btns .last-48-tab {
       font-weight: 700;
-      background-color: #afddd1;
+      background-color: var(--white);
     }
     #deposits-bets-date-range:checked
       ~ .hours-tab-contents-btns .date-range-tab {
       font-weight: 700;
-      background-color: #afddd1;
+      background-color: var(--white);
     }
 
     #deposits-bets-show-history:checked ~ .history-tab-contents {
@@ -1650,16 +1652,16 @@ a {
 
     #withdraw-bets-last-24:checked ~ .hours-tab-contents-btns .last-24-tab {
       font-weight: 700;
-      background-color: #afddd1;
+      background-color: var(--white);
     }
     #withdraw-bets-last-48:checked ~ .hours-tab-contents-btns .last-48-tab {
       font-weight: 700;
-      background-color: #afddd1;
+      background-color: var(--white);
     }
     #withdraw-bets-date-range:checked
       ~ .hours-tab-contents-btns .date-range-tab {
       font-weight: 700;
-      background-color: #afddd1;
+      background-color: var(--white);
     }
 
     #withdraw-bets-show-history:checked ~ .history-tab-contents {
@@ -1679,16 +1681,16 @@ a {
 
     #adjustments-bets-last-24:checked ~ .hours-tab-contents-btns .last-24-tab {
       font-weight: 700;
-      background-color: #afddd1;
+      background-color: var(--white);
     }
     #adjustments-bets-last-48:checked ~ .hours-tab-contents-btns .last-48-tab {
       font-weight: 700;
-      background-color: #afddd1;
+      background-color: var(--white);
     }
     #adjustments-bets-date-range:checked
       ~ .hours-tab-contents-btns .date-range-tab {
       font-weight: 700;
-      background-color: #afddd1;
+      background-color: var(--white);
     }
 
     #adjustments-bets-show-history:checked ~ .history-tab-contents {
@@ -1778,6 +1780,7 @@ a {
   color: #000000bb;
   display: flex;
   gap: 3rem;
+  background-color: #ffffffcc;
 
   .left-sidebar {
     width: 20rem;

@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import "../assets/css/sports.css"
 import Inplay from "../layout/Inplay";
 
 const Sports = () => {
-
+ 
   return (
     <div className="sports-container max-width game-lunch">
 

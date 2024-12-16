@@ -21,15 +21,15 @@ export default function CasinoFooter() {
           <p>Server Time: 05:13:27 GMT+6</p>
         </div>
         <div className="footer-body-right">
-            <a href="">Help</a>
-            <a href="">Banking</a>
-            <a href="">Terms & Conditions</a>
-            <a href="">Cookie Policy</a>
-            <a href="">Complaints Procedure</a>
-            <a href="">Contact Us</a>
-            <a href="">Privacy Policy</a>
-            <a href="">Fair Payouts</a>
-            <a href="">Games LIst</a>
+            <a href="#">Help</a>
+            <a href="/banking">Banking</a>
+            <a href="/termsConditions">Terms & Conditions</a>
+            <a href="/cookiePolicy">Cookie Policy</a>
+            <a href="/complaints">Complaints Procedure</a>
+            <a href="/contactUs">Contact Us</a>
+            <a href="/privacyPolicy">Privacy Policy</a>
+            <a href="/fairPayouts">Fair Payouts</a>
+            <a href="/gamesList">Games List</a>
         </div>
       </div>
       <p className="footer-para">

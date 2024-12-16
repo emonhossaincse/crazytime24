@@ -38,12 +38,21 @@ import Gambling from "./pages/account/Gambling"
 import Activity from "./pages/account/Acivity"
 import History from "./pages/account/History"
 
+import Banking from "./pages/account/PaymentMethod"
+import TermsCondition from "./pages/account/TermsCondition"
+import CookiePolicy from "./pages/account/CookiePolicy"
+import Complaints from "./pages/account/Complaints"
+import ContactUs from "./pages/account/ContactUs"
+import PrivacyPolicy from "./pages/account/PrivacyPolicy"
+import FairPayouts from "./pages/account/FairPayouts"
+
+
 function App() {
 
   return (
     <div className="App">
       <Router>
-     
+
         <Aside/>
         <Chat/>
         <TopNavMenu/>
@@ -67,10 +76,18 @@ function App() {
           <Route path='/account/gambling' element={<Gambling />}/>
           <Route path='/account/activity' element={<Activity />}/>
           <Route path='/account/hisory' element={<History />}/>
+ 
+          <Route path='/banking' element={<Banking />}/>
+          <Route path='/termsConditions' element={<TermsCondition />}/>
+          <Route path='/cookiePolicy' element={<CookiePolicy />}/>
+          <Route path='/complaints' element={<Complaints />}/>
+          <Route path='/contactUs' element={<ContactUs />}/>
+          <Route path='/privacyPolicy' element={<PrivacyPolicy />}/>
+          <Route path='/fairPayouts' element={<FairPayouts />}/>
+
         </Routes>
       </Router>
 
-     
     </div>
   );
 }

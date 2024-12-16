@@ -1,4 +1,5 @@
 import React from 'react'
+import FootersBottom from './FootersBottom'
 
 export default function ContactUs() {
   return (
@@ -76,46 +77,7 @@ export default function ContactUs() {
       </div>
     </div>
   </main>
-  <footer className="footer-options-footer">
-    <div className="empty-div" />
-    <div className="footer-options casino-container">
-      <ul className="footer-nav-items">
-        <li>
-          <a href="">Contact Us</a>
-        </li>
-        <li>
-          <a href="">Responsible Gambling</a>
-        </li>
-        <li>
-          <a href="">Privacy Policy</a>
-        </li>
-        <li>
-          <a href="">About Us</a>
-        </li>
-        <li>
-          <a href="">Sports Rules </a>
-        </li>
-        <li>
-          <a href="">Terms and Conditions </a>
-        </li>
-        <li>
-          <a href="">Cookies Policy </a>
-        </li>
-        <li>
-          <a href="">Fair Payouts</a>
-        </li>
-        <li>
-          <a href="">Complaints Procedure</a>
-        </li>
-      </ul>
-      <img src="../img/GordonMoody-GT-x2_Grey99.png" alt="" />
-      <p className="footer-rights">
-        Gambling can be addictive, please play responsibly. For information on
-        support measures, please visit our Responsible Gambling Help page. ©
-        2001-2024 bet365. All rights reserved.
-      </p>
-    </div>
-  </footer>
+  <FootersBottom />
 </>
 
   )

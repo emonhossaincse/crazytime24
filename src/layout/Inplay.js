@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Inplay() {
   return (
-    <div className="pl-PodLoaderModule_Pod-61">
+    <div className="pl-PodLoaderModule_Pod-61 in-play">
       <div className="inplay-menu">
         <div className="prev">
           <svg
