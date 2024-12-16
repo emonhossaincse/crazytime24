@@ -2,6 +2,7 @@ import React from "react";
 
 export default function Account() {
   return (
+<<<<<<< HEAD
     <div className="profile-container main">
       <input type="radio" id="contact" name="tabs" defaultChecked hidden />
       <input type="radio" id="residential" name="tabs" hidden />
@@ -29,6 +30,33 @@ export default function Account() {
             Verification
           </label>
         </div>
+=======
+   <div className='max-width'>
+     <div className="profile-container main">
+    <input type="radio" id="contact" name="tabs" defaultChecked hidden />
+    <input type="radio" id="residential" name="tabs" hidden />
+    <input type="radio" id="preferences" name="tabs" hidden />
+    <input type="radio" id="password" name="tabs" hidden />
+    <input type="radio" id="verification" name="tabs" hidden />
+    <div className="left-sidebar">
+      <h2>My Account</h2>
+      <div className="left-sidebar-tab">
+        <label htmlFor="contact" className="contact-tab tab">
+          Contact Details
+        </label>
+        <label htmlFor="residential" className="residential-tab tab">
+          Residential Address
+        </label>
+        <label htmlFor="preferences" className="preferences-tab tab">
+          Preferences
+        </label>
+        <label htmlFor="password" className="password-tab tab">
+          Password
+        </label>
+        <label htmlFor="verification" className="verification-tab tab">
+          Verification
+        </label>
+>>>>>>> 79ecfe6cfd89c972332787f78dd8022ce3cdc343
       </div>
 
       <div className="right-content">
@@ -268,5 +296,11 @@ export default function Account() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
+=======
+  </div>  
+   </div>
+  )
+>>>>>>> 79ecfe6cfd89c972332787f78dd8022ce3cdc343
 }

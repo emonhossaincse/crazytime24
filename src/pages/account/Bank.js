@@ -2,7 +2,8 @@ import React from 'react'
 
 export default function Bank() {
   return (
-    <div className="profile-container main">
+   <div className='max-width'>
+     <div className="profile-container main">
     <input type="radio" id="balance" name="tabs" defaultChecked="true" hidden="true" />
     <input type="radio" id="deposit" name="tabs" hidden="true" />
     <input type="radio" id="withdraw" name="tabs" hidden="true" />
@@ -173,6 +174,7 @@ export default function Bank() {
       </div>
     </div>
   </div>
+   </div>
   
   )
 }

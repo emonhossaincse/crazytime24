@@ -96,10 +96,12 @@
     }
 
     .card-lists-card {
-      display: flex;
-      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); 
       gap: var(--gap);
-      overflow-x: clip;
+      align-items: center;
+      justify-items: center;
+      
 
       .card-list-card {
         width: var(--card-width);

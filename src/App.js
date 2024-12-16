@@ -57,7 +57,7 @@ function App() {
             <OddsList />
             <Footer/>
           </>} />
-          <Route path="/game" element={<GameLunch />} />
+          <Route path="/gamerun" element={<GameLunch />} />
           <Route path="/sports" element={<Sports />} />
           <Route path='/affiliate' element={<Affiliate/>}/>
           <Route path='/casino' element={<Casino />} />
