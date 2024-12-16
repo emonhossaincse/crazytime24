@@ -17,12 +17,8 @@ const MyModal = ({ showModal, handleClose }) => {
   const [success, setSuccess] = useState("");
   const [validationError, setValidationError] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("token"));
-  const [isSessionId, setisSessionId] = useState(
-    !!localStorage.getItem("sessionid")
-  );
-  const [isRemoteId, setIsRemoteId] = useState(
-    !!localStorage.getItem("remote_id")
-  );
+  
+  
 
   useEffect(() => {
     const errorTimer = setTimeout(() => {
@@ -44,7 +40,7 @@ const MyModal = ({ showModal, handleClose }) => {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch("https://six6.site/api/login", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/login`, {
         method: "POST",
         headers: {
           ACCEPT: "application/json",
@@ -58,14 +54,14 @@ const MyModal = ({ showModal, handleClose }) => {
       if (response.ok) {
         console.log(data);
         localStorage.setItem("token", data.token);
-        localStorage.setItem("remote_id", data.response.response.id);
-        localStorage.setItem("username", data.response.response.username);
+        localStorage.setItem("remote_id", data.remote_id);
+        localStorage.setItem("username", data.username);
 
         setIsLoggedIn(true);
         handleClose();
         window.location.reload();
       } else {
-        setError(data.message || "An unexpected error occurred"); // Assuming the server sends an error message in the response
+        setError(data.message || "An unexpected error occurred"); 
       }
     } catch (error) {
       console.error("Error during login:", error);
@@ -362,7 +358,7 @@ function SignIn() {
     const token = localStorage.getItem("token");
     if (token) {
       try {
-        const response = await fetch("https://joy88.xyz/api/balance", {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/balance`, {
           method: "POST",
           headers: {
             Authorization: `Bearer ${token}`
@@ -397,7 +393,6 @@ function SignIn() {
 
   const handleLogOut = () => {
     localStorage.removeItem("token");
-    localStorage.removeItem("sessionid");
     localStorage.removeItem("token");
     window.location.reload();
     setIsLoggedIn(false);
