@@ -533,7 +533,7 @@ function Footer() {
                   </div>
                   <div className="fd-ci">
                     <div className="cgapchl Polkadot icon-Polkadot img-fill">
-                      
+                       
                     </div>
                   </div>
                   <div className="fd-ci">

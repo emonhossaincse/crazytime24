@@ -16,9 +16,11 @@
 
     .sports-container{
         grid-template-columns: 1fr;
+
         .in-play{
-            width: 100%;
+            min-width: 10rem;
         }
+        
         .iframe{
             display: none;
         }

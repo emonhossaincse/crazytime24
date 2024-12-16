@@ -1,10 +1,9 @@
 import React from "react";
 import '../assets/css/oddslist.css'
-
+ 
 function OddsList() {
   return (
     <div className="pl-PodLoaderModule_Pod-61 max-width">
-      <div>
         <div className="ss-HomepageSpotlight ss-HomepageSpotlight_Width-1">
           <div className="ss-HomeSpotlightHeader">
             <div
@@ -464,7 +463,6 @@ function OddsList() {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 }
