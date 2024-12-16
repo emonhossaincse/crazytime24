@@ -5,7 +5,8 @@ import {
   faWallet,
   faRightFromBracket,
   faUser,
-  faXmark
+  faXmark,
+  faMoneyBill
 } from "@fortawesome/free-solid-svg-icons";
 import ProfileModal from "../../pages/account/ProfileModal";
 
@@ -424,6 +425,17 @@ function SignIn() {
           Sign In
         </span>}
       {isLoggedIn &&
+       <>
+        <span className=" display-none">
+          <button className="ui-button s-conic1 b1roz03j" style={{ marginRight: "1rem"}}>
+            <div className="button-inner">
+              <svg className="s1ff97qc icon">
+                <FontAwesomeIcon icon={faMoneyBill} />
+              </svg>
+              <span>$100</span>
+            </div>
+          </button>
+        </span>
         <span onClick={handleWalletOpen} className=" display-none">
           <button className="ui-button button-normal s-conic2 b1roz03j">
             <div className="button-inner">
@@ -433,7 +445,8 @@ function SignIn() {
               <span>Deposit</span>
             </div>
           </button>
-        </span>}
+        </span>
+       </>}
 
       {isLoggedIn &&
         <>

@@ -4,13 +4,6 @@ import SignIn from "../modal/SignIn";
 import Wallet from "../sidebar/Wallet";
 import { Link } from 'react-router-dom';
 function TopNavMenu (){
-  
-   
-    
-   
-   
-    
-  
     
 
     return(

@@ -700,9 +700,6 @@ img.common-left-img.mobile {
     border-radius: var(--border-radius);
     padding: 0px 10px;
    
-    /* & span svg{
-        color: #fff !important;
-    } */
 }
 
 .top-menu .nav-link span svg{
@@ -715,9 +712,11 @@ img.common-left-img.mobile {
     
     color: #fff;
 }
+
 .unseen{
     display: none;
 }
+
 .top-action button{
     color: #fff;
     background-color: #1d803ab3;
@@ -742,6 +741,7 @@ img.common-left-img.mobile {
 
     img{
         width: 2.75rem;
+        margin-top: -0.75rem;
     }
 }
 
