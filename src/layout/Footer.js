@@ -490,7 +490,7 @@ function Footer() {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> 
             <div className="fdn9ps2 footer-coins-wrap">
               <p className="coins-t">Accepted Payment Method</p>
               <div className="coins-list">
@@ -504,98 +504,6 @@ function Footer() {
                 <img src="/icon/pay60.png" alt="Icon" />
                 <img src="/icon/pay91.png" alt="Icon" />
                 <img src="/icon/pay61.png" alt="Icon" className="tap" />
-
-                {/* <div className="fd-ci">
-                 
-                    <div className="cgapchl Bitcoin icon-Bitcoin img-fill">
-                    <img src="/icon/pay16.png" alt="Payment Logo" width={100}  />
-                    </div> 
-                  </div>
-                  <div className="fd-ci">
-                    <div className="cgapchl Ethereum icon-Ethereum img-fill">
-                    <img src="/assets/share_6.b1025447.png" alt="instagram"/>
-                    </div>
-                  </div>
-                  <div className="fd-ci">
-                    <div className="cgapchl Doge icon-Doge img-fill">
-                      <img src="" alt="" />
-                    </div>
-                  </div>
-                  <div className="fd-ci">
-                    <div className="cgapchl Ripple icon-Ripple img-fill">
-                      
-                    </div>
-                  </div>
-                  <div className="fd-ci">
-                    <div className="cgapchl Cardano icon-Cardano img-fill">
-                      
-                    </div>
-                  </div>
-                  <div className="fd-ci">
-                    <div className="cgapchl Polkadot icon-Polkadot img-fill">
-                       
-                    </div>
-                  </div>
-                  <div className="fd-ci">
-                    <div className="cgapchl Tron icon-Tron img-fill">
-                      
-                    </div>
-                  </div>
-                  <div className="fd-ci">
-                    <div className="cgapchl BSC icon-BSC img-fill">
-                      
-                    </div>
-                  </div>
-                  <div className="fd-ci">
-                    <div className="cgapchl Avalanche icon-Avalanche img-fill">
-                      
-                    </div>
-                  </div>
-                  <div className="fd-ci">
-                    <div className="cgapchl Solana icon-Solana img-fill">
-                      
-                    </div>
-                  </div>
-                  <div className="fd-ci">
-                    <div className="cgapchl Polygon icon-Polygon img-fill">
-                      
-                    </div>
-                  </div>
-                  <div className="fd-ci">
-                    <div className="cgapchl Arbitrum icon-Arbitrum img-fill">
-                      
-                    </div>
-                  </div>
-                  <div className="fd-ci">
-                    <div className="cgapchl Optimism icon-Optimism img-fill">
-                      
-                    </div>
-                  </div>
-                  <div className="fd-ci">
-                    <div className="cgapchl Cronos icon-Cronos img-fill">
-                      
-                    </div>
-                  </div>
-                  <div className="fd-ci">
-                    <div className="cgapchl Fantom icon-Fantom img-fill">
-                      
-                    </div>
-                  </div>
-                  <div className="fd-ci">
-                    <div className="cgapchl Thorchain icon-Thorchain img-fill">
-                      
-                    </div>
-                  </div>
-                  <div className="fd-ci">
-                    <div className="cgapchl Cosmos icon-Cosmos img-fill">
-                      
-                    </div>
-                  </div>
-                  <div className="fd-ci">
-                    <div className="cgapchl Near icon-Near img-fill">
-                      
-                    </div>
-                  </div> */}
               </div>
             </div>
             <div className="f19tyczm footer-gaming-wrap">

@@ -9531,7 +9531,7 @@ body.chat-open .intercom-dfosxs {
 .fzoz0z4 {
     --1hz36cl: #DADDE6;
     --jeo3dl: #F6F7FA;
-    padding: 48px 0 64px;
+    padding: 48px 0 5rem;
     border-top: 1px solid var(--1hz36cl);
     font-size: .75rem;
     line-height: 1.5;
@@ -9547,6 +9547,7 @@ body.chat-open .intercom-dfosxs {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center
+
 }
 
 .darken .fzoz0z4 {
@@ -9555,12 +9556,16 @@ body.chat-open .intercom-dfosxs {
 }
 
 .fzoz0z4 .left-text {
-    width: 46%
+    width: 46%;
+    margin-inline: auto;
 }
 
 .fzoz0z4 .left-text .logo {
     width: auto;
-    height: 2.5rem
+    height: 3rem;
+    background-color: green;
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
 }
 
 .fzoz0z4 .left-text p {
@@ -9569,7 +9574,8 @@ body.chat-open .intercom-dfosxs {
 }
 
 .fzoz0z4 .right-text {
-    width: 46%
+    width: 46% ;
+    margin-inline: auto;
 }
 
 .fzoz0z4 .right-text .licensed-t {
@@ -9831,12 +9837,13 @@ body.chat-open .intercom-dfosxs {
     display: grid;
     align-items: center;
     gap: 0.5rem;
-    grid-template-columns: repeat(auto-fill, 6rem);
+    grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
     margin: 0.5rem -18px 0 0;
 
     & img{
         width: 5.5rem;
         object-fit: cover;
+        /* aspect-ratio: 5/3; */
     }
     & img.tap{
         margin: auto;
@@ -10700,7 +10707,7 @@ body.chat-open .intercom-dfosxs {
         font-size: .875rem
     }
 }
-
+ 
 button.l1gdc94o {
     position: fixed;
     right: 20px;

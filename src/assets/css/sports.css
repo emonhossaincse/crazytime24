@@ -1,6 +1,7 @@
 .sports-container{
     display: grid;
     grid-template-columns: 5fr 2fr;
+    padding-bottom: 5rem;
 
     & .iframe{
        position: fixed;

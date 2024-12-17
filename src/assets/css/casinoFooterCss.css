@@ -95,6 +95,7 @@ body {
 
 .body {
   font-family: "Verdana", "Geneva", "Arial", sans-serif;
+  margin-bottom: 3rem;
 
   .body-header {
     --text-color: #888888;
@@ -426,9 +427,38 @@ body {
   }
 }
 
+@media (width < 700px) {
+  .table-head {
+    & p:nth-child(2),
+    p:nth-child(3),
+    p:nth-child(4),
+    p:nth-child(5) {
+      display: none;
+    }
+  }
+
+  & summary {
+    justify-content: space-between !important;
+
+    .table-middle {
+      p:nth-child(1),
+      & p:nth-child(2),
+      p:nth-child(3),
+      p:nth-child(4) {
+        display: none;
+      }
+    }
+
+    .table-last-item {
+      width: 100% !important;
+      margin-left: 0 !important;
+    }
+  }
+}
+
 .footer-options-footer {
   background-color: var(--footer-bg);
-  margin-top: 3rem;
+  margin-block: 3rem 5rem;
   font-family: Arial, Helvetica, sans-serif;
 
   ul {
@@ -532,19 +562,18 @@ input {
   border: 1px solid blue;
   outline: none;
 
-
-  & button.overlay{
+  & button.overlay {
     position: fixed;
     z-index: -1;
     inset: 0;
-    background-color: #000000a4 !important ;
+    background-color: #000000a4 !important;
     background-image: none;
     mix-blend-mode: lighten;
     width: 100%;
     height: 100%;
   }
 
-  p{
+  p {
     font-size: var(--font-16-18);
   }
 
@@ -555,7 +584,6 @@ input {
     margin-bottom: var(--spacing-6-8);
 
     & .profile-data-top-left {
-
       line-height: 0;
       text-align: start;
 
@@ -570,8 +598,8 @@ input {
           font-weight: 700;
         }
 
-        .profile-data-refresh-icon{
-          svg{
+        .profile-data-refresh-icon {
+          svg {
             width: 1.25rem;
             height: 1.25rem;
           }
@@ -645,13 +673,13 @@ input {
 
         & .tab-content-card {
           text-align: center;
-          
+
           svg {
             width: 2.5rem;
             height: 2.5rem;
           }
 
-          h5{
+          h5 {
             font-size: var(--spacing-14-16);
           }
         }

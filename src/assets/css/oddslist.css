@@ -656,23 +656,20 @@ svg {
   position: relative;
   border-left-color: var(--border, transparent);
 }
-
+ 
 .cpm-ParticipantOdds_Odds {
   color: var(--sub-text-color);
 }
 
 .inplay-menu {
-  display: flex;
-  gap: 8px;
   position: relative;
-  padding: 0.5rem 2.5rem;
-  border-radius: 0.5rem;
+  margin-bottom: 1rem;
 
   & .prev {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 0.3rem;
+    left: 0.5rem;
 
     & .inplay-prev {
       width: 2rem;
@@ -685,7 +682,7 @@ svg {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 0.3rem;
+    right: 0.5rem;
 
     & .inplay-next {
       width: 2rem;
@@ -693,6 +690,16 @@ svg {
       color: rgb(30, 68, 70);
     }
   }
+
+ .inplay-menu-items{
+  display: flex;
+  gap: 8px;
+ 
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  overflow: scroll hidden;
+  width: calc(100% - 5rem);
+  margin-inline: auto;
 
   & .inplay-menu-item {
 
@@ -705,7 +712,12 @@ svg {
     & svg{
       width: 2.3rem;
       aspect-ratio: 1;
-      fill: rgb(204, 204, 204);
+      fill: rgb(177, 177, 177);
+    }
+
+    &:nth-child(2) svg{
+    
+      margin-bottom: 0.125rem;
     }
 
     & .inplay-menu-title {
@@ -713,4 +725,5 @@ svg {
       margin: 0;
     }
   }
+ }
 }

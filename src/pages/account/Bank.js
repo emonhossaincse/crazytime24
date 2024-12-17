@@ -23,7 +23,8 @@ export default function Bank() {
         </label>
       </div>
     </div>
-    <div className="right-content">
+
+    <div className="right-content ballance-contents">
 
     <label for="account-toggle" class="account-toggle-open">
           <svg
@@ -44,7 +45,7 @@ export default function Bank() {
         <div className="balance-content-top">
           <p className="balance-content-title">Withdrawable</p>
           <p className="balance-content-top-amount">$0.00</p>
-        </div>
+        </div> 
         <div className="balance-content-buttons">
           <button className="balance-deposit-btn button">
             <svg
