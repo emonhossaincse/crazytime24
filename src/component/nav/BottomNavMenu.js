@@ -100,7 +100,7 @@ function BottomNavMenu() {
                 />
               </svg>
             </a>
-            <a onClick={handleWalletOpen} className="nav-link" href="#">
+            <a  className="nav-link" href="/account/bank">
               <div className="press-button">
                 <div className="press-button-effet">
                   <FontAwesomeIcon icon={faWallet} />
