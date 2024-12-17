@@ -53,7 +53,7 @@
     --15e1b1i: rgba(95,105,117,.3);
     --1mpgd1v: #f6f7fa;
     --1m9vfxv: rgba(0,0,0,.2);
-
+ 
 }
 
 .darken {
@@ -315,7 +315,7 @@ img.common-left-img.mobile {
     visibility: visible !important;
     background: var(--background-color);
     box-shadow:  0.2rem 0.5rem #0002;
-    z-index: 1;
+    z-index: 20;
     height: 3.75rem;
     line-height: 3.75rem;
     padding: 0 10px;
@@ -460,6 +460,12 @@ img.common-left-img.mobile {
 .wallet-nav .nav .nav-link{
     padding-left: 30px;
 }
+
+.profile-nav-button{
+    background-color: none;
+    background-image: none;
+}
+
 .icon-bdt{
     width: 25px;
 }

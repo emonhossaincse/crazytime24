@@ -3,7 +3,26 @@ import React from "react";
 export default function ProfileModal({ id }) {
   return (
     <dialog popover="" id={id}>
-      <button className="overlay" popovertarget={id} popovertargetaction="hide" ></button>
+      <button
+        className="profile-close"
+        popovertargetaction="hide"
+        popovertarget={id}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1.5rem"
+          height="1.5rem"
+          viewBox="0 0 52 52"
+          xmlSpace="preserve"
+        >
+          <path d="m31 25.4 13-13.1c.6-.6.6-1.5 0-2.1l-2-2.1c-.6-.6-1.5-.6-2.1 0L26.8 21.2c-.4.4-1 .4-1.4 0L12.3 8c-.6-.6-1.5-.6-2.1 0l-2.1 2.1c-.6.6-.6 1.5 0 2.1l13.1 13.1c.4.4.4 1 0 1.4L8 39.9c-.6.6-.6 1.5 0 2.1l2.1 2.1c.6.6 1.5.6 2.1 0L25.3 31c.4-.4 1-.4 1.4 0l13.1 13.1c.6.6 1.5.6 2.1 0L44 42c.6-.6.6-1.5 0-2.1L31 26.8c-.4-.4-.4-1 0-1.4" />
+        </svg>
+      </button>
+      <button
+        className="overlay"
+        popovertarget={id}
+        popovertargetaction="hide"
+      /> 
       <div className="profile-data-top">
         <div className="profile-data-top-left">
           <p>Username</p>
@@ -48,7 +67,7 @@ export default function ProfileModal({ id }) {
           </svg>
           <p>Deposit</p>
         </button>
-      </div> 
+      </div>
       <div className="profile-data-top-bottom">
         <div>
           <p>Withdrawable</p>
@@ -137,6 +156,7 @@ export default function ProfileModal({ id }) {
                 data-name="Layer 1"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="#000000bb"
+                className="profile-icon"
               >
                 <g id="SVGRepo_bgCarrier" strokeWidth={0} />
                 <g
@@ -197,43 +217,16 @@ export default function ProfileModal({ id }) {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g id="SVGRepo_bgCarrier" strokeWidth={0} />
+                <g strokeWidth={0} />
+                <g strokeLinecap="round" strokeLinejoin="round" />
                 <g
-                  id="SVGRepo_tracerCarrier"
+                  stroke="#292D32"
+                  strokeWidth={1.5}
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                />
-                <g id="SVGRepo_iconCarrier">
-                  <g id="Iconly/Curved/Activity">
-                    <g id="Activity">
-                      <path
-                        id="Stroke 1"
-                        d="M6.91699 14.854L9.90999 10.965L13.324 13.645L16.253 9.86499"
-                        stroke="#000000bb"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        id="Stroke 2"
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M19.6671 2.3501C20.7291 2.3501 21.5891 3.2101 21.5891 4.2721C21.5891 5.3331 20.7291 6.1941 19.6671 6.1941C18.6051 6.1941 17.7451 5.3331 17.7451 4.2721C17.7451 3.2101 18.6051 2.3501 19.6671 2.3501Z"
-                        stroke="#000000bb"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        id="Stroke 4"
-                        d="M20.7555 9.26898C20.8885 10.164 20.9495 11.172 20.9495 12.303C20.9495 19.241 18.6375 21.553 11.6995 21.553C4.76246 21.553 2.44946 19.241 2.44946 12.303C2.44946 5.36598 4.76246 3.05298 11.6995 3.05298C12.8095 3.05298 13.8005 3.11198 14.6825 3.23998"
-                        stroke="#000000bb"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </g>
-                  </g>
+                >
+                  <path d="M9 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7" />
+                  <path d="m7.33 14.49 2.38-3.09c.34-.44.97-.52 1.41-.18l1.83 1.44c.44.34 1.07.26 1.41-.17l2.31-2.98" />
                 </g>
               </svg>
               <h5>My Activity</h5>
@@ -242,7 +235,8 @@ export default function ProfileModal({ id }) {
               <svg
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-                fill="#000000bb"
+                fill="currentcolor"
+                className="history-icon"
               >
                 <g id="SVGRepo_bgCarrier" strokeWidth={0} />
                 <g
@@ -253,7 +247,7 @@ export default function ProfileModal({ id }) {
                 <g id="SVGRepo_iconCarrier">
                   <path
                     fill="none"
-                    stroke="#000000bb"
+                    stroke="currentcolor"
                     strokeWidth={2}
                     d="M1,12 C1,18.075 5.925,23 12,23 C18.075,23 23,18.075 23,12 C23,5.925 18.075,1 12,1 C7.563,1 4,4 2,7.5 M1,1 L1,8 L8,8 M16,17 L12,13 L12,6"
                   />
@@ -279,7 +273,7 @@ export default function ProfileModal({ id }) {
             method restrictions apply. Returns exclude Bet Credits stake.
           </p>
           <p>Time limits and T&amp;C's apply.</p>
-          <button className="button">Deposit Now</button>
+          <button className="button deposit-btn-offers">Deposit Now</button>
         </div>
         <div className="profile-tab-content-preferences tab-content">
           <details>
