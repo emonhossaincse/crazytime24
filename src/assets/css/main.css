@@ -170,10 +170,12 @@ img.common-left-img.mobile {
   .aside {
     display: none;
   }
+
   .mobile-menu {
     --background: #24262b;
     display: flex;
     width: 100%;
+
     #mobile-aside-toogle:checked ~ .mobile-menu-items .mobile-aside-nav {
       display: block;
       width: 100%;
@@ -183,12 +185,13 @@ img.common-left-img.mobile {
       left: 0;
       z-index: 50;
       background-color: var(--bg-sidebar);
-      padding: 1rem;
+      padding: 2.5rem 1rem 1rem;
       overflow-y: scroll;
+
       .toggle-close {
         position: absolute;
         top: 0.5rem;
-        right: 0.5rem;
+        right: 1em;
       }
       .aside-nav-items {
         display: flex;

@@ -1,14 +1,12 @@
 import React from "react";
-import Profile from "../modal/Profile";
-import VIPClub from "../modal/VIPClub";
 
 export default function MobileTopNav() {
   return (
     <aside className="mobile-aside-nav">
       <label htmlFor="mobile-aside-toogle" className="toggle-close">
         <svg
-          width="1.8rem"
-          height="1.8rem"
+          width="1.5rem"
+          height="1.5rem"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
           fill="#98a7b5"

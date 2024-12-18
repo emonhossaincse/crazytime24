@@ -1,78 +1,17 @@
-import React, { useState } from "react";
-import SignUp from "../modal/SignUp";
-import SignIn from "../modal/SignIn";
-import Wallet from "../sidebar/Wallet";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useNavigate } from "react-router-dom";
 import {
-  faWallet,
-  faRightFromBracket,
-  faUser,
-  faXmark
+  faWallet
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 function BottomNavMenu() {
-  const [soprtsLink, setsoprtsLink] = useState(null);
-  const [error, setError] = useState(null);
-  const navigate = useNavigate();
-
-  const handleChatOpen = () => {
-    const bodyElements = document.querySelector(".chat");
-    bodyElements.classList.add("open");
-  };
-
-  const handleWalletOpen = () => {
-    const bodyElements = document.querySelector(".wallet");
-    bodyElements.classList.add("open");
-  };
-
-  const handleGameClick = async gameId => {
-    try {
-      // Fetch the user's authentication token from localStorage
-      const token = localStorage.getItem("token");
-
-      // Ensure that the user is logged in before making the request
-      if (!token) {
-        console.log("User not logged in");
-        return;
-      }
-
-      // Fetch the game details from the Laravel backend
-      const response = await fetch("https://joy88.xyz/api/get-game-direct", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}` // Include the authentication token
-        },
-        body: JSON.stringify({
-          game_id: gameId,
-          lang: "en", // Replace with the desired language
-          play_for_fun: false, // Replace with the desired play_for_fun value
-          home_url: "https://www.six6.online" // Replace with your actual home URL
-        })
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        navigate("/sports", {
-          state: { soprtsLink: data.response.response.embed_code }
-        });
-      } else {
-        setError(data.message || "An unexpected error occurred");
-      }
-    } catch (error) {
-      console.error("Error fetching game details:", error);
-      setError("An unexpected error occurred");
-    }
-  };
 
   return (
     <div className="bottom-nav max-width">
       <div className="container">
         <div className="bottom-menu">
           <li className="nav-item">
-            <a className="nav-link" href="/">
+            <Link className="nav-link" to="/">
               <svg
                 width="1.325erm"
                 height="1.25rem"
@@ -83,8 +22,8 @@ function BottomNavMenu() {
               >
                 <path d="M12 3s-6.186 5.34-9.643 8.232A1.04 1.04 0 0 0 2 12a1 1 0 0 0 1 1h2v7a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-4h4v4a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-7h2a1 1 0 0 0 1-1 .98.98 0 0 0-.383-.768C18.184 8.34 12 3 12 3" />
               </svg>
-            </a>
-            <a className="nav-link" href="/sports">
+            </Link>
+            <Link className="nav-link" to="/sports">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -99,15 +38,15 @@ function BottomNavMenu() {
                   fill="#98A7B5"
                 />
               </svg>
-            </a>
-            <a  className="nav-link" href="/account/bank">
+            </Link>
+            <Link  className="nav-link" to="/account/bank">
               <div className="press-button">
                 <div className="press-button-effet">
                   <FontAwesomeIcon icon={faWallet} />
                 </div>
               </div>
-            </a>
-            <a className="nav-link" href="/casino">
+            </Link>
+            <Link className="nav-link" to="/casino">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -122,7 +61,7 @@ function BottomNavMenu() {
                   fill="#98A7B5"
                 />
               </svg>
-            </a>
+            </Link>
             <button className="nav-link profile-nav-button" popovertarget="profile-side-bar" >
               <svg
                 width="1.325rem"

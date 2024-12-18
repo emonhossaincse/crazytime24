@@ -28,7 +28,7 @@ function TopNavMenu() {
             </svg>
           </label>
             <MobileTopNav />
-            <img src="#" alt="Logo" className="mobile-menu-logo" />
+            <img src="/assets/media/logo/logo.svg" alt="Logo" className="mobile-menu-logo" />
             <svg
               width="1.5rem"
               height="1.5rem"
@@ -36,7 +36,7 @@ function TopNavMenu() {
               data-name="Line Color"
               xmlns="http://www.w3.org/2000/svg"
               className="icon line-color mobile-menu-chat-icon"
-            >
+            > 
               <path
                 d="M18.81 16.23 20 21l-4.95-2.48A9.8 9.8 0 0 1 12 19c-5 0-9-3.58-9-8s4-8 9-8 9 3.58 9 8a7.5 7.5 0 0 1-2.19 5.23"
                 style={{

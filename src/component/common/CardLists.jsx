@@ -7,7 +7,7 @@ export default function CardLists({
   handleImageErrors,
   handleImageLoads,
   imageLoaded
-}) {
+}) { 
   return (
     <section className="card-lists">
       <div className="card-lists-header">

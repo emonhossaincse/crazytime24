@@ -81,15 +81,15 @@ a {
     }
   }
 }
-
+ 
 .main-nav-items {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.25rem;
   text-wrap: nowrap;
   width: 90%;
   margin-inline: auto;
+  padding-top: 1rem;
   overflow-x: auto;
 
   .nav-item {
@@ -102,12 +102,18 @@ a {
     min-width: 5.5rem;
     aspect-ratio: 4/3;
     text-align: center;
-    color: #ffffff;
+    color: var(--text-color);
 
     svg {
       height: 2.25rem;
       width: 2.25rem;
-      fill: #ffffffcc;
+      fill: var(--text-color);
+      stroke: var(--text-color);
+      stroke-width: 0.1px;
+    }
+
+    & svg:nth-child(2){
+      stroke-linejoin: 3px !important;
     }
   }
 }
