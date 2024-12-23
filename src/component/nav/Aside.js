@@ -8,7 +8,8 @@ import { Link } from 'react-router-dom';
 function Aside() {
   // Load the aside state and dark mode from local storage on component mount
   const initialAsideState = localStorage.getItem('asideState') === 'open';
-  const initialDarkMode = localStorage.getItem('darkMode') === 'true';
+  const initialDarkMode = true;
+
   
 
   const [isAsideOpen, setAsideOpen] = useState(initialAsideState);
